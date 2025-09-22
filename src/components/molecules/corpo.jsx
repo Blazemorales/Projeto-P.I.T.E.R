@@ -1,6 +1,8 @@
 // ...existing code...
 import '../layouts/corpo.css'
-{/*import { Linegraph } from './graficos'*/}
+import Linegraph from '../atoms/graficos.js'
+// ...existing code...
+
 function Corpo() {
   return (
     <div className="Corpo container">
