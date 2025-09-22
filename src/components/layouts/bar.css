@@ -1,0 +1,85 @@
+/* ...existing code... */
+.bar { width: 100%; }
+
+.Nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height, 64px);
+  display: flex;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(330deg, #5a5959 0%, #313131f5 75%);
+  /* Keep rounded corners only on the bottom so it sits flush with the browser top */
+  border-radius: 0;
+  padding: 0; /* allow elements to sit at the very edges */
+  box-shadow: 0 4px 14px rgba(181, 196, 218, 0.06);
+  z-index: 1000;
+}
+
+.Nav-bar-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the inner content */
+  gap: 1rem;
+  height: 100%;
+}
+
+.Nav-logo-to-invert {
+  position: absolute;
+  left: 0; /* flush to the viewport left edge */
+  top: 0;
+  height: var(--nav-height, 64px);
+  display: flex;
+  align-items: center;
+}
+
+.Nav-logo-to-invert a {
+  display: inline-block;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 0.6rem 1rem; /* box around the logo */
+  background: transparent;
+  border-radius: 0 8px 8px 0; /* rounded on the right side */
+}
+
+.Nav-itens {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  right: 0; /* flush to the viewport right edge */
+  top: 0;
+  height: var(--nav-height, 64px);
+  display: flex;
+  align-items: center;
+}
+
+.Nav-itens a {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.Nav-itens a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all .15s ease;
+}
+
+.Nav-itens a:hover {
+  background: rgba(79,70,229,0.08);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .Nav-bar-content { padding: 0 8px; }
+  .Nav-itens { display: none; }
+}
+/* ...existing code... */
