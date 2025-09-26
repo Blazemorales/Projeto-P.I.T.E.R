@@ -54,7 +54,14 @@ export function useIntegratedGazetteData() {
       
       // Modificar dados com base na categoria selecionada
       const multiplier = filters.categoria === CATEGORIES.INVESTIMENTOS_PESQUISA ? 1.2 : 0.8;
-      const cityMultiplier = filters.municipio === CITIES.GOIANIA ? 1.5 : 1.0;
+      
+      let cityMultiplier = 1.0;
+      if (filters.municipio === CITIES.GOIANIA) {
+        cityMultiplier = 1.5;
+      } else if (filters.municipio === CITIES.PORTO_ALEGRE) {
+        cityMultiplier = 1.3;
+      }
+
       
       const simulatedData: InvestmentData[] = baseData.map(item => ({
         month: item.month,
