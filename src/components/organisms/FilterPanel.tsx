@@ -1,10 +1,17 @@
 // CAMADA 1: APRESENTAÇÃO - ORGANISM
-// Seções complexas - Painel de Filtros (lado esquerdo da tela)
+// Seções complexas - Painel de Filtros estilizado (lado esquerdo da tela)
+
+'use client';
 
 import React from 'react';
 import { FilterGroup } from '../molecules/FilterGroup';
 import { Button } from '../atoms/Button';
-import { SearchFilters, AllowedState, AllowedCity, AllowedCategory } from '@/types';
+import {
+  SearchFilters,
+  AllowedState,
+  AllowedCity,
+  AllowedCategory,
+} from '@/types';
 
 interface FilterPanelProps {
   filters: SearchFilters;
@@ -17,33 +24,33 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
   filters,
   onFiltersChange,
   onSearch,
-  isLoading = false
+  isLoading = false,
 }) => {
-  // Verificação de segurança - usar valores padrão se filters for undefined
+  // Valores de fallback para segurança
   const safeFilters = filters || {
     estado: 'Goiás' as AllowedState,
-    municipio: 'Goiânia' as AllowedCity, 
+    municipio: 'Goiânia' as AllowedCity,
     categoria: 'investimentos em pesquisa' as AllowedCategory,
     dataInicio: '2024-01-01',
-    dataFim: new Date().toISOString().split('T')[0]
+    dataFim: new Date().toISOString().split('T')[0],
   };
 
   const updateFilter = <K extends keyof SearchFilters>(
     key: K,
     value: SearchFilters[K]
   ) => {
-    if (onFiltersChange) {
-      onFiltersChange({
-        ...safeFilters,
-        [key]: value
-      });
-    }
+    onFiltersChange({
+      ...safeFilters,
+      [key]: value,
+    });
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow">
-      <h2 className="text-lg font-semibold mb-4">Filtros:</h2>
-      
+    <div className="bg-white p-6 rounded-2xl shadow-card space-y-6">
+      {/* Título */}
+      <h2 className="text-xl font-semibold text-gray-800">Filtros</h2>
+
+      {/* Grupo de filtros */}
       <FilterGroup
         estado={safeFilters.estado}
         municipio={safeFilters.municipio}
@@ -57,11 +64,12 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         onDataFimChange={(value) => updateFilter('dataFim', value)}
       />
 
-      <div className="mt-6">
+      {/* Botão */}
+      <div className="pt-2">
         <Button
           onClick={onSearch}
           disabled={isLoading}
-          className="w-full"
+          className="btn btn-primary w-full"
         >
           {isLoading ? 'Pesquisando...' : 'Pesquisar'}
         </Button>

@@ -2,21 +2,29 @@
 // Tipos para todo o projeto P.I.T.E.R
 
 // Estados e Municípios permitidos
-export const ALLOWED_STATES = ['Goiás'] as const;
-export const ALLOWED_CITIES = ['Goiás', 'Goiânia'] as const;
+export const ALLOWED_STATES = ['Goiás', 'Rio Grande do Sul'] as const;
+export const ALLOWED_CITIES = ['Goiás', 'Goiânia', 'Porto Alegre'] as const;
+
 export const ALLOWED_CATEGORIES = [
   'investimentos em pesquisa',
   'investimentos em eletrônicos'
 ] as const;
 
+
+
 // Constantes para facilitar acesso
 export const STATES = {
-  GOIAS: 'Goiás' as const
+  GOIAS: 'Goiás' as const,
+  RIO_GRANDE_DO_SUL: 'Rio Grande do Sul' as const  
+
 };
 
 export const CITIES = {
   GOIAS: 'Goiás' as const,
-  GOIANIA: 'Goiânia' as const
+  GOIANIA: 'Goiânia' as const,
+  PORTO_ALEGRE: 'Porto Alegre' as const  
+    
+
 };
 
 export const CATEGORIES = {
