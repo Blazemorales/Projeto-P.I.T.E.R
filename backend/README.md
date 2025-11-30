@@ -1,6 +1,3 @@
-Claro, aqui está o `backend/README.md` reestruturado e atualizado, consolidando todas as informações técnicas do sistema de inteligência híbrida, as correções recentes e a estrutura original de contribuidores e troubleshooting.
-
-````markdown
 # Backend - Projeto P.I.T.E.R
 
 **P**rocurador de **I**nvestimentos em **T**ecnologia em **E**ducação **R**egional
@@ -253,6 +250,3 @@ Isso garante que todo commit seja verificado pelo **Black** (formatação) e **R
 Este projeto está sob a licença definida no arquivo LICENSE na raiz do repositório.
 
 **Desenvolvido com ☕ e 🤖 pela equipe do Projeto P.I.T.E.R - UnB/FGA**
-
-```
-```
