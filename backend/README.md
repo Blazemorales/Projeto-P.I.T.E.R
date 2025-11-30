@@ -232,7 +232,7 @@ Isso executará:
 pre-commit install
 ```
 
-Isso garante que todo commit seja verificado pelo **Black** (formatação) e **Ruff** (linting).
+Isso garante que todo commit seja verificado pelo **Black** (formatação) e **Ruff** (linting)
 
 -----
 
