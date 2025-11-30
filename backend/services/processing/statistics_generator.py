@@ -15,28 +15,48 @@ CATEGORY_MAP = {
         "nobreak", "estabilizador", "servidor", "laboratório de informática",
         "microcomputador", "processamento de dados"
     ],
+
     "Conectividade": [
         "internet", "wi-fi", "wifi", "banda larga", "fibra óptica", 
         "link de dados", "roteador", "switch", "cabeamento", "rede lógica", 
         "acesso à internet", "ponto de acesso", "access point"
     ],
+
     "Software e Licenças": [
-        "licença de software", "sistema de gestão", "aplicativo", "app", 
-        "plataforma digital", "ambiente virtual", "ava", "google workspace", 
-        "microsoft office", "antivírus", "sistema acadêmico", "software educativo",
-        "jogos digitais", "gamificação", "sistemas informatizados"
+        "licença de software", "licença de sistema", "licença de aplicativo",
+        "sistema de gestão", "sistema acadêmico", "sistemas informatizados",
+        "aplicativo", "app", "plataforma digital", "plataforma online",
+        "ambiente virtual", "ava", "ambiente virtual de aprendizagem",
+        "google workspace", "microsoft office",
+        "software educativo", "software educacional",
+        "jogos digitais", "gamificação",
+        "antivírus"
     ],
+
     "Robótica e Maker": [
-        "robótica", "kit de robótica", "arduino", "lego education", "cultura maker", 
-        "impressora 3d", "filamento", "cortadora a laser", "programação", 
-        "componentes eletrônicos", "scratch", "micro:bit"
+        # Robótica em geral
+        "robótica", "robótica educacional",
+        "kit de robótica", "kit de robótica educacional",
+        "arduino", "curso de robótica", "oficina de robótica",
+        "laboratório de robótica",
+        "programação", "programação educacional",
+        "scratch", "micro:bit",
+        "componentes eletrônicos",
+
+        # Cultura maker / equipamentos
+        "cultura maker", 
+        "impressora 3d", "filamento",
+        "cortadora a laser",
+        "lego education"
     ],
+
     "Infraestrutura de TI": [
         "ar condicionado para laboratório", "instalação elétrica", "adequação de sala",
         "segurança da informação", "suporte técnico", "manutenção de computadores",
         "formação tecnológica", "capacitação em tecnologia", "outsourcing de impressão"
     ]
 }
+
 
 # --- FILTRO DE EXCLUSÃO CORRIGIDO (SEM 'dotação') ---
 EXCLUSION_TERMS = [
