@@ -3,75 +3,60 @@ import os
 import google.generativeai as genai
 from typing import Dict, Any
 from dotenv import load_dotenv
-import re
+from pathlib import Path
 
-# Carrega as variáveis do arquivo .env
-load_dotenv()
+# --- CORREÇÃO DE CAMINHO ---
+# Identifica o caminho absoluto deste arquivo e sobe 3 níveis para achar a pasta 'backend'
+# Estrutura: backend/services/api/clients/gemini_client.py -> parents[3] = backend/
+env_path = Path(__file__).resolve().parents[3] / '.env'
+load_dotenv(dotenv_path=env_path)
 
+# Tenta pegar a chave
 api_key = os.getenv("GEMINI_API_KEY")
 
 if api_key:
     genai.configure(api_key=api_key)
 else:
-    print("⚠️ AVISO: GEMINI_API_KEY não encontrada no .env")
+    print(f"⚠️ AVISO: GEMINI_API_KEY não encontrada. Tentando ler de: {env_path}")
 
+# --- Função de Seleção Dinâmica de Modelo ---
 def get_best_gemini_model():
-    """
-    Busca dinamicamente o melhor/mais recente modelo 'Flash' disponível na conta.
-    Se falhar, retorna um fallback seguro.
-    """
     try:
-        # Lista todos os modelos disponíveis
         available_models = []
         for m in genai.list_models():
             if 'generateContent' in m.supported_generation_methods:
-                # Filtra apenas modelos da família Gemini
                 if 'gemini' in m.name.lower():
                     available_models.append(m.name)
         
-        # 1. Preferência: Versões Flash mais novas (2.5, 2.0, 1.5...)
-        # A lógica aqui procura strings como 'gemini-2.5-flash', 'gemini-1.5-flash'
-        # e tenta ordenar para pegar a maior versão.
+        # Procura modelos Flash
         flash_models = [m for m in available_models if 'flash' in m.lower() and 'legacy' not in m.lower()]
         
         if flash_models:
-            # Ordena reverso para tentar pegar 2.5 antes de 1.5, etc.
-            # (Uma ordenação alfabética simples geralmente funciona bem para versões: 2.5 > 1.5)
             flash_models.sort(reverse=True)
-            
-            # Tenta pegar o primeiro que não seja 'experimental' ou 'preview' se possível,
-            # mas se só tiver preview (comum em lançamentos novos), pega ele mesmo.
             chosen_model = flash_models[0]
-            print(f"🤖 Modelo de IA selecionado automaticamente: {chosen_model}")
+            print(f"🤖 Modelo de IA selecionado: {chosen_model}")
             return genai.GenerativeModel(chosen_model)
 
-        # 2. Fallback: Se não achar Flash, pega qualquer Gemini Pro
+        # Fallback para Pro
         pro_models = [m for m in available_models if 'pro' in m.lower()]
         if pro_models:
             pro_models.sort(reverse=True)
-            print(f"⚠️ Flash não encontrado. Usando Pro: {pro_models[0]}")
             return genai.GenerativeModel(pro_models[0])
 
     except Exception as e:
-        print(f"⚠️ Erro ao listar modelos ({e}). Usando fallback fixo.")
+        print(f"⚠️ Erro ao listar modelos: {e}")
 
-    # 3. Último recurso: Se a listagem falhar (erro de rede, etc), usa um fixo que sabemos que existe hoje.
     return genai.GenerativeModel('gemini-2.5-flash')
 
-
+# --- Função Principal ---
 async def analyze_investment_context(text: str) -> Dict[str, Any]:
-    """
-    Usa o Gemini para fazer uma análise qualitativa do texto do diário.
-    """
     if not api_key:
         return {"error": "API Key não configurada"}
     
     if not text or len(text) < 50:
         return {"analysis": "Texto insuficiente para análise."}
 
-    # --- MUDANÇA AQUI: Usa a função dinâmica em vez de nome fixo ---
     model = get_best_gemini_model()
-    # --------------------------------------------------------------
 
     prompt = f"""
     Você é um especialista em análise de licitações públicas e tecnologia educacional.

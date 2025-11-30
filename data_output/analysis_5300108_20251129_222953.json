@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-05",
+    "search_keywords": "notebook",
+    "generated_at": "2025-11-29T22:29:53.679274"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "MISC": 40,
+      "LOC": 25,
+      "PER": 20,
+      "ORG": 8
+    },
+    "top_entities": {
+      "walkman": 5,
+      "Internet": 4,
+      "AUTO DE APREENSÃO": 3,
+      "Garrafa": 2,
+      "pendrive": 2,
+      "UnDF": 2,
+      "Secretaria": 2,
+      "Banners": 2,
+      "Walkman": 1,
+      "Imobilizado da empresa": 1
+    },
+    "total_invested": 1496260.72,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 1496260.72,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "Aquisição de notebooks e equipamentos para implantação de salas de videoconferência no Sistema Penitenciário do Distrito Federal e registro de preços para aquisição de computadores portáteis (notebooks) para a Secretaria de Desenvolvimento Social.",
+      "justificativa": "Viabilizar a implantação de Salas de Videoconferência nas Unidades Prisionais do Sistema Penitenciário do Distrito Federal, e atender demandas da Secretaria de Desenvolvimento Social; além de empréstimo para estudantes com deficiência na UnDF.",
+      "fornecedor": "B.DANIEL INFORMATICA",
+      "marca_modelo": "Sim, mencio-se 'notebook' em geral, e um contrato menciona 'W7p' como parte de uma especificação de notebook."
+    }
+  }
+}

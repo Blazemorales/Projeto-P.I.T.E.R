@@ -3,15 +3,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict, Any
 import uvicorn
 
-# Imports dos serviços
+# Imports
 from services.integration.piter_api_orchestrator import PiterApiOrchestrator, run_analysis_pipeline
 from services.api.clients.querido_diario_client import FilterParams
-from services.api.ranking import ranking_router
+# Novo Import de Comparação
+from services.api.comparison.comparison_service import ComparisonService 
 
 app = FastAPI(
     title="P.I.T.E.R API",
     description="Plataforma de Integração e Transparência em Educação e Recursos",
-    version="1.0.0"
+    version="1.3.0"
 )
 
 app.add_middleware(
@@ -23,9 +24,7 @@ app.add_middleware(
 )
 
 orchestrator = PiterApiOrchestrator()
-
-# Registrar routers
-app.include_router(ranking_router)
+comparison_service = ComparisonService() # Instancia o serviço
 
 @app.get("/")
 async def read_root():
@@ -35,6 +34,7 @@ async def read_root():
 async def health_check():
     return {"status": "healthy", "timestamp": "2024-01-01T00:00:00Z"}
 
+# ... (Mantenha o endpoint /api/v1/gazettes igual) ...
 @app.get("/api/v1/gazettes")
 async def get_gazettes(
     territory_ids: str = Query(..., description="Código IBGE do município"),
@@ -55,24 +55,41 @@ async def get_gazettes(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# ... (Mantenha o endpoint /analyze igual) ...
 @app.get("/analyze", response_model=Dict[str, Any])
 async def analyze_gazettes(
     territory_id: str = "5300108",
     since: str = "2024-01-01",
     until: str = "2024-01-05",
-    # --- CORREÇÃO AQUI: Usamos Query(None) explicitamente ---
     keywords: str = Query(None, description="Palavra-chave para filtro")
 ):
-    """
-    Dispara o pipeline de automação de IA.
-    """
-    # Garante que keywords seja None se não for passado (evita Ellipsis)
     kw_value = keywords if keywords and keywords is not ... else None
-    
     return await run_analysis_pipeline(
         territory_id=territory_id,
         since=since,
         until=until,
+        keywords=kw_value
+    )
+
+# --- NOVO ENDPOINT DE COMPARAÇÃO ---
+@app.get("/compare", response_model=Dict[str, Any])
+async def compare_territories(
+    territory_a: str = Query(..., description="ID do Território A"),
+    date_a_start: str = Query(..., description="Início Data A"),
+    date_a_end: str = Query(..., description="Fim Data A"),
+    territory_b: str = Query(..., description="ID do Território B"),
+    date_b_start: str = Query(..., description="Início Data B"),
+    date_b_end: str = Query(..., description="Fim Data B"),
+    keywords: str = Query(None, description="Palavra-chave comum")
+):
+    """
+    Compara investimentos em tecnologia entre dois territórios ou períodos.
+    """
+    kw_value = keywords if keywords and keywords is not ... else None
+    
+    return await comparison_service.compare_scenarios(
+        territory_a, date_a_start, date_a_end,
+        territory_b, date_b_start, date_b_end,
         keywords=kw_value
     )
 
