@@ -25,10 +25,10 @@ export const Input: React.FC<InputProps> = ({
 }) => {
   const inputClasses = [
     'w-full px-3 py-2 border border-transparent rounded-md shadow-lg',
-    'bg-[#F0EBD8] text-[#06080F]',
+    'bg-[#FFFFFF] text-[#06080F]',
     'placeholder-gray-800 focus:outline-none focus:ring-2 focus:ring-[#06080F] focus:border-[#06080F]',
-    'focus:bg-[#F0EBD8]',
-    'disabled:bg-[#F0EBD8] disabled:text-gray-500 disabled:border-gray-200',
+    'focus:bg-[#FFFFFF]',
+    'disabled:bg-[#FFFFFF] disabled:text-gray-500 disabled:border-gray-200',
     '[&::-webkit-calendar-picker-indicator]:cursor-pointer',
     '[&::-webkit-outer-spin-button]:[-webkit-appearance:none] [&::-webkit-inner-spin-button]:[-webkit-appearance:none]',
     className,
