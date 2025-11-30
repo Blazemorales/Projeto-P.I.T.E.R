@@ -1,0 +1,82 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-01-31",
+      "search_keywords": "material escolar",
+      "generated_at": "2025-11-30T17:38:35.702418"
+    },
+    "data": {
+      "total_entities": 139,
+      "entity_counts_by_type": {
+        "LOC": 133,
+        "MISC": 3,
+        "ORG": 3
+      },
+      "top_entities": {
+        "Secretaria": 62,
+        "Estado de Educação": 10,
+        "Estado de Segurança Pública": 10,
+        "Estado de Saúde": 8,
+        "Orçamento": 6,
+        "Estado de Planejamento": 6,
+        "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 6,
+        "Estado": 5,
+        "Estado de Transporte": 4,
+        "Mobilidade": 4
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-03-01 a 2024-03-31",
+      "search_keywords": "material escolar",
+      "generated_at": "2025-11-30T17:38:48.888155"
+    },
+    "data": {
+      "total_entities": 101,
+      "entity_counts_by_type": {
+        "LOC": 100,
+        "MISC": 1
+      },
+      "top_entities": {
+        "Secretaria": 51,
+        "Estado de Educação": 9,
+        "Estado de Segurança Pública": 8,
+        "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 6,
+        "Estado de Saúde": 5,
+        "Governo": 4,
+        "Estado de Governo": 4,
+        "Estado de Economia": 3,
+        "Estado de Administração Penitenciária": 2,
+        "Estado de Transporte": 2
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "summary": {
+    "investment_difference": 0.0,
+    "winner": "Empate",
+    "generated_at": "2025-11-30T17:38:48.888183"
+  }
+}

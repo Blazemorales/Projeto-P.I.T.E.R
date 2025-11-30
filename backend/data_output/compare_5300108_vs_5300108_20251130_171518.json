@@ -1,0 +1,77 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-01-05",
+      "search_keywords": "notebook",
+      "generated_at": "2025-11-30T17:15:05.100234"
+    },
+    "data": {
+      "total_entities": 25,
+      "entity_counts_by_type": {
+        "LOC": 23,
+        "MISC": 2
+      },
+      "top_entities": {
+        "Secretaria": 10,
+        "Orçamento": 2,
+        "Estado de Saúde": 2,
+        "Estado de Educação": 2,
+        "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 2,
+        "Estado de Segurança Pública": 2,
+        "Estado": 2,
+        "Administração.............................................................": 1,
+        "Estado de Planejamento": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-02-01 a 2024-02-05",
+      "search_keywords": "notebook",
+      "generated_at": "2025-11-30T17:15:18.174008"
+    },
+    "data": {
+      "total_entities": 15,
+      "entity_counts_by_type": {
+        "LOC": 15
+      },
+      "top_entities": {
+        "Secretaria": 8,
+        "Estado de Economia": 1,
+        "Estado de Educação": 1,
+        "Estado de Segurança Pública": 1,
+        "Estado de Administração Penitenciária": 1,
+        "Estado de Transporte": 1,
+        "Mobilidade": 1,
+        "Estado": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "summary": {
+    "investment_difference": 0.0,
+    "winner": "Empate",
+    "generated_at": "2025-11-30T17:15:18.174024"
+  }
+}

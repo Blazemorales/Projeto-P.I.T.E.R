@@ -164,7 +164,7 @@ def test_analyze_endpoint_qd_failure(mocker):
     # --- Verificação (Assertions) ---
     # O código atual retorna 200 e um JSON de erro específico
     assert response.status_code == 200
-    expected_error = {"error": "Nenhum diário encontrado."} # O erro é o mesmo do texto vazio no código atual
+    expected_error = {"error": "Erro de conexão"} 
     assert response.json() == expected_error
 
     print("Teste de falha no Querido Diário passou!")

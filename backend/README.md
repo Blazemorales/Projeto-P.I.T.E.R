@@ -1,8 +1,11 @@
+Claro, aqui está o `backend/README.md` reestruturado e atualizado, consolidando todas as informações técnicas do sistema de inteligência híbrida, as correções recentes e a estrutura original de contribuidores e troubleshooting.
+
+````markdown
 # Backend - Projeto P.I.T.E.R
 
 **P**rocurador de **I**nvestimentos em **T**ecnologia em **E**ducação **R**egional
 
-Guia de configuração, arquitetura e execução do ambiente de desenvolvimento local para a equipe.
+Este é o motor de inteligência do projeto, responsável por minerar Diários Oficiais, processar linguagem natural e gerar análises quantitativas e qualitativas sobre investimentos públicos em tecnologia.
 
 - **Disciplina:** `MDS, Engenharia de Software`
 - **Professora/Orientadora:** `Carla`
@@ -12,15 +15,17 @@ Guia de configuração, arquitetura e execução do ambiente de desenvolvimento 
 
 ## 📋 Índice
 
-- [Tecnologias](#️-tecnologias)
-- [Arquitetura do Sistema](#-arquitetura-do-sistema)
+- [Tecnologias](#-tecnologias)
+- [Arquitetura de Inteligência](#-arquitetura-de-inteligência)
 - [Estrutura de Diretórios](#-estrutura-de-diretórios)
-- [Pipeline de Dados](#-pipeline-de-dados)
+- [Persistência de Dados](#-persistência-de-dados)
 - [Como Rodar o Projeto](#-como-rodar-o-projeto-localmente)
-- [Endpoints da API](#️-endpoints-principais)
-- [Histórico de Mudanças](#-histórico-de-mudanças)
+- [Endpoints da API](#-endpoints-da-api)
 - [Testes e Qualidade](#-testes-e-qualidade)
-- [Referências](#-referência)
+- [Histórico de Mudanças](#-histórico-de-mudanças)
+- [Troubleshooting](#-troubleshooting)
+- [Contribuidores](#-contribuidores)
+- [Licença](#-licença)
 
 ---
 
@@ -28,237 +33,226 @@ Guia de configuração, arquitetura e execução do ambiente de desenvolvimento 
 
 - **Linguagem:** Python 3.12
 - **Framework Web:** FastAPI
-- **Validação de Dados:** Pydantic
-- **Servidor ASGI:** Uvicorn
+- **Validação:** Pydantic
+- **Servidor:** Uvicorn
 - **Cliente HTTP:** HTTPX (async)
-- **Análise de Dados:** Pandas
-- **NLP:** spaCy (modelo `pt_core_news_sm`)
-- **IA Generativa:** Google Gemini (via Google Gen AI SDK)
+- **Análise de Dados:** Pandas & Regex
+- **NLP (Entidades):** spaCy (Modelo: `pt_core_news_sm`)
+- **IA Generativa (Qualitativo):** Google Gemini (`gemini-2.5-flash` ou superior)
 - **Testes:** Pytest, Pytest-Mock
-- **Qualidade de Código:** Pre-commit, Black, Ruff
+- **Qualidade:** Pre-commit, Black, Ruff
 
-> ⚠️ **AVISO:** Requisito: Python **3.12** (spaCy não é compatível com Python 3.13+)
+> ⚠️ **Requisito:** Python **3.12** é obrigatório (spaCy tem limitações com 3.13+).
 
 ---
 
-## 🧠 Arquitetura do Sistema
+## 🧠 Arquitetura de Inteligência
 
-O backend segue uma **arquitetura em camadas** baseada no padrão **P.I.T.E.R** (inspirado em Clean Architecture), utilizando uma abordagem de **Inteligência Híbrida** (NLP Clássico + IA Generativa).
+O P.I.T.E.R utiliza uma abordagem de **Inteligência Híbrida** para garantir precisão nos números e contexto na explicação:
 
-```mermaid
-graph TD
-    A[Client / Frontend] -->|HTTP Request| B(Camada de Apresentação<br>FastAPI Routes)
-    B --> C{Camada de Integração<br>PiterApiOrchestrator}
-    C -->|Coleta| D[Camada de Clientes API]
-    C -->|Processamento| E[Camada de Processamento]
-    D -->|Busca| F[Querido Diário]
-    D -->|Contexto| G[Google Gemini AI]
-    E -->|Limpeza| H[Data Cleaner]
-    E -->|Estatísticas| I[Statistics Generator]
-    E -->|NLP| J[spaCy]
-````
+1.  **Camada Quantitativa (Exatidão):**
+    * Utiliza **Regex** e **Python Puro** para extrair valores monetários (R$) e categorizá-los em tópicos de EdTech (ex: "Hardware", "Robótica", "Conectividade").
+    * *Vantagem:* Elimina o risco de "alucinações" matemáticas comuns em LLMs, garantindo que R$ 1.000.000,00 seja sempre lido corretamente.
 
-### Princípios Arquiteturais
+2.  **Camada Qualitativa (Contexto):**
+    * Utiliza **Google Gemini** para ler o texto completo da licitação e gerar um resumo humano.
+    * *Saída:* Resumo do objeto ("Compra de 200 notebooks"), justificativa ("Modernização de laboratórios") e identificação do fornecedor.
 
-1.  **Inteligência Híbrida**:
-      * **Quantitativo (Exatidão):** Regex e Python puro para somar valores e categorizar gastos (evita alucinação de IA).
-      * **Qualitativo (Contexto):** IA Generativa (Gemini) para resumir, justificar e explicar os gastos.
-2.  **Separação de Responsabilidades**: Cada serviço tem uma função única.
-3.  **Orquestração Centralizada**: O `PiterApiOrchestrator` coordena o fluxo de dados.
-4.  **Persistência em Arquivo**: Resultados salvos em JSON para consumo desacoplado pelo Frontend.
+3.  **Coleta Inteligente:**
+    * O robô utiliza uma estratégia de "Scan" (paginação profunda) combinada com filtros manuais de data no backend para garantir que os dados recuperados do *Querido Diário* correspondam exatamente ao período de análise, contornando limitações de relevância da API externa.
 
------
+---
 
 ## 📂 Estrutura de Diretórios
 
-```
+```text
 backend/
-├── main.py                         # Ponto de entrada da aplicação FastAPI
-├── requirements.txt                # Dependências do projeto
-├── .env.example                    # Exemplo de variáveis de ambiente
+├── main.py                         # Rotas da API (Entrypoint)
+├── requirements.txt                # Dependências
+├── .env                            # Chaves de API (Gemini, etc)
 │
-├── services/                       # Lógica de negócio e serviços
-│   │
-│   ├── integration/                # 🧠 CAMADA DE INTEGRAÇÃO
-│   │   ├── __init__.py
-│   │   └── piter_api_orchestrator.py
-│   │       ├── PiterApiOrchestrator (classe)
-│   │       └── run_analysis_pipeline() (função)
-│   │           • Pipeline completo: Coleta → Limpeza → IA → Estatísticas → Persistência
-│   │
-│   ├── api/                        # 🔌 CAMADA DE API (CLIENTES)
-│   │   ├── clients/
-│   │   │   ├── querido_diario_client.py   # Coleta dados oficiais
-│   │   │   ├── spacy_api_client.py        # NLP (Entidades)
-│   │   │   └── gemini_client.py           # IA Generativa (Resumos)
-│   │
-│   └── processing/                 # ⚙️ CAMADA DE PROCESSAMENTO
-│       ├── data_cleaner.py            # Limpeza e Pré-filtragem (Regex)
-│       └── statistics_generator.py    # Categorização Financeira (Radar de Tech)
+├── services/                       # Lógica de Negócio
+│   ├── integration/
+│   │   └── piter_api_orchestrator.py  # 🧠 CÉREBRO: Coordena todo o fluxo
+│   ├── api/
+│   │   ├── clients/                # Clientes Externos
+│   │   │   ├── querido_diario_client.py   # Coleta (com filtro manual de datas)
+│   │   │   ├── spacy_api_client.py        # NLP Local
+│   │   │   └── gemini_client.py           # IA Generativa (Agente Qualitativo)
+│   │   └── comparison/
+│   │       └── comparison_service.py      # Lógica de Comparação (A vs B)
+│   └── processing/
+│       ├── data_cleaner.py            # Limpeza (Regex de ruído)
+│       └── statistics_generator.py    # Estatísticas e Categorização Financeira
 │
-└── tests/                          # 🧪 Testes automatizados
-    ├── test_main_api.py               # Testes de Integração
-    └── processing/                    # Testes Unitários
-```
+└── data_output/                       # Histórico local de JSONs gerados
+````
 
 -----
 
-## 🔄 Pipeline de Dados (`/analyze`)
+## 💾 Persistência de Dados
 
-Quando o endpoint de análise é chamado, o seguinte fluxo acontece:
+O backend não utiliza banco de dados relacional no MVP. Ele gera arquivos **JSON estáticos** diretamente na pasta pública do Frontend, permitindo consumo imediato pela interface.
 
-1.  **Busca (Input):** O sistema busca no *Querido Diário* usando keywords estratégicas (ex: "robótica", "computador").
-2.  **Agregação:** Baixa até 50 diários e concatena os trechos relevantes.
-3.  **Pré-Filtragem:** O `DataCleaner` remove cabeçalhos, rodapés e ruído visual.
-4.  **Análise Quantitativa:**
-      * O `StatisticsGenerator` identifica valores monetários (R$).
-      * Cruza o contexto com categorias de **Tecnologia Educacional** (Hardware, Software, Robótica).
-5.  **Análise Qualitativa (IA):**
-      * Se houver investimento, o texto é enviado ao **Gemini**.
-      * Retorna: Resumo do Objeto, Justificativa e Fornecedor.
-6.  **Persistência:** Salva o JSON em `frontend/public/data/latest_analysis.json`.
+| Recurso | Arquivo Gerado (Frontend) | Descrição |
+| :--- | :--- | :--- |
+| **Pesquisa** | `frontend/public/data/latest_search.json` | Dados da última busca individual (`/analyze`). |
+| **Comparação** | `frontend/public/data/latest_comparison.json` | Dados da última comparação (`/compare`). |
+| **Histórico** | `backend/data_output/` | Cópia de segurança de todas as análises com timestamp. |
 
 -----
 
 ## 🚀 Como Rodar o Projeto Localmente
 
-### 1️⃣ Pré-requisitos
-
-  - Python 3.12 instalado
-  - Chave de API do Google Gemini (Obtenha no [Google AI Studio](https://aistudio.google.com/))
-
-### 2️⃣ Instalação
+### 1\. Instalação
 
 ```bash
-# 1. Clone o projeto e entre na pasta principal
+# 1. Clone e entre na pasta do backend
 git clone [https://github.com/unb-mds/Projeto-P.I.T.E.R.git](https://github.com/unb-mds/Projeto-P.I.T.E.R.git)
 cd Projeto-P.I.T.E.R
+cd backend
 
-# 2. (Opcional) Troque para a branch de desenvolvimento
-git checkout enviodadosapi
+# 2. Crie e ative o ambiente virtual
+python3 -m venv venv
+source venv/bin/activate  # (Linux/Mac)
+# .\venv\Scripts\Activate.ps1 # (Windows)
 
-# 3. Crie e ative o ambiente virtual (na raiz do projeto)
-python3 -m venv venv  # Ou 'py -3.12 -m venv venv' no Windows
+# 3. Instale as dependências
+pip install -r requirements.txt
 
-# Ativar no Windows (PowerShell):
-.\venv\Scripts\Activate.ps1
-# Ativar no Linux/Mac:
-# source venv/bin/activate
-
-# 4. Instale as dependências (apontando para a pasta backend)
-pip install -r backend/requirements.txt
-
-# 5. Instale o modelo do spaCy (Link direto para evitar erros 404)
+# 4. Instale o modelo do spaCy (Link direto para evitar erro 404)
 pip install [https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.7.0/pt_core_news_sm-3.7.0.tar.gz](https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.7.0/pt_core_news_sm-3.7.0.tar.gz)
 ```
 
-### 3️⃣ Configuração de Ambiente
+### 2\. Configuração (.env)
 
-Crie um arquivo `.env` dentro da pasta `backend/` com suas chaves:
+Crie um arquivo `.env` dentro da pasta `backend/` com sua chave do Google Gemini (necessária para a análise qualitativa):
 
-```bash
-# backend/.env
+```ini
 GEMINI_API_KEY="sua_chave_AIzaSy_aqui..."
 ```
 
-### 4️⃣ Execução do Servidor
+### 3\. Execução
 
-**IMPORTANTE:** Rodar sempre a partir da **raiz do projeto**, usando o modo de módulo (`-m`).
+**IMPORTANTE:** Execute sempre a partir da **raiz do projeto** para garantir que os imports funcionem corretamente.
 
 ```bash
-# Inicie o servidor (estando na pasta raiz Projeto-P.I.T.E.R)
+# Volte para a raiz do projeto
+cd ..
+
+# Execute o servidor
 python -m uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Acesse a documentação interativa em: **http://127.0.0.1:8000/docs**
-
 -----
 
-## 📡 Endpoints Principais
+## 📡 Endpoints da API
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| `GET` | `/analyze` | **Pipeline Principal.** Dispara coleta, IA e atualiza o frontend. |
-| `GET` | `/api/v1/gazettes` | Busca simples de diários (sem análise profunda). |
-| `GET` | `/health` | Healthcheck básico. |
+Acesse a documentação interativa em: **http://127.0.0.1:8000/docs**
 
-### Exemplo de Uso (Radar de Robótica)
+### 1\. Radar de Pesquisa (`GET /analyze`)
 
-Para analisar investimentos em robótica em Brasília (padrão):
+Analisa um período específico em busca de investimentos.
 
-```bash
-GET [http://127.0.0.1:8000/analyze?keywords=robótica](http://127.0.0.1:8000/analyze?keywords=robótica)
-```
+  * **URL:** `http://127.0.0.1:8000/analyze`
+  * **Parâmetros:**
+      * `keywords`: (Opcional) Termo de busca (ex: "robótica", "notebook").
+      * `since` / `until`: Período (YYYY-MM-DD).
+  * **Efeito:** Gera o arquivo `latest_search.json` e atualiza o dashboard.
 
-**Resposta (JSON gerado):**
+### 2\. Comparador (`GET /compare`)
 
-```json
-{
-  "data": {
-    "total_invested": 150000.00,
-    "investments_by_category": {
-      "Robótica & Maker": 150000.00
-    },
-    "qualitative_analysis": {
-      "resumo_objeto": "Aquisição de laboratórios móveis de robótica.",
-      "fornecedor": "TechEduca LTDA"
-    }
-  }
-}
-```
+Compara dois cenários (ex: Jan vs Fev) para ver quem investiu mais.
+
+  * **URL:** `http://127.0.0.1:8000/compare`
+  * **Parâmetros:** `territory_a`, `date_a_start`, `date_a_end` vs `territory_b`, ...
+  * **Efeito:** Gera o arquivo `latest_comparison.json` com vencedor e diferença.
 
 -----
 
 ## 🧪 Testes e Qualidade
 
-### 1\. Executar Testes
+### Executando Testes
 
-Os testes devem ser executados a partir da pasta `backend`.
+Os testes cobrem a coleta, limpeza, cálculo financeiro e a rota de análise.
 
 ```bash
+# Entre na pasta backend
 cd backend
+
+# Execute o Pytest
 pytest -s -v
 ```
 
-Isso executará:
+### Cobertura Atual
 
-  * **Testes de Integração:** Verificam se a API responde e se conecta (com mocks).
-  * **Testes Unitários:** Verificam a lógica de limpeza de dados e cálculo financeiro.
+  * ✅ **Unitários:** Limpeza de dados (Regex) e Gerador de Estatísticas.
+  * ✅ **Integração:** Endpoint `/analyze` (Sucesso, Falha de API, Texto Vazio).
+  * ⚠️ **Comparação:** A rota `/compare` foi validada manualmente.
 
-### 2\. Qualidade de Código (Pre-commit)
+### Qualidade de Código (Pre-commit)
 
 ```bash
 # Instalar hooks (na raiz)
 pre-commit install
 ```
 
-Isso garante que todo commit seja verificado pelo **Black** (formatação) e **Ruff** (linting)
+Isso garante que todo commit seja verificado pelo **Black** (formatação) e **Ruff** (linting).
 
 -----
 
-## 📜 Histórico de Mudanças Relevantes
+## 📜 Histórico de Mudanças
 
-### v1.3.1 - 19 Novembro 2025
+### v1.3.0 - Novembro 2025 (Atual)
 
-#### **Correções de CI/CD e Estabilidade**
+  * **Inteligência Híbrida:** Integração total com Google Gemini e spaCy.
+  * **Radar de EdTech:** Filtros específicos para Hardware, Software e Robótica.
+  * **Correção de Dados:** Implementação de filtro manual de datas e exclusão de falsos positivos (folha de pagamento).
+  * **Persistência:** Sistema de arquivos JSON para comunicação com Frontend.
+  * **Comparação:** Novo endpoint para duelo de cenários.
 
-  * **CI/CD:** Atualização do workflow de integração contínua para Python 3.12
-  * **Dependências:** Correção de versões pinadas (spacy 3.7.6, google-generativeai 0.8.5)
-  * **Testes:** Adição de pytest-asyncio e correção de testes falhando
-  * **Statistics Generator:** Correção do retorno de `total_entities` nas estatísticas
-  * **Build:** Resolução de problemas de build causados por versões yanked do PyPI
+### v1.2.0 - Novembro 2025
 
-### v1.3.0 - Novembro 2025
+  * **Keywords:** Implementação de suporte a busca por palavras-chave.
 
-#### **Implementação de Inteligência Híbrida**
+### v1.1.0 - Novembro 2025
 
-  * **IA Generativa:** Integração com Google Gemini para análise qualitativa.
-  * **Radar de Tecnologia:** Novos filtros para detectar Hardware, Software e Robótica.
-  * **Persistência:** Geração automática de arquivos JSON para o Frontend.
-  * **Correção de Coleta:** Ajuste no cliente HTTP para seguir redirecionamentos da API oficial.
+  * **Ranking:** Implementação inicial do sistema de ranking.
 
 -----
+
+## 🔧 Troubleshooting
+
+### Erro: `ModuleNotFoundError: No module named 'backend'`
+
+**Solução:** Você está rodando o comando de dentro da pasta `backend`. Volte para a raiz (`cd ..`) e rode `python -m uvicorn backend.main:app ...`.
+
+### Erro: `spaCy model not found` (Erro 404)
+
+**Solução:** O comando automático pode falhar. Instale via link direto:
+`pip install https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.7.0/pt_core_news_sm-3.7.0.tar.gz`
+
+### Erro: `GEMINI_API_KEY não encontrada`
+
+**Solução:** Verifique se o arquivo `.env` está na pasta `backend/` e se o código `gemini_client.py` está carregando o caminho correto com `dotenv`.
+
+-----
+
+## 👥 Contribuidores
+
+  - **Ana** - Implementação de keywords e otimização de busca
+  - **Gulia** - Sistema de ranking e integração com APIs
+  - **Morais** - Pipeline de análise e processamento de dados
+  - **Rodrigo** - Estatísticas e geração de métricas
+  - **Equipe P.I.T.E.R** - Desenvolvimento contínuo
+
+-----
+
+## 📄 Licença
+
+Este projeto está sob a licença definida no arquivo LICENSE na raiz do repositório.
 
 **Desenvolvido com ☕ e 🤖 pela equipe do Projeto P.I.T.E.R - UnB/FGA**
 
+```
 ```

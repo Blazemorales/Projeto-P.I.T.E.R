@@ -1,11 +1,10 @@
-# backend/services/api/clients/querido_diario_client.py
 import httpx
 import logging
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
-from datetime import date
+from typing import Optional, Dict, Any, List
+from datetime import datetime, date
 
-# URL correta da API (sem o /api no final da base, pois o endpoint adiciona)
+# URL Direta da API
 QUERIDO_DIARIO_API_URL = "https://api.queridodiario.ok.org.br"
 
 logging.basicConfig(level=logging.INFO)
@@ -20,56 +19,90 @@ class FilterParams(BaseModel):
 
 async def fetch_gazettes(territory_id: str, since: str, until: str, keywords: str = None) -> Optional[Dict[Any, Any]]:
     """
-    Busca diários na API.
-    NOTA: Sem filtro manual de data, a API pode retornar resultados antigos por relevância.
+    Busca diários usando PAGINAÇÃO (Varredura) e filtro manual de datas.
+    Essencial para encontrar diários específicos quando a API prioriza relevância.
     """
-    # Endpoint correto com barra no final
     url = f"{QUERIDO_DIARIO_API_URL}/gazettes/"
-    
     query_term = keywords if keywords else "educação tecnologia informática"
     
-    params = {
-        "territory_ids": territory_id,
-        "since": since,
-        "until": until,
-        "size": 50, 
-        "querystring": query_term
-    }
+    # --- CONFIGURAÇÃO DA VARREDURA ---
+    # Lê até 5 páginas (500 documentos) para tentar achar a data certa no meio da relevância
+    PAGES_TO_SCAN = 5
+    PAGE_SIZE = 100
+    
+    collected_gazettes = []
     
     try:
-        async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
-            logger.info(f"Buscando '{query_term}' em {url} ...")
-            response = await client.get(url, params=params)
-            
-            if response.status_code != 200:
-                logger.error(f"Erro HTTP {response.status_code}: {response.text[:200]}")
-                return None
+        target_start = datetime.strptime(since, "%Y-%m-%d").date()
+        target_end = datetime.strptime(until, "%Y-%m-%d").date()
+    except ValueError:
+        logger.error(f"Datas inválidas: {since} - {until}")
+        return {"gazettes": [], "total_gazettes": 0}
 
+    logger.info(f"🕵️ INICIANDO VARREDURA: '{query_term}' de {since} até {until}")
+
+    async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
+        for page in range(PAGES_TO_SCAN):
+            params = {
+                "territory_ids": territory_id,
+                "since": since,
+                "until": until,
+                "size": PAGE_SIZE,
+                "offset": page * PAGE_SIZE, # Pula para a próxima página
+                "querystring": query_term
+            }
+            
             try:
+                response = await client.get(url, params=params)
+                
+                if response.status_code != 200:
+                    logger.warning(f"  ⚠️ Erro na pág {page+1}: HTTP {response.status_code}")
+                    break 
+
                 data = response.json()
-            except ValueError:
-                logger.error("API não retornou JSON.")
-                return None
-            
-            # --- VERSÃO ANTERIOR: Retorna tudo o que a API mandou ---
-            # Removemos o bloco "if target_start <= g_date..." que estava zerando os resultados.
-            
-            total = data.get('total_gazettes', 0)
-            logger.info(f"✅ Diários encontrados (API): {total}")
+                batch = data.get("gazettes", [])
+                
+                if not batch:
+                    break # Acabaram os resultados da API
 
-            return data
-            
-    except Exception as e:
-        logger.error(f"Erro na busca: {e}")
-        return None
+                # --- FILTRO MANUAL DE DATA ---
+                count_in_batch = 0
+                for gazette in batch:
+                    raw_date = gazette.get("date")
+                    if not raw_date: continue
+                    
+                    try:
+                        g_date = datetime.strptime(str(raw_date)[:10], "%Y-%m-%d").date()
+                        
+                        # Só guarda se for EXATAMENTE do período pedido
+                        if target_start <= g_date <= target_end:
+                            collected_gazettes.append(gazette)
+                            count_in_batch += 1
+                            
+                    except ValueError:
+                        continue
+                
+                # Opcional: Log para ver o progresso
+                # logger.info(f"  - Pág {page+1}: {len(batch)} baixados, {count_in_batch} úteis.")
 
-# --- CLASSE Wrapper ---
+            except Exception as e:
+                logger.error(f"  ❌ Erro na requisição da pág {page}: {e}")
+                break
+    
+    total_found = len(collected_gazettes)
+    logger.info(f"✅ VARREDURA CONCLUÍDA. Encontrados {total_found} diários válidos no período.")
+    
+    return {
+        "gazettes": collected_gazettes,
+        "total_gazettes": total_found
+    }
+
+# --- Wrapper Class (Compatibilidade) ---
 class QueridoDiarioClient:
     BASE_URL = f"{QUERIDO_DIARIO_API_URL}/gazettes/"
 
     async def fetch_gazettes(self, filters: FilterParams) -> Dict[str, Any]:
         params = filters.dict(exclude_none=True)
-        # Ajuste de compatibilidade de parâmetros
         if 'published_since' in params: params['since'] = params.pop('published_since').strftime("%Y-%m-%d")
         if 'published_until' in params: params['until'] = params.pop('published_until').strftime("%Y-%m-%d")
 

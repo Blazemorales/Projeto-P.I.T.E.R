@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-31",
+    "search_keywords": "internet",
+    "generated_at": "2025-11-30T16:26:51.414621"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "MISC": 18,
+      "ORG": 18,
+      "LOC": 17,
+      "PER": 3
+    },
+    "top_entities": {
+      "Secretaria": 3,
+      "TARF": 2,
+      "ALTERAR": 2,
+      "Fazenda do Distrito Federal": 2,
+      "Atendimento Virtual": 2,
+      "Recurso": 2,
+      "HARPIA": 2,
+      "Tribunal Administrativo de Recursos Fiscais": 2,
+      "Distrito Federal": 2,
+      "internet": 2
+    },
+    "total_invested": 1022786.75,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 1022786.75,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "O texto menciona investimentos e requisitos relacionados a infraestrutura tecnológica, como acesso à internet, equipamentos (computador, tablet) e sistemas de informação, em diversos contextos (peticionamento eletrônico, atendimento virtual, infraestrutura predial para assistência farmacêutica e esporte eletrônico).",
+      "justificativa": "Garantir a acessibilidade tecnológica para peticionamento eletrônico (HARPIA), modernizar a infraestrutura de acesso à internet e sistemas de informação, e formalizar a prática de esporte eletrônico.",
+      "fornecedor": "Não identificado",
+      "marca_modelo": "Não identificado"
+    }
+  }
+}

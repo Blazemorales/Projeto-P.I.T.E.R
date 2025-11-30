@@ -1,0 +1,89 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-02-28",
+      "search_keywords": "alimentação escolar",
+      "generated_at": "2025-11-30T17:40:46.325423"
+    },
+    "data": {
+      "total_entities": 223,
+      "entity_counts_by_type": {
+        "LOC": 218,
+        "ORG": 3,
+        "MISC": 2
+      },
+      "top_entities": {
+        "Secretaria": 106,
+        "Estado de Educação": 16,
+        "Estado de Segurança Pública": 16,
+        "Estado de Saúde": 11,
+        "Estado de Transporte": 9,
+        "Mobilidade": 9,
+        "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 7,
+        "Estado": 7,
+        "Estado de Governo": 6,
+        "Orçamento": 6
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-06-01 a 2024-07-30",
+      "search_keywords": "alimentação escolar",
+      "generated_at": "2025-11-30T17:41:02.933117"
+    },
+    "data": {
+      "total_entities": 253,
+      "entity_counts_by_type": {
+        "LOC": 248,
+        "MISC": 2,
+        "ORG": 2,
+        "PER": 1
+      },
+      "top_entities": {
+        "Secretaria": 122,
+        "Estado de Educação": 19,
+        "Estado de Segurança Pública": 18,
+        "Estado de Saúde": 15,
+        "Estado de Transporte": 11,
+        "Mobilidade": 11,
+        "Estado de Governo": 10,
+        "Estado de Economia": 9,
+        "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 7,
+        "Estado": 7
+      },
+      "total_invested": 675.6,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 675.6
+      },
+      "qualitative_analysis": {
+        "resumo_objeto": "Não há descrição clara de objeto de licitação ou investimento específico, apenas referências a páginas e seções do Diário Oficial para diversas Secretarias.",
+        "justificativa": "Não identificado",
+        "fornecedor": "Não identificado",
+        "marca_modelo": "Não identificado"
+      }
+    }
+  },
+  "summary": {
+    "investment_difference": 675.6,
+    "winner": "B",
+    "generated_at": "2025-11-30T17:41:02.933199"
+  }
+}

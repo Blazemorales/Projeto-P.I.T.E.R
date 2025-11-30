@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-02-29",
+    "search_keywords": "projetor",
+    "generated_at": "2025-11-30T17:53:36.569677"
+  },
+  "data": {
+    "total_entities": 55,
+    "entity_counts_by_type": {
+      "MISC": 29,
+      "LOC": 11,
+      "PER": 10,
+      "ORG": 5
+    },
+    "top_entities": {
+      "Rede de Ensino Público do Distrito Federal": 1,
+      "Projetor Audio LTDA": 1,
+      "Comb SUPORTE": 1,
+      "TELA": 1,
+      "LED IPS": 1,
+      "WINDOWS 10": 1,
+      "VALOR RCA": 1,
+      "QUANTIDADE": 1,
+      "UNITARIO": 1,
+      "ALUGUEL": 1
+    },
+    "total_invested": 1795911.57,
+    "investments_by_category": {
+      "Hardware & Equipamentos": 1795911.57,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "Aquisição de projetores multimídia e equipamentos audiovisuais, além de serviços relacionados a produção de filmes e comunicação visual.",
+      "justificativa": "Aquisição de projetores para serviços administrativos do CBMDF e ampliação/renovação do parque tecnológico do HCB, além de apoio logístico e audiovisual para eventos focados em jovens/estudantes.",
+      "fornecedor": "PRODUMIX COMÉRCIO E SERVIÇOS LTDA. (para os projetores do CBMDF)",
+      "marca_modelo": "Sim. Menciona-se o projetor NEC NC 3200S e o sistema Dolby CP 750 modelo – DA20, além de 'SUPORTE UHD GRAPHICS 620, TELA 14\" LED IPS, WINDOWS 10' para outros itens."
+    }
+  }
+}

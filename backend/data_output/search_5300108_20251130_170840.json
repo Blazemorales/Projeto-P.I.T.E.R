@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-05",
+    "search_keywords": "padrão",
+    "generated_at": "2025-11-30T17:08:40.552506"
+  },
+  "data": {
+    "total_entities": 0,
+    "entity_counts_by_type": {},
+    "top_entities": {},
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Hardware & Equipamentos": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

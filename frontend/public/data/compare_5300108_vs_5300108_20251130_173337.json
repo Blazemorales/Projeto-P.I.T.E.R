@@ -1,0 +1,13 @@
+{
+  "scenario_a": {
+    "error": "Nenhum diário encontrado."
+  },
+  "scenario_b": {
+    "error": "Nenhum diário encontrado."
+  },
+  "summary": {
+    "investment_difference": 0,
+    "winner": "Empate",
+    "generated_at": "2025-11-30T17:33:37.566731"
+  }
+}

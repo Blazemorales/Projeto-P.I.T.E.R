@@ -1,49 +1,50 @@
+# backend/services/api/comparison/comparison_service.py
 from typing import Dict, Any
-from services.integration.piter_api_orchestrator import run_analysis_pipeline
+from services.integration.piter_api_orchestrator import run_analysis_pipeline, save_json_file
+from datetime import datetime
 
 class ComparisonService:
-    """
-    Serviço responsável por orquestrar a comparação entre dois cenários (Municípios ou Períodos).
-    """
-
     async def compare_scenarios(self, 
                                 territory_a: str, date_a_start: str, date_a_end: str,
                                 territory_b: str, date_b_start: str, date_b_end: str,
                                 keywords: str = None) -> Dict[str, Any]:
-        """
-        Executa o pipeline de análise para dois alvos e formata a resposta para comparação.
-        """
         
-        print(f"⚖️ Iniciando Comparação: {territory_a} vs {territory_b}...")
+        print(f"⚖️ Iniciando Comparação...")
 
-        # Executa análise para o Cenário A
+        # Executa Cenário A (save_as_search=False para NÃO sobrescrever a pesquisa principal)
         result_a = await run_analysis_pipeline(
-            territory_id=territory_a,
-            since=date_a_start,
-            until=date_a_end,
-            keywords=keywords
+            territory_a, date_a_start, date_a_end, keywords, save_as_search=False
         )
 
-        # Executa análise para o Cenário B
+        # Executa Cenário B
         result_b = await run_analysis_pipeline(
-            territory_id=territory_b,
-            since=date_b_start,
-            until=date_b_end,
-            keywords=keywords
+            territory_b, date_b_start, date_b_end, keywords, save_as_search=False
         )
 
-        # Calcula Deltas (Diferenças) básicos de investimento
+        # Lógica de Vencedor
         total_a = result_a.get("data", {}).get("total_invested", 0)
         total_b = result_b.get("data", {}).get("total_invested", 0)
-        diff = total_a - total_b
+        diff = abs(total_a - total_b)
         
+        winner = "Empate"
+        if total_a > total_b: winner = "A"
+        elif total_b > total_a: winner = "B"
+
         comparison_data = {
             "scenario_a": result_a,
             "scenario_b": result_b,
             "summary": {
                 "investment_difference": diff,
-                "winner": "A" if total_a > total_b else "B" if total_b > total_a else "Empate"
+                "winner": winner,
+                "generated_at": datetime.now().isoformat()
             }
         }
+
+        # --- SALVA O ARQUIVO DE COMPARAÇÃO ---
+        # Isso cria o 'latest_comparison.json' para a Página de Comparação usar
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"compare_{territory_a}_vs_{territory_b}_{timestamp}.json"
+        
+        save_json_file(comparison_data, filename, is_latest=True, latest_name="latest_comparison.json")
 
         return comparison_data

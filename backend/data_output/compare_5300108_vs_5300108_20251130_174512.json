@@ -1,0 +1,85 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-02-28",
+      "search_keywords": "alimentação escolar",
+      "generated_at": "2025-11-30T17:44:57.877666"
+    },
+    "data": {
+      "total_entities": 140,
+      "entity_counts_by_type": {
+        "ORG": 44,
+        "LOC": 41,
+        "MISC": 39,
+        "PER": 16
+      },
+      "top_entities": {
+        "Distrito Federal": 3,
+        "Brasília": 3,
+        "DODF": 3,
+        "Decreto nº 18.955": 2,
+        "Processo": 2,
+        "Parecer": 2,
+        "Portaria": 2,
+        "Conselho de Educação do Distrito Federal": 2,
+        "Recorrida Fazenda Pública do Distrito Federal": 2,
+        "ABSA": 2
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-06-01 a 2024-07-30",
+      "search_keywords": "alimentação escolar",
+      "generated_at": "2025-11-30T17:45:12.403852"
+    },
+    "data": {
+      "total_entities": 174,
+      "entity_counts_by_type": {
+        "MISC": 55,
+        "ORG": 52,
+        "LOC": 48,
+        "PER": 19
+      },
+      "top_entities": {
+        "INTERESSADA": 4,
+        "Brasília": 4,
+        "Decreto": 3,
+        "DISTRITO FEDERAL": 3,
+        "NUTRIÇÃO": 2,
+        "CC-07": 2,
+        "VOGUE ALIMENTAÇÃO": 2,
+        "Secretário Executivo": 2,
+        "CLÁUSULA PRIMEIRA": 2,
+        "NUPES": 2
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 0.0,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    }
+  },
+  "summary": {
+    "investment_difference": 0.0,
+    "winner": "Empate",
+    "generated_at": "2025-11-30T17:45:12.404220"
+  }
+}
