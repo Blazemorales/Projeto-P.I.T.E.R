@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2025-10-31 a 2025-11-30",
+    "search_keywords": "computador",
+    "generated_at": "2025-11-30T06:35:58.212879"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 39,
+      "MISC": 31,
+      "ORG": 17,
+      "PER": 15
+    },
+    "top_entities": {
+      "ICMS": 5,
+      "TIC": 5,
+      "Brasília": 3,
+      "Decreto": 3,
+      "DIFAL": 3,
+      "Cebraspe": 3,
+      "Secretaria": 2,
+      "Distrito Federal": 2,
+      "Lei Complementar": 2,
+      "“.png": 2
+    },
+    "total_entities": 102,
+    "total_invested": 156865168.86,
+    "investments_by_category": {
+      "Outros (Não categorizado)": 156865168.86
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "O texto menciona provimento de vagas em Cursos de Qualificação Profissional (Operador de Computador, Assistente Administrativo e Auxiliar de Cozinha) e detalhes sobre gestão de redes de computadores e serviços de TIC, além de conversão de licença-prêmio em pecúnia e regras de concurso/inscrição.",
+      "justificativa": "O texto aponta para a qualificação profissional no Centro Educação de Jovens e Adultos e de Educação Profissional de Brasília (CESAS) e necessidades de gestão e suporte em Tecnologia da Informação na Secretaria de Estado de Economia do Distrito Federal (SEEDF).",
+      "fornecedor": "Não identificado",
+      "marca_modelo": "Não identificado"
+    }
+  }
+}

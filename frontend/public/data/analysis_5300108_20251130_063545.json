@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2025-10-31 a 2025-11-30",
+    "search_keywords": "robótica",
+    "generated_at": "2025-11-30T06:35:45.291258"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 101,
+      "MISC": 91,
+      "ORG": 41,
+      "PER": 15
+    },
+    "top_entities": {
+      "Robótica": 27,
+      "Ar Condicionado Asa Sul": 16,
+      "Refrigeração": 15,
+      "Sistemas Eletrônicos de Segurança": 11,
+      "Asa Sul": 10,
+      "CFTV": 10,
+      "Projeto": 5,
+      "Operador de Computador": 4,
+      "Barbeiro": 3,
+      "Costureiro Industrial do Vestuário": 3
+    },
+    "total_entities": 248,
+    "total_invested": 369721.65,
+    "investments_by_category": {
+      "Robótica & Cultura Maker": 369721.65
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "Diversos equipamentos e materiais relacionados à robótica, como Drones, Câmeras IP, Projetores, Óculos de RV, placas Arduino/Raspberry Pi, e impressora 3D, além da oferta de cursos de qualificação profissional.",
+      "justificativa": "Apoio à realização do projeto \"COMPETIÇÃO ROBÓTICA CERRADO DO FUTURO\", implantação de laboratório de robótica de acesso público e oferta de cursos de qualificação profissional (incluindo robótica, programação e novas tecnologias).",
+      "fornecedor": "INSTITUTO SARANDO AS NAÇÕES; INSTITUTO BRASIL SAPIENS (para o projeto \"QUALIFICATECH\")",
+      "marca_modelo": "Sim, Placas Arduino, Placa Raspberry Pi, Impressora 3D + Controladora LDC"
+    }
+  }
+}

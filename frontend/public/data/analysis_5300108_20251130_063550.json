@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2025-10-31 a 2025-11-30",
+    "search_keywords": "tablet",
+    "generated_at": "2025-11-30T06:35:50.412475"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 48,
+      "MISC": 39,
+      "ORG": 19,
+      "PER": 9
+    },
+    "top_entities": {
+      "Distrito Federal": 5,
+      "Edital": 4,
+      "Tablet": 4,
+      "VII": 3,
+      "Secretaria": 3,
+      "TIC": 3,
+      "Termo de Referência": 2,
+      "Anexos": 2,
+      "Estudantes do Ensino Fundamental": 2,
+      "Ensino Fundamental": 2
+    },
+    "total_entities": 115,
+    "total_invested": 1137216.3,
+    "investments_by_category": {
+      "Hardware & Equipamentos": 1080816.3,
+      "Outros (Não categorizado)": 56400.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "Diversos investimentos em bens e serviços, com destaque para a aquisição de equipamentos de informática (computadores, notebooks, tablets) e suprimentos químicos para piscinas.",
+      "justificativa": "Suprir o retorno ao trabalho presencial de empregados, novas contratações, atender demandas de secretarias (como SEDET e SLU/DF), apoiar projetos sociais (Territórios Amigos das Crianças) e promover a acessibilidade tecnológica para a população de baixa renda.",
+      "fornecedor": "VHDS LTDA, MICROSENS S/A, J C TECNOLOGIAS E INFORMÁTICA LTDA (Empresas contratadas ou sagradas campeãs em diferentes processos licitatórios mencionados).",
+      "marca_modelo": "Sim: Tablet (SANSUNG S9 FE 5G) é mencionado em um contrato específico; outros itens são genéricos como computador, tablet, switch, servidor, e produtos químicos para piscinas."
+    }
+  }
+}

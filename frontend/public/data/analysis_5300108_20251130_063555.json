@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2025-10-31 a 2025-11-30",
+    "search_keywords": "robótica",
+    "generated_at": "2025-11-30T06:35:55.852211"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 101,
+      "MISC": 91,
+      "ORG": 41,
+      "PER": 15
+    },
+    "top_entities": {
+      "Robótica": 27,
+      "Ar Condicionado Asa Sul": 16,
+      "Refrigeração": 15,
+      "Sistemas Eletrônicos de Segurança": 11,
+      "Asa Sul": 10,
+      "CFTV": 10,
+      "Projeto": 5,
+      "Operador de Computador": 4,
+      "Barbeiro": 3,
+      "Costureiro Industrial do Vestuário": 3
+    },
+    "total_entities": 248,
+    "total_invested": 369721.65,
+    "investments_by_category": {
+      "Robótica & Cultura Maker": 369721.65
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "Investimento em equipamentos de robótica, câmeras IP, projetores, óculos de realidade virtual, placas Arduino/Raspberry Pi, impressora 3D e kits de robótica educacional, além de fomento a projetos e cursos de qualificação profissional.",
+      "justificativa": "Provimento de vagas em Cursos de Qualificação Profissional (incluindo Robótica), implantação de laboratório de robótica de acesso público e realização de projetos como \"COMPETIÇÃO ROBÓTICA CERRADO DO FUTURO\" e \"QUALIFICATECH\".",
+      "fornecedor": "INSTITUTO SARANDO AS NAÇÕES, INSTITUTO BRASIL SAPIENS (e outros proponentes não detalhados como vencedores finais em processos licitatórios diretos).",
+      "marca_modelo": "Sim, há menção específica a Drones Robótica, Câmera Wireless IP Robótica, Projetor led Robótica, Óculo de realidade virtual Robótica, Placas arduino Robótica, Placa Raspberry Pi Robótica, Photoboard Robótica, Jumpers Robótica, Leds e motores Robótica, Impressora 3D + Controladora LDC Robótica."
+    }
+  }
+}
