@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-05",
+    "search_keywords": "notebook",
+    "generated_at": "2025-11-30T16:19:52.919415"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "MISC": 6,
+      "ORG": 2,
+      "LOC": 1
+    },
+    "top_entities": {
+      "Decreto Federal": 1,
+      "Decretos Distritais": 1,
+      "Lei nº 8.666/1993": 1,
+      "Notebook": 1,
+      "Marca": 1,
+      "Modelo: Positivo Master N6440": 1,
+      "TOTAL": 1,
+      "DOTAÇÃO ORÇAMENTÁRIA": 1,
+      "Unidade Orçamentária": 1
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

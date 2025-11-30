@@ -1,148 +1,116 @@
-# backend/services/api/clients/querido_diario_client.py
-
 import httpx
+import logging
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
-from datetime import date
+from typing import Optional, Dict, Any, List
+from datetime import datetime, date
 
-QUERIDO_DIARIO_API_URL = "https://api.queridodiario.ok.org.br/api" # <-- Corrigido
+# URL Direta da API
+QUERIDO_DIARIO_API_URL = "https://api.queridodiario.ok.org.br"
 
-async def fetch_gazettes(territory_id: str, since: str, until: str, keywords: str = None) -> Optional[Dict[Any, Any]]:
-    """
-    Busca diários oficiais com palavras-chave específicas.
-    """
-    url = f"{QUERIDO_DIARIO_API_URL}/gazettes"
-    
-    # Se não passar keyword, usa uma padrão focada em gastos para garantir resultados
-    query_term = keywords if keywords else "educação tecnologia informática"
-    
-    params = {
-        "territory_ids": territory_id,
-        "since": since,
-        "until": until,
-        "size": 50, # Pode aumentar para 100 para ter mais dados
-        "querystring": query_term # <-- Usa a variável dinâmica aqui
-    }
-    
-    try:
-        # --- CORREÇÃO: follow_redirects=True segue o link novo automaticamente ---
-        async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
-            print(f"Buscando em: {url} (com redirecionamento automático)")
-            response = await client.get(url, params=params)
-            
-            # Se der erro 404 ou 500, vai cair aqui
-            response.raise_for_status() 
-            
-            data = response.json()
-            print(f"Querido Diário: Encontrados {data.get('total_gazettes', 0)} diários.")
-            return data
-    
-    except httpx.HTTPStatusError as e:
-        print(f"Erro HTTP ao buscar dados do Querido Diário: Status {e.response.status_code}")
-        print(f"Detalhes: {e.response.text[:200]}...") # Mostra o início do erro para ajudar no debug
-        return None
-    except httpx.RequestError as e:
-        print(f"Erro de CONEXÃO ao buscar dados do Querido Diário: {e}")
-        return None
-    except Exception as e:
-        print(f"Erro inesperado no cliente do Querido Diário: {e}")
-        return None
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 class FilterParams(BaseModel):
-    """Modelo para os parâmetros de filtro da API do Querido Diário."""
     territory_ids: Optional[str] = None
     published_since: Optional[date] = None
     published_until: Optional[date] = None
     querystring: Optional[str] = None
     size: Optional[int] = 10
 
+async def fetch_gazettes(territory_id: str, since: str, until: str, keywords: str = None) -> Optional[Dict[Any, Any]]:
+    """
+    Busca diários usando PAGINAÇÃO (Varredura) e filtro manual de datas.
+    Essencial para encontrar diários específicos quando a API prioriza relevância.
+    """
+    url = f"{QUERIDO_DIARIO_API_URL}/gazettes/"
+    query_term = keywords if keywords else "educação tecnologia informática"
+    
+    # --- CONFIGURAÇÃO DA VARREDURA ---
+    # Lê até 5 páginas (500 documentos) para tentar achar a data certa no meio da relevância
+    PAGES_TO_SCAN = 5
+    PAGE_SIZE = 100
+    
+    collected_gazettes = []
+    
+    try:
+        target_start = datetime.strptime(since, "%Y-%m-%d").date()
+        target_end = datetime.strptime(until, "%Y-%m-%d").date()
+    except ValueError:
+        logger.error(f"Datas inválidas: {since} - {until}")
+        return {"gazettes": [], "total_gazettes": 0}
+
+    logger.info(f"🕵️ INICIANDO VARREDURA: '{query_term}' de {since} até {until}")
+
+    async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
+        for page in range(PAGES_TO_SCAN):
+            params = {
+                "territory_ids": territory_id,
+                "since": since,
+                "until": until,
+                "size": PAGE_SIZE,
+                "offset": page * PAGE_SIZE, # Pula para a próxima página
+                "querystring": query_term
+            }
+            
+            try:
+                response = await client.get(url, params=params)
+                
+                if response.status_code != 200:
+                    logger.warning(f"  ⚠️ Erro na pág {page+1}: HTTP {response.status_code}")
+                    break 
+
+                data = response.json()
+                batch = data.get("gazettes", [])
+                
+                if not batch:
+                    break # Acabaram os resultados da API
+
+                # --- FILTRO MANUAL DE DATA ---
+                count_in_batch = 0
+                for gazette in batch:
+                    raw_date = gazette.get("date")
+                    if not raw_date: continue
+                    
+                    try:
+                        g_date = datetime.strptime(str(raw_date)[:10], "%Y-%m-%d").date()
+                        
+                        # Só guarda se for EXATAMENTE do período pedido
+                        if target_start <= g_date <= target_end:
+                            collected_gazettes.append(gazette)
+                            count_in_batch += 1
+                            
+                    except ValueError:
+                        continue
+                
+                # Opcional: Log para ver o progresso
+                # logger.info(f"  - Pág {page+1}: {len(batch)} baixados, {count_in_batch} úteis.")
+
+            except Exception as e:
+                logger.error(f"  ❌ Erro na requisição da pág {page}: {e}")
+                break
+    
+    total_found = len(collected_gazettes)
+    logger.info(f"✅ VARREDURA CONCLUÍDA. Encontrados {total_found} diários válidos no período.")
+    
+    return {
+        "gazettes": collected_gazettes,
+        "total_gazettes": total_found
+    }
+
+# --- Wrapper Class (Compatibilidade) ---
 class QueridoDiarioClient:
-    BASE_URL = "https://api.queridodiario.ok.org.br/api/gazettes" # <-- Corrigido
+    BASE_URL = f"{QUERIDO_DIARIO_API_URL}/gazettes/"
 
     async def fetch_gazettes(self, filters: FilterParams) -> Dict[str, Any]:
         params = filters.dict(exclude_none=True)
-        # Adiciona follow_redirects aqui também
+        if 'published_since' in params: params['since'] = params.pop('published_since').strftime("%Y-%m-%d")
+        if 'published_until' in params: params['until'] = params.pop('published_until').strftime("%Y-%m-%d")
+
         async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
             response = await client.get(self.BASE_URL, params=params)
             response.raise_for_status()
-
-            # Garantir codificação UTF-8 correta
-            response.encoding = 'utf-8'
-            data = response.json()
-
-            # Corrigir problemas de codificação nos excerpts
-            if 'gazettes' in data:
-                for gazette in data['gazettes']:
-                    if 'excerpts' in gazette and gazette['excerpts']:
-                        gazette['excerpts'] = [
-                            self._fix_encoding(excerpt) if isinstance(excerpt, str) else excerpt
-                            for excerpt in gazette['excerpts']
-                        ]
-
-            print("Resposta do Querido Diário:", data) # Ótimo para depuração
-            return data
-
-    def _fix_encoding(self, text: str) -> str:
-        """Corrige problemas comuns de codificação de caracteres."""
-        if not text:
-            return text
-
-        # Dicionário de substituições para caracteres mal codificados
-        replacements = {
-            '�': '',  # Remove caracteres de interrogação
-            'ç': 'ç',
-            'ã': 'ã',
-            'á': 'á',
-            'â': 'â',
-            'à': 'à',
-            'ê': 'ê',
-            'é': 'é',
-            'í': 'í',
-            'ô': 'ô',
-            'ó': 'ó',
-            'ú': 'ú',
-            'ü': 'ü',
-            'Ç': 'Ç',
-            'Ã': 'Ã',
-            'Á': 'Á',
-            'Â': 'Â',
-            'À': 'À',
-            'Ê': 'Ê',
-            'É': 'É',
-            'Í': 'Í',
-            'Ô': 'Ô',
-            'Ó': 'Ó',
-            'Ú': 'Ú',
-            'Ü': 'Ü',
-        }
-
-        # Aplicar correções específicas para caracteres mal codificados
-        fixed_text = text
-
-        # Corrigir padrões específicos encontrados
-        fixed_text = fixed_text.replace('incen�var', 'incentivar')
-        fixed_text = fixed_text.replace('inicia�va', 'iniciativa')
-        fixed_text = fixed_text.replace('a�vidades', 'atividades')
-        fixed_text = fixed_text.replace('a�ões', 'ações')
-
-        # Remover caracteres de interrogação isolados
-        import re
-        fixed_text = re.sub(r'[�]+', '', fixed_text)
-
-        return fixed_text
-
+            return response.json()
+    
     async def search_gazettes(self, territory_id: str, start_date: str, end_date: str, keywords: list):
-        """Compatibility wrapper expected by RankingService.
-
-        The older RankingService calls `search_gazettes(...)`. Provide a
-        thin wrapper that delegates to the module-level `fetch_gazettes`
-        implementation (which performs the actual HTTP request).
-
-        Args:
-            territory_id: Código IBGE do território
-            start_date: Data inicial (YYYY-MM-DD)
-            end_date: Data final (YYYY-MM-DD)
-            keywords: Lista de palavras-chave para filtrar os resultados
-        """
-        # Passa as keywords para fetch_gazettes para uso no querystring
-        return await fetch_gazettes(str(territory_id), str(start_date), str(end_date), keywords)
+        query = " ".join(keywords) if keywords else None
+        return await fetch_gazettes(str(territory_id), str(start_date), str(end_date), query)

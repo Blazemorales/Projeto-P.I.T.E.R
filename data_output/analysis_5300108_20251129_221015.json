@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-02-01 a 2024-02-28",
+    "search_keywords": "computador",
+    "generated_at": "2025-11-29T22:10:15.465749"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 39,
+      "MISC": 31,
+      "ORG": 17,
+      "PER": 15
+    },
+    "top_entities": {
+      "ICMS": 5,
+      "Cebraspe": 3,
+      "Decreto": 3,
+      "Brasília": 3,
+      "DIFAL": 3,
+      "Distrito Federal": 2,
+      "Secretaria": 2,
+      "Lei Complementar": 2,
+      "pecúnia": 2,
+      "DODF": 2
+    },
+    "total_invested": 156865028.86,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 156865028.86
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "O texto menciona a oferta de Cursos de Qualificação Profissional (Operador de Computador, Assistente Administrativo e Auxiliar de Cozinha) e discute atividades relacionadas à gestão de redes de computadores, além de despesas de pessoal e benefícios previdenciários.",
+      "justificativa": "Investimento em qualificação profissional, gestão de infraestrutura de Tecnologia da Informação e pagamento de benefícios de servidores.",
+      "fornecedor": "Não identificado",
+      "marca_modelo": "Não identificado"
+    }
+  }
+}

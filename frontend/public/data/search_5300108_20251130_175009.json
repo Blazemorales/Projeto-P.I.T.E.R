@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-02-29",
+    "search_keywords": "projetor",
+    "generated_at": "2025-11-30T17:50:09.381189"
+  },
+  "data": {
+    "total_entities": 55,
+    "entity_counts_by_type": {
+      "MISC": 29,
+      "LOC": 11,
+      "PER": 10,
+      "ORG": 5
+    },
+    "top_entities": {
+      "Rede de Ensino Público do Distrito Federal": 1,
+      "Projetor Audio LTDA": 1,
+      "Comb SUPORTE": 1,
+      "TELA": 1,
+      "LED IPS": 1,
+      "WINDOWS 10": 1,
+      "VALOR RCA": 1,
+      "QUANTIDADE": 1,
+      "UNITARIO": 1,
+      "ALUGUEL": 1
+    },
+    "total_invested": 1795911.57,
+    "investments_by_category": {
+      "Hardware & Equipamentos": 1795911.57,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "O texto menciona a aquisição de projetores multimídia e equipamentos para ampliação/renovação de parque tecnológico, além de detalhar a estrutura de um cinema.",
+      "justificativa": "Aquisição de projetores para serviços administrativos do CBMDF e equipamentos para o Parque Tecnológico do HCB, além de suporte audiovisual para jovens em um espaço logístico.",
+      "fornecedor": "PRODUMIX COMÉRCIO E SERVIÇOS LTDA.",
+      "marca_modelo": "Sim, NEC NC 3200S para projetor cinematográfico e menção a SUPORTE UHD GRAPHICS para notebooks/computadores."
+    }
+  }
+}

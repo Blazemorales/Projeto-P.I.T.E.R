@@ -1,0 +1,95 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-01-31",
+      "search_keywords": "impressora",
+      "generated_at": "2025-11-30T17:54:06.434376"
+    },
+    "data": {
+      "total_entities": 25,
+      "entity_counts_by_type": {
+        "MISC": 13,
+        "ORG": 6,
+        "PER": 4,
+        "LOC": 2
+      },
+      "top_entities": {
+        "CNPJ": 3,
+        "Unidade": 2,
+        "CACI": 2,
+        "AMC Informática Ltda": 2,
+        "Contrato": 2,
+        "RK NEGOCIAÇÕES23": 1,
+        "Hospital Regional do Guará": 1,
+        "TÉRMICA ZEBRA GC420D": 1,
+        "IMPRESSORA": 1,
+        "TÉRMICA": 1
+      },
+      "total_invested": 367234.5,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 367234.5,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {
+        "resumo_objeto": "O texto menciona a contratação de serviços de impressão com fornecimento de impressoras multifuncionais e a aquisição de etiquetas autoadesivas térmicas para impressora térmica Zebra.",
+        "justificativa": "O primeiro contrato (09/2019 CACI) visa atender unidades com serviços de impressão, e o segundo item é para atender as necessidades do Hospital Regional do Guará.",
+        "fornecedor": "AMC Informática Ltda. (Contrato 09/2019 CACI) e RK NEGOCIAÇÕES23 (Aquisição de etiquetas). A Windoc Gestão de Documentos Ltda. é citada como vencedora para um item não totalmente descrito no trecho.",
+        "marca_modelo": "Sim, impressora térmica Zebra GC420D (para as etiquetas)."
+      }
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-06-01 a 2024-06-30",
+      "search_keywords": "impressora",
+      "generated_at": "2025-11-30T17:54:18.626552"
+    },
+    "data": {
+      "total_entities": 82,
+      "entity_counts_by_type": {
+        "MISC": 35,
+        "ORG": 22,
+        "LOC": 19,
+        "PER": 6
+      },
+      "top_entities": {
+        "CNPJ": 5,
+        "DOZE": 2,
+        "SECRETARIA": 2,
+        "DISTRITO FEDERAL": 2,
+        "Equipamentos: APARELHOS DE RAIOS": 2,
+        "IMPRESSORA FOTOTERMOGRÁFICA": 2,
+        "Sistema de Registro de Preços": 2,
+        "Secretaria de Saúde": 2,
+        "Edital de Pregão Eletrônico": 2,
+        "Secretaria": 2
+      },
+      "total_invested": 337053.87,
+      "investments_by_category": {
+        "Hardware & Equipamentos": 337053.87,
+        "Conectividade": 0.0,
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Infraestrutura de TI": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {
+        "resumo_objeto": "O texto descreve a prestação de serviços de assistência técnica para manutenção de impressoras, aquisição de consumíveis como fitas cartucho e etiquetas, e aquisição de módulos de acabamento para impressoras gráficas.",
+        "justificativa": "Os investimentos visam a manutenção de equipamentos de saúde (autoclaves e Raio X), suporte técnico para equipamentos de impressão e suprimento para a produção gráfica da Câmara Legislativa.",
+        "fornecedor": "WINDOC GESTÃO DE DOCUMENTOS LTDA, CARDIOBRAS, GILMAR PEREIRA COSTA, HEALTH, SCIENTIFIC DENTAL MEDICAL LTDA, Technocopy Service LTDA ME, FABIO B GARCIA - PECAS",
+        "marca_modelo": "Sim: Xerox Versant 280 Press, LEXMARK CX725DHE, SAMSUNG SL-M40, Xerox Versant 180 Press, ZEBRA GC420D"
+      }
+    }
+  },
+  "summary": {
+    "investment_difference": 30180.630000000005,
+    "winner": "A",
+    "generated_at": "2025-11-30T17:54:18.626594"
+  }
+}

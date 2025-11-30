@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-02-01 a 2024-02-29",
+    "search_keywords": "internet",
+    "generated_at": "2025-11-30T16:27:04.049764"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "MISC": 23,
+      "ORG": 12,
+      "LOC": 12,
+      "PER": 1
+    },
+    "top_entities": {
+      "Companhia": 3,
+      "internet": 3,
+      "Lei Distrital": 2,
+      "Distrito Federal": 2,
+      "Internet": 2,
+      "DISTRITO FEDERAL": 1,
+      "Anexo I - Cronograma": 1,
+      "Edital": 1,
+      "Formulário Eletrônico": 1,
+      "Agência": 1
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}
