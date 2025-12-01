@@ -35,8 +35,8 @@ const Navbar_sec = () => {
               const baseStyle =
                 "flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-200 text-sm font-medium";
               const activeStyle = active
-                ? "bg-[#06080F]/70 text-[#F0EBD8] shadow"
-                : "text-gray-800 hover:bg-[#06080F]/80 hover:text-[#F0EBD8]";
+                ? "bg-[#022C3C]/70 text-[#E1E5F2] shadow"
+                : "text-gray-800 hover:bg-[#022C3C]/80 hover:text-[#E1E5F2]";
               const linkClass = `${baseStyle} ${activeStyle}`;
 
               return (

@@ -8,8 +8,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --piter-grad-start: 153, 171, 194; /* light blue */
-  --piter-grad-end: 70, 105, 134; /* darker blue */
+  --piter-grad-start: 191, 219, 247; /* light blue */
+  --piter-grad-end: 31, 122, 140; /* darker blue */
   --card-bg: 255, 255, 255;
 }
 
@@ -53,7 +53,7 @@ input[type="date"],
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-  background-color: #F0EBD8 !important;
+  background-color: #FFFFFF !important;
   color: #06080F !important;
   caret-color: #06080F !important;
 }
@@ -62,7 +62,7 @@ input[type="date"]:focus,
 input[type="email"]:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
-  background-color: #F0EBD8 !important;
+  background-color: #FFFFFF !important;
   color: #06080F !important;
   caret-color: #06080F !important;
   outline: none !important;

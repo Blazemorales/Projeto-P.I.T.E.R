@@ -24,7 +24,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({
   loading = false,
 }) => {
   return (
-    <div className="bg-[#F0EBD8] p-6 rounded-lg shadow-md space-y-4">
+    <div className="bg-[#FFFFFF] p-6 rounded-lg shadow-md space-y-4">
       <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5 gap-4">
           <Select
             label="Município 1"

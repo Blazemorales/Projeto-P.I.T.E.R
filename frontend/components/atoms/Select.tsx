@@ -30,7 +30,7 @@ export const Select: React.FC<SelectProps> = ({
 }) => {
   const selectClasses = [
     'w-full px-3 py-2.5 border border-transparent rounded-md shadow-lg',
-    'bg-[#F0EBD8] focus:outline-none focus:ring-2 focus:ring-[#06080F]/80 focus:border-[#06080F]/80',
+    'bg-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-[#06080F]/80 focus:border-[#06080F]/80',
     'disabled:bg-gray-50 disabled:text-gray-500 disabled:border-gray-200',
     className,
   ].join(' ');
