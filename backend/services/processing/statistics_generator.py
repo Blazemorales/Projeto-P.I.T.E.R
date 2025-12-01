@@ -1,5 +1,8 @@
 import re
 from typing import List, Dict, Any
+from datetime import datetime
+from collections import defaultdict
+
 
 try:
     import pandas as pd
@@ -8,35 +11,35 @@ except Exception:
 
 # --- MAPEAMENTO: Categoria de Tecnologia ---
 CATEGORY_MAP = {
-    "Hardware & Equipamentos": [
-        "computador", "computadores", "notebook", "notebooks", "laptop", 
-        "tablet", "tablets", "chromebook", "desktop", "impressora", 
-        "projetor", "datashow", "lousa digital", "monitor", "tela interativa",
-        "nobreak", "estabilizador", "servidor", "laboratório de informática",
-        "microcomputador", "processamento de dados"
-    ],
-    "Conectividade": [
-        "internet", "wi-fi", "wifi", "banda larga", "fibra óptica", 
-        "link de dados", "roteador", "switch", "cabeamento", "rede lógica", 
-        "acesso à internet", "ponto de acesso", "access point"
-    ],
     "Software e Licenças": [
-        "licença de software", "sistema de gestão", "aplicativo", "app", 
-        "plataforma digital", "ambiente virtual", "ava", "google workspace", 
-        "microsoft office", "antivírus", "sistema acadêmico", "software educativo",
-        "jogos digitais", "gamificação", "sistemas informatizados"
+        "licença de software", "licença de sistema", "licença de aplicativo",
+        "sistema de gestão", "sistema acadêmico", "sistemas informatizados",
+        "aplicativo", "app", "plataforma digital", "plataforma online",
+        "ambiente virtual", "ava", "ambiente virtual de aprendizagem",
+        "google workspace", "microsoft office",
+        "software educativo", "software educacional",
+        "jogos digitais", "gamificação",
+        "antivírus"
     ],
+
     "Robótica e Maker": [
-        "robótica", "kit de robótica", "arduino", "lego education", "cultura maker", 
-        "impressora 3d", "filamento", "cortadora a laser", "programação", 
-        "componentes eletrônicos", "scratch", "micro:bit"
-    ],
-    "Infraestrutura de TI": [
-        "ar condicionado para laboratório", "instalação elétrica", "adequação de sala",
-        "segurança da informação", "suporte técnico", "manutenção de computadores",
-        "formação tecnológica", "capacitação em tecnologia", "outsourcing de impressão"
+        # Robótica em geral
+        "robótica", "robótica educacional",
+        "kit de robótica", "kit de robótica educacional",
+        "arduino", "curso de robótica", "oficina de robótica",
+        "laboratório de robótica",
+        "programação", "programação educacional",
+        "scratch", "micro:bit",
+        "componentes eletrônicos",
+
+        # Cultura maker / equipamentos
+        "cultura maker", 
+        "impressora 3d", "filamento",
+        "cortadora a laser",
+        "lego education"
     ]
 }
+
 
 # --- FILTRO DE EXCLUSÃO CORRIGIDO (SEM 'dotação') ---
 EXCLUSION_TERMS = [
@@ -56,6 +59,41 @@ EXCLUSION_TERMS = [
 class StatisticsGenerator:
     def __init__(self):
         pass
+
+    def _parse_date(self, date_value):
+        """Tenta converter diferentes formatos de data para `datetime`.
+        Retorna `None` se não for possível parsear.
+        """
+        if not date_value:
+            return None
+
+        if isinstance(date_value, datetime):
+            return date_value
+
+        if isinstance(date_value, str):
+            s = date_value.strip()
+            # Tenta ISO primeiro
+            try:
+                return datetime.fromisoformat(s)
+            except Exception:
+                pass
+
+            # Tenta formatos comuns
+            for fmt in ("%Y-%m-%d", "%Y-%m-%dT%H:%M:%S", "%d/%m/%Y", "%d-%m-%Y"):
+                try:
+                    return datetime.strptime(s, fmt)
+                except Exception:
+                    continue
+
+            # Extrai primeiro trecho YYYY-MM-DD se presente
+            m = re.search(r"(\d{4}-\d{2}-\d{2})", s)
+            if m:
+                try:
+                    return datetime.strptime(m.group(1), "%Y-%m-%d")
+                except Exception:
+                    pass
+
+        return None
 
     def generate_statistics(self, gazette_data: List[Dict[str, Any]]) -> Dict[str, Any]:
         if isinstance(gazette_data, dict) and 'gazettes' in gazette_data:
@@ -84,12 +122,30 @@ class StatisticsGenerator:
 
         return stats
 
-    def extract_investment_statistics(self, gazettes: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def extract_investment_statistics(self, gazettes: List[Dict[str, Any]], selected_category: str = None) -> Dict[str, Any]:
         total_invested = 0.0
         category_totals = {cat: 0.0 for cat in CATEGORY_MAP.keys()}
         category_totals["Outros"] = 0.0
 
         money_re = re.compile(r"(?:R\$\s?)?(\d{1,3}(?:\.\d{3})*,\d{2})")
+        # Preparar intervalo de datas para decidir agrupamento (mês vs ano)
+        parsed_dates = [self._parse_date(g.get('date')) for g in gazettes if g.get('date')]
+        parsed_dates = [d for d in parsed_dates if d is not None]
+        time_series = {}
+        group_by = None
+
+        if selected_category and parsed_dates:
+            start_date = min(parsed_dates)
+            end_date = max(parsed_dates)
+            delta_days = (end_date - start_date).days
+            # Até um ano (considerando ano bissexto) -> agrupar por mês
+            if delta_days <= 366:
+                group_by = 'month'
+            else:
+                group_by = 'year'
+
+            # usar defaultdict para acumular rapidamente
+            ts_acc = defaultdict(float)
 
         for gazette in gazettes:
             text_content = ""
@@ -135,13 +191,29 @@ class StatisticsGenerator:
                 total_invested += clean_value
                 category_totals[found_category] += clean_value
 
+                # Se solicitado, acumular série temporal apenas para a categoria selecionada
+                if selected_category and found_category == selected_category:
+                    gazette_date = self._parse_date(gazette.get('date'))
+                    if gazette_date:
+                        if group_by == 'month':
+                            bucket = f"{gazette_date.year}-{gazette_date.month:02d}"
+                        else:
+                            bucket = f"{gazette_date.year}"
+                        ts_acc[bucket] += clean_value
+
         total_invested = round(total_invested, 2)
         category_totals = {k: round(v, 2) for k, v in category_totals.items()}
-        
-        return {
+        result = {
             "total_invested": total_invested,
             "investments_by_category": category_totals
         }
+
+        if selected_category:
+            # converter acumulador para dict ordenado por chave (cronológico por formato)
+            time_series = {k: round(v, 2) for k, v in sorted(ts_acc.items())}
+            result["time_series"] = time_series
+
+        return result
 
     def calculate_entity_statistics(self, entities: List[Dict[str, str]]) -> Dict[str, Any]:
         if not entities:
