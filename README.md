@@ -8,6 +8,20 @@ Plataforma para busca e análise de diários oficiais municipais com foco em inv
 
 - ** Documentação**: [https://unb-mds.github.io/Projeto-P.I.T.E.R/](https://unb-mds.github.io/Projeto-P.I.T.E.R/)
 - ** Design (Figma)**: [https://www.figma.com/design/SrD9XAdENSImL4DVWmEZD5/Organização-MDS](https://www.figma.com/design/SrD9XAdENSImL4DVWmEZD5/Organiza%C3%A7%C3%A3o-MDS?node-id=0-1&t=0wOi8rZ1ZfIk7Juu-1)
+- **📚 Guia Rápido de Integração**: [GUIA_INTEGRACAO_RAPIDA.md](./GUIA_INTEGRACAO_RAPIDA.md)
+- **🏗️ Arquitetura da Integração**: [ARQUITETURA_INTEGRACAO.md](./ARQUITETURA_INTEGRACAO.md)
+
+---
+
+## ✨ Novidade: Integração Backend ↔ Frontend Completa
+
+A integração está **100% funcional** com 3 fluxos principais:
+
+| Fluxo | Descrição | Endpoint |
+|-------|-----------|----------|
+| 🔍 **Busca Simples** | Busca rápida de diários na API Querido Diário | `GET /api/v1/gazettes` |
+| 🤖 **Análise com IA** | Pipeline NER + Estatísticas + Gemini AI | `GET /analyze` |
+| ⚖️ **Comparação** | Compara investimentos entre 2 territórios | `GET /compare` |
 
 ---
 
@@ -15,25 +29,35 @@ Plataforma para busca e análise de diários oficiais municipais com foco em inv
 
 ```
 frontend/          # Next.js React Application
-├── app/              # Next.js App Router
-├── components/       # React Components (Atomic Design)
-│   ├── atoms/        # Componentes básicos
-│   ├── molecules/    # Componentes compostos
-│   └── organisms/    # Componentes complexos
-├── hooks/            # Custom React Hooks
-├── types/            # TypeScript Types
-├── package.json      # Frontend Dependencies
-└── tailwind.config.js # Configuração TailwindCSS
+├── services/
+│   └── backend-integration.ts     ✅ NOVO - Serviço centralizado
+├── hooks/
+│   ├── useBackendAnalysis.ts      ✅ NOVO - Hook para análise
+│   ├── useComparisonService.ts    ✅ NOVO - Hook para comparação
+│   └── useGazetteSearch.ts
+├── types/
+│   └── index.ts                   ✅ ATUALIZADO com tipos novos
+├── components/
+│   ├── pages/
+│   │   └── dashboard-pesquisa.tsx ✅ ATUALIZADO com 3 abas
+│   └── exemplos/
+│       └── ExemplosIntegracao.tsx ✅ NOVO - 4 exemplos práticos
+├── public/data/
+│   ├── latest_search.json
+│   └── latest_comparison.json
+└── .env.local                      ✅ CONFIGURADO
 
 backend/           # FastAPI Python API
-├── services/         # Business Logic & External APIs
-│   ├── api/clients/  # Clientes para APIs externas
-│   └── integration/  # Orquestradores de integração
-├── main.py           # FastAPI Application
-├── requirements.txt  # Python Dependencies
-└── venv/             # Virtual Environment
+├── main.py                         ✅ FastAPI com CORS
+├── services/
+│   ├── integration/
+│   │   └── piter_api_orchestrator.py
+│   └── api/comparison/
+│       └── comparison_service.py
+├── data_output/                    ✅ Análises salvas
+└── requirements.txt
 
-docker-compose.yml # Orquestração Local
+docker-compose.yml                 ✅ Orquestração completa
 ```
 
 ---

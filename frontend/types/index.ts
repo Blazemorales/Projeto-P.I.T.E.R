@@ -84,3 +84,75 @@ export const CATEGORIES = [
 
 export type Municipality = typeof MUNICIPALITIES[number];
 export type Category = typeof CATEGORIES[number];
+
+// TIPOS PARA INTEGRAÇÃO COM BACKEND - Análise e Comparação
+
+export interface EntityCount {
+  [key: string]: number;
+}
+
+export interface TopEntities {
+  [key: string]: {
+    count: number;
+    type: string;
+  };
+}
+
+export interface InvestmentsByCategory {
+  [category: string]: number;
+}
+
+export interface QualitativeAnalysis {
+  resumo_objeto: string;
+  justificativa: string;
+  fornecedor: string;
+  marca_modelo: string;
+}
+
+export interface AnalysisMeta {
+  source_territory: string;
+  period: string;
+  search_keywords: string;
+  generated_at: string;
+}
+
+export interface AnalysisData {
+  total_entities: number;
+  entity_counts_by_type: EntityCount;
+  top_entities: TopEntities;
+  total_invested: number;
+  investments_by_category: InvestmentsByCategory;
+  qualitative_analysis: QualitativeAnalysis;
+}
+
+export interface AnalysisResponse {
+  meta: AnalysisMeta;
+  data: AnalysisData;
+}
+
+export interface ComparisonMeta {
+  territory_a: string;
+  territory_a_name: string;
+  period_a: string;
+  territory_b: string;
+  territory_b_name: string;
+  period_b: string;
+  search_keywords: string;
+  generated_at: string;
+}
+
+export interface ComparisonData {
+  territory_a_analysis: AnalysisData;
+  territory_b_analysis: AnalysisData;
+  differences: {
+    investment_diff: number;
+    investment_percentage: number;
+    entities_diff: number;
+    winner: string;
+  };
+}
+
+export interface ComparisonResponse {
+  meta: ComparisonMeta;
+  data: ComparisonData;
+}
