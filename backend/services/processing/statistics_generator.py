@@ -11,20 +11,6 @@ except Exception:
 
 # --- MAPEAMENTO: Categoria de Tecnologia ---
 CATEGORY_MAP = {
-    "Hardware & Equipamentos": [
-        "computador", "computadores", "notebook", "notebooks", "laptop", 
-        "tablet", "tablets", "chromebook", "desktop", "impressora", 
-        "projetor", "datashow", "lousa digital", "monitor", "tela interativa",
-        "nobreak", "estabilizador", "servidor", "laboratório de informática",
-        "microcomputador", "processamento de dados"
-    ],
-
-    "Conectividade": [
-        "internet", "wi-fi", "wifi", "banda larga", "fibra óptica", 
-        "link de dados", "roteador", "switch", "cabeamento", "rede lógica", 
-        "acesso à internet", "ponto de acesso", "access point"
-    ],
-
     "Software e Licenças": [
         "licença de software", "licença de sistema", "licença de aplicativo",
         "sistema de gestão", "sistema acadêmico", "sistemas informatizados",
@@ -51,12 +37,6 @@ CATEGORY_MAP = {
         "impressora 3d", "filamento",
         "cortadora a laser",
         "lego education"
-    ],
-
-    "Infraestrutura de TI": [
-        "ar condicionado para laboratório", "instalação elétrica", "adequação de sala",
-        "segurança da informação", "suporte técnico", "manutenção de computadores",
-        "formação tecnológica", "capacitação em tecnologia", "outsourcing de impressão"
     ]
 }
 
