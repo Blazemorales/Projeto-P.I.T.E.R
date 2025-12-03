@@ -1,0 +1,19 @@
+# backend/nixpacks.toml
+# Configuração para deploy no Railway
+
+[phases.setup]
+# Pacotes do sistema necessários (Python 3.12 + compiladores)
+nixPkgs = ["python312", "gcc", "g++"]
+
+[phases.install]
+# Comandos de instalação de dependências
+cmds = [
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt",
+    "python -m spacy download pt_core_news_sm"
+]
+
+[start]
+# Comando para iniciar a aplicação
+# $PORT é fornecido automaticamente pelo Railway
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
