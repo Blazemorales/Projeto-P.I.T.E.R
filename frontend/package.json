@@ -31,6 +31,6 @@
     "typescript": "^5.2.0"
   },
   "scripts": {
-    "build": "npm --prefix frontend install && npm --prefix frontend run build"
+    "build": "cd frontend && npm install && npm install lucide-react && npm run build"
   }
 }
