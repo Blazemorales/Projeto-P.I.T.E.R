@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2025-10-02 a 2025-12-02",
+    "search_keywords": "software",
+    "generated_at": "2025-12-02T22:07:42.809163"
+  },
+  "data": {
+    "total_entities": 8,
+    "entity_counts_by_type": {
+      "MISC": 3,
+      "LOC": 3,
+      "ORG": 1,
+      "PER": 1
+    },
+    "top_entities": {
+      "CONTRATO Nº": 1,
+      "GOIANIAPREV": 1,
+      "Contratante": 1,
+      "MARCOS OLIVEIRA DA SILVA": 1,
+      "Contratada": 1,
+      "CNPJ": 1,
+      "Órgão": 1,
+      "Av. B": 1
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

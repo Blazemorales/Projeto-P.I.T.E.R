@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-31",
+    "search_keywords": "padrão",
+    "generated_at": "2025-12-02T20:36:16.245477"
+  },
+  "data": {
+    "total_entities": 139,
+    "entity_counts_by_type": {
+      "LOC": 133,
+      "MISC": 3,
+      "ORG": 3
+    },
+    "top_entities": {
+      "Secretaria": 62,
+      "Estado de Educação": 10,
+      "Estado de Segurança Pública": 10,
+      "Estado de Saúde": 8,
+      "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 6,
+      "Estado de Planejamento": 6,
+      "Orçamento": 6,
+      "Estado": 5,
+      "Estado de Transporte": 4,
+      "Mobilidade": 4
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

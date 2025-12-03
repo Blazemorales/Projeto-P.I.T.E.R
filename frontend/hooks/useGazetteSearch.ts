@@ -44,8 +44,13 @@ export const useGazetteSearch = () => {
     }));
   }, []);
 
-  const search = useCallback(async () => {
-    const { municipio, categoria, dataInicio, dataFim } = state.filters;
+  const search = useCallback(async (overrideFilters?: Partial<SearchFilters>) => {
+    // Permite sobrescrever filtros (útil para comparação)
+    const filters = overrideFilters 
+      ? { ...state.filters, ...overrideFilters }
+      : state.filters;
+    
+    const { municipio, categoria, dataInicio, dataFim } = filters;
 
     console.log('🔍 Iniciando busca com filtros:', { municipio, categoria, dataInicio, dataFim });
 
@@ -113,6 +118,28 @@ export const useGazetteSearch = () => {
         total: data.total_gazettes || 0,
         error: null,
       }));
+
+      // NOVO: Salvar resultados no backend para sincronizar com dashboard
+      // Executado em background (não bloqueia a busca)
+      // Se falhar, apenas loga warning mas não afeta a busca
+      import('@/services/backend-integration').then(module => {
+        module.default.saveSearchResults(
+          data.gazettes || [],
+          {
+            territory_id: municipality.value,
+            municipio: municipio,
+            dataInicio: dataInicio,
+            dataFim: dataFim,
+            categoria: categoria,
+            querystring: categoria,
+          }
+        ).catch((error) => {
+          // Erro silencioso - não afeta a busca
+          console.warn('Aviso: Resultados não foram salvos para o dashboard:', error);
+        });
+      }).catch(() => {
+        // Erro ao importar - ignorar silenciosamente
+      });
 
     } catch (error) {
       console.error('Erro na busca:', error);

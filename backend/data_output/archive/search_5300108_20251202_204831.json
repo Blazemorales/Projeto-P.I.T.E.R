@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-31",
+    "search_keywords": "contrato software",
+    "generated_at": "2025-12-02T20:48:31.961555"
+  },
+  "data": {
+    "total_entities": 13,
+    "entity_counts_by_type": {
+      "ORG": 6,
+      "LOC": 5,
+      "PER": 1,
+      "MISC": 1
+    },
+    "top_entities": {
+      "Decisão": 2,
+      "Relatório de Inspeção": 1,
+      "Tribunal de Contas do Distrito Federal": 1,
+      "Sessão Ordinária": 1,
+      "Administração Regional de Gama": 1,
+      "Ordem EGOV": 1,
+      "DITEC": 1,
+      "Distrito Federal": 1,
+      "Portaria GM": 1,
+      "INVESTSUS": 1
+    },
+    "total_invested": 645.9,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 645.9
+    },
+    "qualitative_analysis": {
+      "error": "API Key não configurada"
+    }
+  }
+}

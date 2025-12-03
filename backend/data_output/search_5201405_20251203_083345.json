@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "source_territory": "5201405",
+    "period": "2025-01-01 a 2025-11-03",
+    "search_keywords": "software",
+    "generated_at": "2025-12-03T08:33:45.290136",
+    "type": "search_with_stats",
+    "date_range_start": "2025-01-01",
+    "date_range_end": "2025-11-03"
+  },
+  "data": {
+    "total_gazettes": 18,
+    "total_invested": 1997695.64,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Educação": 0.0,
+      "Capacitação": 0.0,
+      "Servidor": 0.0,
+      "Cloud/Nuvem": 470328.0,
+      "Hospedagem": 0.0,
+      "Rede": 0.0,
+      "Backup": 0.0,
+      "Data Center": 0.0,
+      "Gestão": 59575.98,
+      "ERP": 0.0,
+      "Financeiro": 46125.0,
+      "Robótica": 0.0,
+      "Outros": 1421666.66
+    },
+    "investments_by_period": {
+      "2025-04": 59575.98,
+      "2025-09": 51453.0,
+      "2025-10": 1886666.66
+    },
+    "publications_by_period": {
+      "2025-01": 1,
+      "2025-02": 2,
+      "2025-03": 2,
+      "2025-04": 2,
+      "2025-06": 2,
+      "2025-07": 2,
+      "2025-08": 2,
+      "2025-09": 3,
+      "2025-10": 2
+    },
+    "period_grouping": "month"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5201405",
+      "date": "2025-06-12",
+      "scraped_at": "2025-06-13T03:53:14.188012",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-12/e98286f8770af067561ee4e21db954171d21c2e8.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "ipm (colorido e monocro-\nmático)\n\ng) Display Touchscreen Colorido mínimo de 3,5”;\n\nh) Tamanho do Documento (máximo)21,6 cm (Largura) x 497,8 cm(Comprimen-\nto)\n\ni) Tamanho do Documento (mínimo) 5,1 cm (Largura) x 7 cm (Largura)\n\nj) Possuir pacote de software de digitalização, incluindo OCR e edição de PDF;\n\nm) Resolução de Digitalização Óptica mínima 600 x 600 dpi, Interpolada míni-\nma: 1200 x 1200 dpi;\n\nn) Suporta tamanhos mínimos papel entre de 30 até 400 g/m\n\no) Função “Digitalizar para” mínimo: PC"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-12/e98286f8770af067561ee4e21db954171d21c2e8.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-06-23",
+      "scraped_at": "2025-06-24T02:43:47.379207",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-23/503e1394e5a41fbe076dfc5838ec56edd5935ac5.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "60 ipm (colorido e monocro-\nmático)\n\ng)Display Touchscreen Colorido mínimo de 3,5”;\n\nh)Tamanho do Documento (máximo)21,6 cm (Largura) x 497,8 cm(Comprimen-\nto)\n\ni)Tamanho do Documento (mínimo) 5,1 cm (Largura) x 7 cm (Largura)\nj)Possuir pacote de software de digitalização, incluindo OCR e edição de PDF;\n\nm)Resolução de Digitalização Óptica mínima 600 x 600 dpi, Interpolada mínima: \n1200 x 1200 dpi;\n\n\n\nDiário Oficial\nAno 11 - Nº 263532 Município de Aparecida de Goiânia\n\nDiário Oficial EletrônicoAparecida"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-23/503e1394e5a41fbe076dfc5838ec56edd5935ac5.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-10-28",
+      "scraped_at": "2025-10-30T03:53:18.212998",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-10-28/ec122e20c0803004ea9abddff8e7178cb5fc1d2e.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "representado pelo Sr. RU-\nDIMAR BARBOSA DOS REIS, portador do RG nº *.***.763-5 e inscrito no CPF \nnº ***.460.249.**.\n\nOBJETO DO CONTRATO: O presente contrato tem por objeto a contratação de \nempresa especializada para fornecimento de licença de uso de software para ve-\nrificação de preços praticados pela Administração Pública em pregões eletrônicos \nrealizados no Brasil.\n\nOBJETO DO TERMO ADITIVO: Prorrogação do prazo de vigência contratual \npor 12 (doze) meses, reajuste e valor ao Contrato nº 2317/2023"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-10-28/ec122e20c0803004ea9abddff8e7178cb5fc1d2e.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-10-09",
+      "scraped_at": "2025-10-10T03:54:58.367614",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-10-09/1bf42e142158ac01e318ab08db00ffdb0b4241df.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fornecimento de solução informatizada de gerenciamento de \nprocessos judiciais destinada à Procuradoria Geral do Município de Aparecida \nde Goiânia (PGM). O objeto abrange, em especial, os seguintes componentes: \nlicenciamento de direito de uso de software jurídico, incluindo atualizações e \nmódulo de armazenamento de documentos em nuvem; serviços de implantação \ne migração/saneamento de dados da base existente; treinamento dos servidores/\nusuários designados; suporte técnico durante toda a vigência;"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-10-09/1bf42e142158ac01e318ab08db00ffdb0b4241df.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-07-07",
+      "scraped_at": "2025-07-08T03:14:20.173759",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-07-07/d60262bfa6c34bb2b1894d53cb6777dcfa328671.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Oficial EletrônicoAparecida de Goiânia,\n07  de Julho de 2025, Segunda - Feira \n\nProcesso nº: 2025.004.733\nInteressado: INSTITUTO DE PREVIDÊNCIA DE APARECIDA DE \n\nGOIÂNIA- APPREV\nAssunto: Contratação emergencial de empresa especializada em lo-\n\ncação de software\n  \n\nATO DE DISPENSA DE LICITAÇÃO Nº 28/2025.\n\nA PRESIDENTE DO INSTITUTO DE PREVIDÊNCIA DE APARECIDA \nDE GOIÂNIA- APPREV, Sra. Marcia Tinoco Silva, no uso de suas atribuições \nlegais, e considerando tudo que consta dos autos acima mencionado, resolve:"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-07-07/d60262bfa6c34bb2b1894d53cb6777dcfa328671.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-08-14",
+      "scraped_at": "2025-08-15T04:18:04.251075",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-08-14/ef307c077c38cc5ef97f0d90e6b379d2d3a8d4e9.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "MUNERATO.\n\nOBJETO DO CONTRATO: Constitui objeto do presente a contratação de em-\npresa especializada na prestação de serviços de assistência técnica, incluindo a \nmanutenção corretiva, preventiva, calibração, atualizações e melhorias nos recur-\nsos de software GENEXPERT DX para versões atuais do equipamento de teste \nrápido molecular (GENEXPERT® IV R2), com fornecimento de reposição de \npeças e acessórios necessários ao adequado funcionamento do objeto, conforme \ndetalhamento e especificações técnicas"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-08-14/ef307c077c38cc5ef97f0d90e6b379d2d3a8d4e9.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-01-22",
+      "scraped_at": "2025-01-23T03:26:49.488237",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-01-22/54b7fec2b4ad863ff952b2804f9c8a6a5610bc6c.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Fiscal de contrato, ambos lotados no quadro de servidores \ndesta autarquia, vinculados ao processo 2024.405.713, cujo objetivo se refere a \ncontratação empresa especializada na entrega de serviços de Clipping Jurídico, \ndisponibilizados por meio de software jurídico on-line licenciado, de informa-\nções judiciais e administrativas em tramitação nas diversas instâncias, extraídas \nmediante a leitura e fornecimento dos recortes de interesse do Instituto de Pre-\nvidência de Aparecida de Goiânia – APARECIDAPREV"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-01-22/54b7fec2b4ad863ff952b2804f9c8a6a5610bc6c.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-02-26",
+      "scraped_at": "2025-02-27T03:29:02.906496",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-02-26/f14219a9f8d7ae3abc3070475146227d316f28f5.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        " torna pública a \nrealização de um procedimento de Dispensa de Licitação, cujo o objeto é a con-\ntratação de pessoa jurídica especializada, empresa para locação de sistema de TV \nweb com equipamentos streaming, equipamentos eletrônicos e sistema/software, \npara realiza-ção de votação eletrônica e Painel Legislativo personalizado con-\nforme condições estabeleci-das no Termo de Referência para atender a Câmara \nno exercício de 2025, nos termos do Art. 75, inciso II, § 3°, da Lei Federal n° \n14.133/2021"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-02-26/f14219a9f8d7ae3abc3070475146227d316f28f5.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-09-22",
+      "scraped_at": "2025-09-23T03:35:17.502255",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-22/41ef91471b2fb7d409b4f5d940c45c43f600f108.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "pública, que consiste num sistema de pesquisas \n\nbaseado em resultados de licitações adjudicadas e homo-\n\nlogadas disponíveis no painel de preços (banco de preço)\n\n   Qtd 1 R$ 15.375,00 R$ 15.375,00\n\n1.2 Natureza: Serviço técnico especializado – SOFTWARE (LICENÇA DE \nACESSO). \n\n1.3 O prazo de vigência da contratação é de 12 meses, contados da assinatura do \nContrato, na forma do artigo 106 e 107 da Lei n° 14.133, de 2021. \n\n1.4 O custo total da contratação é de R$15.375,00 (Quinze mil e trezentos"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-22/41ef91471b2fb7d409b4f5d940c45c43f600f108.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-04-07",
+      "scraped_at": "2025-04-08T02:51:30.678741",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-04-07/444f792fd2b3285dce84afeb551f609597455c02.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "processo administrativo nº 2023.195.570 que \ntem por objeto contratação de empresa especializada na prestação de serviços de \nassistência técnica, incluindo manutenção corretiva, preventiva, calibração, atua-\nlizações e melhorias nos recursos de software genexpert dx para versões atuais do \nequipamento de teste rápido molecular (genexpert IV R2), com fornecimento de \nreposição de peças e acessórios necessário ao adequado funcionamento do objeto. \n\nArt. 5º - Esta Portaria entrará em vigor na data"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-04-07/444f792fd2b3285dce84afeb551f609597455c02.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-04-22",
+      "scraped_at": "2025-04-23T03:40:19.555560",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-04-22/095a06137a50274a681d81ba3f2cea66a8c4f1a8.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "133/2021, torna-se público o extrato do \ncontrato nº 009/2025, firmado com o GUILHERME CARVALHO DA SILVA \n02523562251, CNPJ nº 44.515.752/0001-60. Objeto: é a contratação de pessoa \njurídica especializada para a locação, de equipamentos e sistema/software para \nrealização de votação eletrônica e Painel Legislativo personalizado, pelo prazo de \n06 (seis) meses. O valor global do presente contrato é de R$ 59.575,98. Assinatu-\nra do contrato: 09 de abril de 2025. \n\nCLEOMAR VICENTE FERNANDES\n – Presidente"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-04-22/095a06137a50274a681d81ba3f2cea66a8c4f1a8.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-09-01",
+      "scraped_at": "2025-09-02T04:15:25.962598",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-01/53b72d18e38cd8759f2c96922e47421de27b5be2.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "de Aparecida de Goiânia, em atendimento ao Art. 94, da \nLei 14.133/2021, torna-se público o Contrato nº 043/2025, firmado com PONTO-\nTECH COMERCIO E DESENVOLVIMENTO DE SOFTWARE LTDA, CNPJ \nnº 50.943.973/0001-32. Objeto: objeto deste instrumento, é Prestação de serviço \ntécnico especializado, abrangendo: (a) licenciamento de software de controle de \nponto eletrônico em ambiente web para até 300 usuários, com backup em nuvem \ne funcionalidades de apuração de jornada; (b) suporte técnico remoto e in"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-01/53b72d18e38cd8759f2c96922e47421de27b5be2.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-07-02",
+      "scraped_at": "2025-07-03T11:47:54.243909",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-07-02/8b7ec992edffc953d14602087b89f724d2536dff.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "MeioAmbiente deAparecida de Goiânia/GO a LICEN-\nÇAAMBIENTAL SIMPLIFICADA - LAS, para atividade de: Desenvolvimento\ne licenciamento de programas de computador,Aluguel de máquinas e equipamen-\ntos para escritórios inclusive equipamentos periféricos software e hardware, Mo-\nnitoramento e gestão de consumo de energia elétrica, Fabricação de geradores de\ncorrente contínua e alternada, peças e acessórios, Medição de consumo de energia\nelétrica, gás e água, Comercio varejista de material elétrico, Comercio"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-07-02/8b7ec992edffc953d14602087b89f724d2536dff.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-03-20",
+      "scraped_at": "2025-03-21T03:33:59.128883",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-03-20/be88f4375a3380e14fff70913820d063fde5277e.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Administração e o \nSecretário Municipal da Fazenda no uso de suas atribuições legais, tendo em vista \na adjudicação do Pregão Eletrônico nº 086/2024, processo: 2023.214.963, objeto: \nContratação de empresa especializada em fornecimento de licença de software, \npara uso temporário, que contemple solução completa para a gestão do Imposto \nSobre Serviços de Qualquer Natureza – ISSQN, com prestação de serviços de ma-\nnutenção e suporte técnico, mediante a execução das atividades e demais carac-\nterísticas"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-03-20/be88f4375a3380e14fff70913820d063fde5277e.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-08-05",
+      "scraped_at": "2025-08-06T03:53:46.430842",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-08-05/77399e83f3aaf4b3c6f1de40b9cb66c75fc84834.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "procedimento de Dispensa Eletrônica, cujo o objeto é, \nContratação de empresa para aquisição de dois (02) equipamentos eletrônicos de \ncontrole de ponto e acesso com tecnologia de reconhecimento facial, acompanha-\ndos de sistema de gestão de acesso, software de controle de frequência para até \n300 usuários e prestação de serviços de suporte técnico e manutenção corretiva \ne preventiva em equipamentos já instalados deste Poder Legislativo Municipal, \na realizar se no dia 12 de agosto de 2025, às 10:00"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-08-05/77399e83f3aaf4b3c6f1de40b9cb66c75fc84834.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-03-07",
+      "scraped_at": "2025-03-08T03:11:59.992106",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-03-07/6d9f305bb31580f6a5a42cb920532cd3a1a20f44.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "neste ato, representada pelo Sr. NIVAL-\nDO DA SILVA, portador do RG-CI n°910.286 SSP/GO e inscrito sob CPF/MF \nn°282.***.***-**.\n\nOBJETO DO CONTRATO: Contratação de empresa para prestação de serviço de \nCall Center, incluindo licença para uso de software próprio, toda tecnologia ne-\ncessária, profissionais habilitados, para execução de sistema de gerenciamento de \n\nmatrículas via internet e telefone (0800).\n\nOBJETO DO TERMO ADITIVO: Prorrogação de prazo e valor ao Contrato \nn°91/2019.\n\nFUNDAMENTO:"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-03-07/6d9f305bb31580f6a5a42cb920532cd3a1a20f44.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-02-24",
+      "scraped_at": "2025-02-25T03:17:11.138493",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-02-24/b9172056fa105a7c068d2a56326d3c3fa3e624f9.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "nº 000.***.896-44  sob matrícula n° \n1972365, como Fiscal de contrato, ambos lotados no quadro de servidores des-\nta autarquia, vinculadas ao processo 2025.004.733, que se destina à contratação \nemergencial de empresa especializada em locação de software para gestão de \nfolha de pagamento, abrangendo funcionalidades para cálculos de folha mensal, \n13º salário, rescisões, férias, relatórios financeiros e integração com sistemas re-\ngulatórios, como e-Social e Colare. O serviço inclui suporte técnico"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-02-24/b9172056fa105a7c068d2a56326d3c3fa3e624f9.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-09-11",
+      "scraped_at": "2025-09-12T04:13:21.789532",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-11/2cd9889bb8015e9e9af8f9fbc900fe7f0043bef3.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Sr. MARCILIO DE OLIVEIRA, \ninscrito no CPF/MF sob o nº 963.***.***-**.\n \nOBJETO DO CONTRATO: Constitui objeto do presente contrato a contratação \nde empresa especializada na entrega de serviços de Clipping Jurídico, disponibi-\nlizados por meio de software jurídico on-line licenciado, de informações judiciais \ne administrativas em transmissão nas diversas instâncias, extraídas mediante a \nleitura e fornecimento dos recortes de interesse do APARECIDAPREV. \n\nOBJETO DO TERMO ADITIVO: Prorrogação do prazo"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-09-11/2cd9889bb8015e9e9af8f9fbc900fe7f0043bef3.txt"
+    }
+  ]
+}

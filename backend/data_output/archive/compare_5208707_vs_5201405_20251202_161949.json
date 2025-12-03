@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "territory_a": "5208707",
+    "territory_a_name": "Território 5208707",
+    "period_a": "2025-07-01 a 2025-12-02",
+    "territory_b": "5201405",
+    "territory_b_name": "Território 5201405",
+    "period_b": "2025-07-01 a 2025-12-02",
+    "search_keywords": "software",
+    "generated_at": "2025-12-02T16:19:49.750067"
+  },
+  "data": {
+    "territory_a_analysis": {
+      "total_entities": 89,
+      "entity_counts_by_type": {
+        "MISC": 36,
+        "LOC": 29,
+        "ORG": 16,
+        "PER": 8
+      },
+      "top_entities": {
+        "Secretaria": 6,
+        "Goiânia": 4,
+        "Suporte Técnico": 3,
+        "Município": 3,
+        "Contratante": 3,
+        "Serviço de Manutenção": 2,
+        "Software AG Informática": 2,
+        "MUNICÍPIO": 2,
+        "Assinatura": 2,
+        "Lei 14.133/2021": 2
+      },
+      "total_invested": 6684938.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 6684938.0
+      },
+      "qualitative_analysis": {
+        "error": "API Key não configurada"
+      }
+    },
+    "territory_b_analysis": {
+      "total_entities": 49,
+      "entity_counts_by_type": {
+        "MISC": 23,
+        "ORG": 9,
+        "LOC": 9,
+        "PER": 8
+      },
+      "top_entities": {
+        "Contrato": 4,
+        "TERMO": 2,
+        "Comercio": 2,
+        "Aparecida de Goiânia": 2,
+        "DO CONTRATO": 2,
+        "Brasil": 1,
+        "Administração Pública": 1,
+        "Sr. RU- DIMAR": 1,
+        "Procuradoria Geral do Município": 1,
+        "Julho": 1
+      },
+      "total_invested": 46125.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 46125.0
+      },
+      "qualitative_analysis": {
+        "error": "API Key não configurada"
+      }
+    },
+    "differences": {
+      "investment_diff": 6638813.0,
+      "investment_percentage": 14393.090514905149,
+      "entities_diff": 40,
+      "winner": "Território A (5208707)"
+    }
+  }
+}

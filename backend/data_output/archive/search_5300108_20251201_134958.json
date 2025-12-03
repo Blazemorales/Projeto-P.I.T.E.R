@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-12-31",
+    "search_keywords": "computador",
+    "generated_at": "2025-12-01T13:49:58.944147"
+  },
+  "data": {
+    "total_entities": 103,
+    "entity_counts_by_type": {
+      "MISC": 40,
+      "LOC": 31,
+      "ORG": 22,
+      "PER": 10
+    },
+    "top_entities": {
+      "ICMS": 4,
+      "Distrito Federal": 3,
+      "IGESDF": 3,
+      "pecúnia": 3,
+      "Portal da Adasa": 2,
+      "Centro Empresarial CNC": 2,
+      "Brasília": 2,
+      "Lote C": 2,
+      "Quadra 5": 2,
+      "Comissão de Valores Mobiliários": 2
+    },
+    "total_invested": 695556.13,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 695556.13
+    },
+    "qualitative_analysis": {
+      "error": "API Key não configurada"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-31",
+    "search_keywords": "tablet",
+    "generated_at": "2025-12-01T13:50:53.290903"
+  },
+  "data": {
+    "total_entities": 26,
+    "entity_counts_by_type": {
+      "LOC": 19,
+      "ORG": 5,
+      "MISC": 1,
+      "PER": 1
+    },
+    "top_entities": {
+      "Renda do Distrito Federal": 4,
+      "Termo": 3,
+      "Secretaria": 3,
+      "Referência": 3,
+      "Trabalho": 3,
+      "Registro": 2,
+      "CONTRATANTE": 1,
+      "PAROLLE COMUNICAÇÃO": 1,
+      "CNPJ": 1,
+      "CONTRATADA": 1
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

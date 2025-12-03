@@ -115,7 +115,6 @@ export default function Home() {
                 {results.map((gazette, index) => (
                   <GazetteCard key={`${gazette.territory_id}-${gazette.date}-${index}`} gazette={gazette} />
                 ))}
-                <DashboardPesquisa />
               </div>
             ) : (
               <div className="text-center py-12">

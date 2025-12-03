@@ -18,9 +18,43 @@ except ImportError:
 class PiterApiOrchestrator:
     def __init__(self):
         self.qd_client = QueridoDiarioClient()
-    
+
     async def get_enriched_gazette_data(self, filters: FilterParams) -> Dict[str, Any]:
-        gazette_data = await self.qd_client.fetch_gazettes(filters)
+        """
+        Busca diários oficiais com FILTRAGEM MANUAL de datas.
+
+        Usa a função fetch_gazettes() standalone que aplica filtro manual,
+        em vez da classe QueridoDiarioClient que não filtra.
+
+        Razão: A API Querido Diário prioriza relevância sobre filtros de data,
+        então precisamos validar manualmente os resultados.
+        """
+        # Preparar parâmetros para a função standalone
+        territory_id = filters.territory_ids
+        since = filters.published_since.strftime("%Y-%m-%d") if filters.published_since else None
+        until = filters.published_until.strftime("%Y-%m-%d") if filters.published_until else None
+        keywords = filters.querystring
+
+        # Se não houver filtros de data, usar método original (mais rápido)
+        if not since and not until:
+            gazette_data = await self.qd_client.fetch_gazettes(filters)
+            return gazette_data
+
+        # A função fetch_gazettes requer both since AND until
+        # Se apenas um for fornecido, usar data padrão para o outro
+        if not since:
+            since = "2020-01-01"  # Data padrão inicial
+        if not until:
+            until = datetime.now().strftime("%Y-%m-%d")  # Data atual
+
+        # Usar função com filtro manual quando há filtros de data
+        gazette_data = await querido_diario_client.fetch_gazettes(
+            territory_id=territory_id,
+            since=since,
+            until=until,
+            keywords=keywords
+        )
+
         return gazette_data
 
 def save_json_file(data: Dict[str, Any], filename: str, is_latest: bool = False, latest_name: str = ""):

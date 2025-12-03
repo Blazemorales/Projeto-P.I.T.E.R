@@ -1,0 +1,43 @@
+{
+  "scenario_a": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-01-05",
+      "search_keywords": "teste"
+    },
+    "data": {
+      "total_invested": 1000.0,
+      "investments_by_category": {
+        "Tecnologia": 1000.0
+      },
+      "qualitative_analysis": {
+        "resumo_objeto": "Teste",
+        "justificativa": "Teste",
+        "fornecedor": "Teste LTDA"
+      }
+    }
+  },
+  "scenario_b": {
+    "meta": {
+      "source_territory": "5300108",
+      "period": "2024-01-01 a 2024-01-05",
+      "search_keywords": "teste"
+    },
+    "data": {
+      "total_invested": 1000.0,
+      "investments_by_category": {
+        "Tecnologia": 1000.0
+      },
+      "qualitative_analysis": {
+        "resumo_objeto": "Teste",
+        "justificativa": "Teste",
+        "fornecedor": "Teste LTDA"
+      }
+    }
+  },
+  "summary": {
+    "investment_difference": 0.0,
+    "winner": "Empate",
+    "generated_at": "2025-11-30T17:53:16.570950"
+  }
+}

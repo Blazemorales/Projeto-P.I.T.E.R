@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2025-09-03 - 2025-12-03",
+    "search_keywords": "software",
+    "generated_at": "2025-12-03T06:41:06.270283",
+    "type": "simple_search",
+    "date_range_start": "2025-09-03",
+    "date_range_end": "2025-12-03"
+  },
+  "data": {
+    "total_gazettes": 8,
+    "total_invested": 0,
+    "total_entities": 0,
+    "investments_by_category": {}
+  },
+  "gazettes": [
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-22",
+      "scraped_at": "2025-09-23T03:39:07.897688",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-22/267dda725d2eb4fea7051df4216886190232e10c.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Secretaria Municipal de Inovação e Transformação Digital\n\nChefia da Advocacia Setorial\n\nEXTRATO DO CONTRATO 05/2025\n\nContrato de Licenciamento de Software por Assinatura, com Serviço de Manutenção e Suporte Técnico, que\nentre si celebram ao MUNICÍPIO DE GOIÂNIA, por intermédio da SECRETARIA MUNICIPAL DE INOVAÇÃO E\nTRANSFORMAÇÃO DIGITAL – SIT e a empresa SOFTWARE AG INFORMÁTICA E SERVIÇOS LTDA.\n\nO MUNICÍPIO DE GOIÂNIA, pessoa jurídica jurídica de direito público, com sede na Avenida do Cerrado, n° 999"
+      ],
+      "edition": "8627",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-22/267dda725d2eb4fea7051df4216886190232e10c.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-19",
+      "scraped_at": "2025-09-20T09:42:36.853577",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-19/0c6a72716c6697a1e9ed3ad02a2b193c212640fe.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Municipal de Goiânia, declara Inexigível a Licitação, com apoio no art. 74\nI, da Lei 14.133/2021, para a contratação da empresa Software AG Informática e Serviços Ltda,\ninscrita no CNPJ sob nº 07.594.862/0001-39, pelo valor total de R$ 4.822.688,00 (quatro\nmilhões, oitocentos e vinte e dois mil, seiscentos e oitenta e oito reais), cujo objeto da\ncontratação é o licenciamento de software por assinatura, incluindo serviços de manutenção e\nsuporte técnico, conforme descrito no Termo de Referência, na proposta"
+      ],
+      "edition": "8626",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-19/0c6a72716c6697a1e9ed3ad02a2b193c212640fe.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-11",
+      "scraped_at": "2025-09-12T04:14:41.015523",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-11/6b1487dbc72f87a8353ccde04baa20de537499f4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Inovação e Transformação Digital\n\nChefia da Advocacia Setorial\n\nEXTRATO DO CONTRATO 06/25\n\nContrato de\n Solução de\nSoftware de\nGestão, em\nmodelo de\nlicenciamento,\nque entre si\n celebram o\nMunicípio de\nGoiânia, por\nintermédio\nda Secretaria\nMunicipal de\nInovação,\nCiência e\nTecnologia -\nSictec, e a\nempresa\nCongres -\nConsultoria\nem Gestão\nEmpresarial\nLtda.\n\nO presente Contrato de Solução de Software de Gestão, em modelo de licenciamento, dar-se-á mediante as cláusulas e\ncondições adiante.\n\nPartes:\n\nContratantes:"
+      ],
+      "edition": "8620",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-11/6b1487dbc72f87a8353ccde04baa20de537499f4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-29",
+      "scraped_at": "2025-09-30T03:30:15.881948",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-29/2c20175042ff3b75943adbc5a60f6f21779688a4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fiscalizar a execução do Contrato Ctjr n.º 05/2025 (SEI nº\n25.2.000000462-3) , celebrado entre o Município de Goiânia, através da  Secretaria Municipal de\nInovação e Transformação Digital - SIT e a Empresa \"Software AG\" Informática e Serviços LTDA, cujo\nobjeto é a contratação de Licenciamento de Software por assinatura, com serviço de Manutenção e\nSuporte Técnico.\n\nArt. 2°. Determinar que o mencionado servidor observe e cumpra as determinações\ncontidas na Instrução Normativa n.º 02/2018 da Controladoria"
+      ],
+      "edition": "8632",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-29/2c20175042ff3b75943adbc5a60f6f21779688a4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-27",
+      "scraped_at": "2025-11-28T02:49:59.679203",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fiscalizar e acompanhar a execução do CONTRATO Nº 018/2025, firmado entre o\nGOIANIAPREV (Contratante) e a empresa 48.511.241 MARCOS OLIVEIRA DA SILVA (Contratada), CNPJ n.º\n48.511.241/0001-21, tendo como objeto o fornecimento de catracas eletrônicas com software integrado de controle de\nacesso, incluindo serviços de locação, instalação, treinamento e suporte técnico para atender as necessidades por um\nperíodo de 12 (doze) meses, a ser executado nas dependências deste Órgão, localizadas na Av. B, Qd. C-1"
+      ],
+      "edition": "8671",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-26",
+      "scraped_at": "2025-09-27T03:57:51.437773",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-26/66a9f3974cafd0218d623313382529f0cfec20e2.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "nº 335/2021, atualizada pela Lei\nComplementar nº 382/2024, e pelo Decreto nº 2.132/2025, e em atendimento do art. 13 da Instrução\nNormativa nº 09/2023 do Tribunal de Contas dos Municípios do Estado de Goiás.\n\nConsiderando o Contrato de Solução de Software de Gestão, celebrado por intermédio\nda Secretaria Municipal de Governo - SEGOV/Contratante e da Secretaria Municipal de Inovação e\nTransformação Digital - SIT/Contratante.\n\nResolve:\n\nArt. 1°.Designar, respectivamente, os servidores abaixo relacionados"
+      ],
+      "edition": "8631",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-26/66a9f3974cafd0218d623313382529f0cfec20e2.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-19",
+      "scraped_at": "2025-11-20T02:51:35.668779",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "sistema, deverá fundamentar a negativa e\napresentar à contratante relatório de impacto ou amostras do conjunto de dados não cobertos\npelo sigilo.\n\nArt. 11. A administração pública municipal poderá dar preferência, nas\ncontratações, ao emprego de software livre, com licenciamento gratuito e não exclusivo sobre\nos direitos de propriedade intelectual relativos a programas de computador, de forma a permitir\nexpressamente a alteração, a utilização e a distribuição de sistemas de inteligência artificial"
+      ],
+      "edition": "8667",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-05",
+      "scraped_at": "2025-09-06T03:48:50.275904",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-05/65c14db75a6bfe20568912f881f61f7bfbf730a1.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "empresa a Congres - Consultoria em Gestão Empresarial Ltda, CNPJ Nº 48.606.374/0001-81, no valor\ntotal de R$62.250,00 (sessenta e dois mil e duzentos e cinquenta reais), pelo prazo máximo de 12\n(doze) meses, cujo objeto é o licenciamento mensal de software em nuvem para gestão de\ndesempenho (objetivos e indicadores), projetos, tarefas e agenda corporativa, incluindo suporte\ntécnico e metodológico, destinado a atender as necessidades da SIT, conforme especificações,\nquantitativos e condições previstos"
+      ],
+      "edition": "8616",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-05/65c14db75a6bfe20568912f881f61f7bfbf730a1.txt"
+    }
+  ]
+}

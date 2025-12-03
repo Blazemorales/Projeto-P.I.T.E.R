@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2025-06-03 a 2025-12-02",
+    "search_keywords": "software",
+    "generated_at": "2025-12-02T22:08:21.637978"
+  },
+  "data": {
+    "total_entities": 103,
+    "entity_counts_by_type": {
+      "MISC": 38,
+      "LOC": 33,
+      "ORG": 22,
+      "PER": 10
+    },
+    "top_entities": {
+      "Secretaria": 7,
+      "Goiânia": 4,
+      "Município": 3,
+      "Contratante": 3,
+      "Suporte Técnico": 3,
+      "Assinatura": 2,
+      "Gestão Empresarial Ltda": 2,
+      "MUNICÍPIO": 2,
+      "Serviço de Manutenção": 2,
+      "Serviços Ltda": 2
+    },
+    "total_invested": 6684938.0,
+    "investments_by_category": {
+      "Software e Licenças": 6684938.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {
+      "error": "API Key não configurada"
+    }
+  }
+}

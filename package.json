@@ -19,12 +19,5 @@
   "bugs": {
     "url": "https://github.com/Blazemorales/ProjP/issues"
   },
-  "homepage": "https://github.com/Blazemorales/ProjP#readme",
-  "dependencies": {
-    "@types/react": "^19.2.2",
-    "axios": "^1.13.1",
-    "lucide-react": "^0.545.0",
-    "react": "^19.2.0",
-    "recharts": "^3.3.0"
-  }
+  "homepage": "https://github.com/Blazemorales/ProjP#readme"
 }

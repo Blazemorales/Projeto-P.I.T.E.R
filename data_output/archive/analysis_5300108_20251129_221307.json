@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-31",
+    "search_keywords": "computador",
+    "generated_at": "2025-11-29T22:13:07.243138"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 39,
+      "MISC": 31,
+      "ORG": 17,
+      "PER": 15
+    },
+    "top_entities": {
+      "ICMS": 5,
+      "Cebraspe": 3,
+      "Decreto": 3,
+      "Brasília": 3,
+      "DIFAL": 3,
+      "Distrito Federal": 2,
+      "Secretaria": 2,
+      "Lei Complementar": 2,
+      "pecúnia": 2,
+      "DODF": 2
+    },
+    "total_invested": 300477695.0,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 300477695.0
+    },
+    "qualitative_analysis": {
+      "resumo_objeto": "O texto menciona a oferta de Cursos de Qualificação Profissional (Operador de Computador, Assistente Administrativo e Auxiliar de Cozinha), a conversão de Licença-Prêmio em pecúnia, e serviços relacionados a Tecnologia da Informação (TI) e redes de computadores.",
+      "justificativa": "Os investimentos e custos citados parecem ser direcionados à capacitação profissional, gestão de pessoal aposentado (conversão de licença-prêmio) e manutenção/suporte de infraestrutura de TI dentro de órgãos públicos, incluindo a Secretaria de Estado de Economia (SEEDF).",
+      "fornecedor": "Não identificado (Há menção ao Cebraspe e ao INSTITUTO QUADRIX no contexto de processos seletivos/inscrições, mas não como fornecedor de bens/serviços diretamente licitados no trecho financeiro).",
+      "marca_modelo": "Não identificado"
+    }
+  }
+}

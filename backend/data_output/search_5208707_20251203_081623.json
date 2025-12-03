@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2023-01-03 a 2025-06-03",
+    "search_keywords": "robotica",
+    "generated_at": "2025-12-03T08:16:23.925550",
+    "type": "search_with_stats",
+    "date_range_start": "2023-01-03",
+    "date_range_end": "2025-06-03"
+  },
+  "data": {
+    "total_gazettes": 8,
+    "total_invested": 110217425.63,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Educação": 105166939.33,
+      "Capacitação": 0.0,
+      "Servidor": 0.0,
+      "Cloud/Nuvem": 0.0,
+      "Hospedagem": 0.0,
+      "Rede": 0.0,
+      "Backup": 0.0,
+      "Data Center": 0.0,
+      "Gestão": 0.0,
+      "ERP": 0.0,
+      "Financeiro": 0.0,
+      "Robótica": 5048406.29,
+      "Outros": 2080.01
+    },
+    "investments_by_period": {
+      "2023": 2080.01,
+      "2024": 110215345.62
+    },
+    "publications_by_period": {
+      "2023": 3,
+      "2024": 3,
+      "2025": 2
+    },
+    "period_grouping": "year"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5208707",
+      "date": "2023-01-06",
+      "scraped_at": "2023-01-06T21:27:46.420229",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-01-06/66680b9cb0e015a4ec0f47e0ed704dcf81e1bd95.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "1236101412.726 I    PROGRAMA AUTONOMIA DAS INST. EDUCACIONAIS-PAFIE-ENS.FUN I I I 9.005.000 I 9.005.000 I\nI I DAMENTAL I I I I I \nI I   GOIANIA EM NOVA ACAO I I 11.162.000 I I 11.162.000 I\nI 1750.1236101471.028 I    GOIANIA EM NOVA ACAO - TABLETS E ROBOTICA I I 23.000 I I 23.000 I\nI 1750.1236101471.029 I    GOIANIA EM NOVA ACAO - REFORMA E AMPLIACAO DE UNIDADES I I 10.827.000 I I 10.827.000 I\nI I ESCOLARES I I I I I \nI 1750.1236101471.030 I    GOIANIA EM NOVA ACAO - ESCOLAS DE TEMPO INTEGRAL I I 312"
+      ],
+      "edition": "7958",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-01-06/66680b9cb0e015a4ec0f47e0ed704dcf81e1bd95.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-01-10",
+      "scraped_at": "2024-01-10T22:49:48.803196",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-10/7ee8d7d48ecfc5ab3da1a495f1a3ee02fb7ececd.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "EDUCACIONAIS-PAFIE-ENS.FUN I  I  I  11.606.000  I  11.606.000 I \n\n I  I DAMENTAL  I  I  I  I  I \n\n I  I  GOIANIA EM NOVA ACAO                                     I  I  34.000 I  I  34.000 I \n\n I 1750.1236101471.028 I  GOIANIA EM NOVA ACAO - TABLETS E ROBOTICA               I  I  16.000 I  I  16.000 I \n\n I 1750.1236101471.029 I  GOIANIA EM NOVA ACAO - REFORMA E AMPLIACAO DE UNIDADES  I  I  10.000 I  I  10.000 I \n\n I  I ESCOLARES  I  I  I  I  I \n\n I 1750.1236101471.030 I  GOIANIA EM NOVA ACAO - ESCOLAS"
+      ],
+      "edition": "8204",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-10/7ee8d7d48ecfc5ab3da1a495f1a3ee02fb7ececd.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-01-07",
+      "scraped_at": "2025-01-08T02:16:35.719203",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-01-07/859741b575d9dbaab5ae05c9c0dbd2a1c6c4e434.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "DESENVOLVIMENTO DAS ACOES PARA \nMANUTENCAO DO ENSINO FUNDAMENTAL  673.846.000\n\n1750.1236101412.726 \nPROGRAMA AUTONOMIA DAS INST. EDUCACIONAIS‐\nPAFIE‐ENS.FUNDAMENTAL  14.806.000\n\nGOIANIA EM NOVA ACAO  58.000\n1750.1236101471.028  GOIANIA EM NOVA ACAO ‐ TABLETS E ROBOTICA  30.000\n\n1750.1236101471.029 \nGOIANIA EM NOVA ACAO ‐ REFORMA E AMPLIACAO \nDE UNIDADES ESCOLARES  13.000\n\n1750.1236101471.030 \nGOIANIA EM NOVA ACAO ‐ ESCOLAS DE TEMPO \nINTEGRAL  15.000\n\n\n\nEDUCACAO INFANTIL  363.988.000\nM.D.E. CONSTRUCAO, REFORMA, AMPLIACAO E "
+      ],
+      "edition": "8451",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-01-07/859741b575d9dbaab5ae05c9c0dbd2a1c6c4e434.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-01-05",
+      "scraped_at": "2023-01-06T11:26:00.643850",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-01-05/d7d53265b4b0bb68ff198e5f4271b4e340301636.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "1236101412.726 I    PROGRAMA AUTONOMIA DAS INST. EDUCACIONAIS-PAFIE-ENS.FUN I I I 9.005.000 I 9.005.000 I\nI I DAMENTAL I I I I I \nI I   GOIANIA EM NOVA ACAO I I 11.162.000 I I 11.162.000 I\nI 1750.1236101471.028 I    GOIANIA EM NOVA ACAO - TABLETS E ROBOTICA I I 23.000 I I 23.000 I\nI 1750.1236101471.029 I    GOIANIA EM NOVA ACAO - REFORMA E AMPLIACAO DE UNIDADES I I 10.827.000 I I 10.827.000 I\nI I ESCOLARES I I I I I \nI 1750.1236101471.030 I    GOIANIA EM NOVA ACAO - ESCOLAS DE TEMPO INTEGRAL I I 312"
+      ],
+      "edition": "7957",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-01-05/d7d53265b4b0bb68ff198e5f4271b4e340301636.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-07-25",
+      "scraped_at": "2024-07-26T00:35:46.901791",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-25/f1abbcad1e9156866e24dd137c78e99025560d34.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Reforma e manutenção da rede física das escolas 720.000,00\n\nConstrução, reforma, \n\nampliação, manutenção da \n\nrede física Reforma e manutenção das unidades de \n\neducação infantil\n700.000,00\n\nEducação\n\nGoiânia em Nova Ação Goiânia em Nova Ação – Tablets e Robótica 4.000.000,00\n\n\n\nGoiânia em Nova Ação – Reforma e Ampliação de \n\nUnidadesEscolares\n50.000.000,00\n\nGoiânia em Nova Ação – Escolas de Tempo Integral 10.500.000,00\n\nDesenvolv. das ações para manut. do ensino \n\nfundamental\n422.514.339,10\n\nM.D.E ‐ Ensino Fundamental"
+      ],
+      "edition": "8340",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-25/f1abbcad1e9156866e24dd137c78e99025560d34.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-01-30",
+      "scraped_at": "2024-01-30T23:24:19.723223",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-30/95d1b4ad434fdb7cd35fbbd45c51a8acf537b916.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "859290100 Ensino de dança Alto Alto Baixo \n859110000 Ensino de esportes Alto Alto Baixo \n859969904 Ensino de estética Médio Médio Baixo \n859370000 Ensino de idiomas Alto Alto Baixo \n\n859290300 Ensino de música Alto Alto Baixo \n859969905 Ensino de robótica Médio Médio Baixo \n\n859969906 Ensino de segurança Médio Médio Baixo \n851390000 Ensino fundamental Alto Alto Médio \n852010000 Ensino médio Alto Alto Médio \n\n852010001 Ensino médio filantrópico Alto Alto Médio \n162930101 Entalhador (autônomo) Baixo"
+      ],
+      "edition": "8218",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-30/95d1b4ad434fdb7cd35fbbd45c51a8acf537b916.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-04-30",
+      "scraped_at": "2025-05-01T03:10:55.664038",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-30/a669acba28903dc4fcb01a3cf48cb1d472469dcf.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "----+-------------------+-------------------+-------------------+-------------------+\n\n| 0147 | GOIANIA EM NOVA ACAO | 15.000,00| | 15.000,00| | 15.000,00 | | |\n\n| | | | | | | | | |\n\n| | | | | | | | | |\n\n| 1028 | GOIANIA EM NOVA ACAO - TABLETS E ROBOTICA | 11.000,00| | 11.000,00| | 11.000,00 | | |\n\n| | | | | | | | | |\n\n| | | | | | | | | |\n\n| 33504100 | CONTRIBUICOES | 1.000,00| | 1.000,00| | 1.000,00 | | |\n\n| | | | | | | | | |\n\n| 33903000 | MATERIAL DE CONSUMO | 2.000,00| | 2.000,00| | 2.000,00 |"
+      ],
+      "edition": "8528",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-30/a669acba28903dc4fcb01a3cf48cb1d472469dcf.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-10-03",
+      "scraped_at": "2023-10-04T11:40:03.239991",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-10-03/a2a791a8c12fa0c131ed23e1faec46118da73b6e.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "ISENTO\n1 VAGA PARA \n\nCADA 45m²\n\n859969904\nEnsino de estética\n\n1** ISENTO\n1 VAGA PARA \n\nCADA 45m²\nX\n\n859370000\nEnsino de idiomas\n\n1** ISENTO\n1 VAGA PARA \n\nCADA 45m²\n\n859290300\nEnsino de música\n\n1** ISENTO\n1 VAGA PARA \n\nCADA 45m²\n\n859969905\nEnsino de robótica\n\n1** ISENTO\n1 VAGA PARA \n\nCADA 45m²\n\n859969906\nEnsino de segurança\n\n1** ISENTO\n1 VAGA PARA \n\nCADA 45m²\n\n851390000\nEnsino fundamental\n\n1** X E.I. ISENTO X\n\n852010000\nEnsino médio\n\n1** X E.I. ISENTO X\n\n852010001\nEnsino médio filantrópico\n\n1** X E.I"
+      ],
+      "edition": "8141",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-10-03/a2a791a8c12fa0c131ed23e1faec46118da73b6e.txt"
+    }
+  ]
+}

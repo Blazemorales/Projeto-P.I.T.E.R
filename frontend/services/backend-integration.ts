@@ -313,6 +313,62 @@ export class BackendIntegrationService {
       throw error;
     }
   }
+
+  /**
+   * NOVO: Salvar resultados de busca no backend
+   * Permite sincronizar busca simples com dashboard
+   *
+   * @param gazettes - Array de diários encontrados
+   * @param filters - Filtros usados na busca
+   */
+  static async saveSearchResults(
+    gazettes: any[],
+    filters: {
+      territory_id?: string;
+      municipio?: string;
+      dataInicio?: string;
+      dataFim?: string;
+      categoria?: string;
+      querystring?: string;
+    }
+  ): Promise<void> {
+    try {
+      // Não bloquear se não houver diários
+      if (!gazettes || gazettes.length === 0) {
+        console.log('⚠️ Nenhum diário para salvar');
+        return;
+      }
+
+      console.log(`💾 Salvando ${gazettes.length} diários no backend...`);
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/save_search`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          gazettes,
+          filters,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Save Search API Error: ${response.status}`);
+      }
+
+      const result = await response.json();
+
+      if (result.status === 'saved') {
+        console.log(`✅ Resultados salvos: ${result.filename}`);
+      } else if (result.status === 'error') {
+        console.warn('⚠️ Erro ao salvar (não crítico):', result.message);
+      }
+    } catch (error) {
+      // Erro silencioso - não deve bloquear a busca
+      console.warn('⚠️ Não foi possível salvar resultados (não crítico):', error);
+      // NÃO lançar erro - deixa a busca continuar normalmente
+    }
+  }
 }
 
 // Export como singleton para uso direto

@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "territory_a": "5208707",
+    "territory_a_name": "Território 5208707",
+    "period_a": "2025-10-08 a 2025-12-02",
+    "territory_b": "5201405",
+    "territory_b_name": "Território 5201405",
+    "period_b": "2025-10-08 a 2025-12-02",
+    "search_keywords": "software",
+    "generated_at": "2025-12-02T22:13:28.427737"
+  },
+  "data": {
+    "territory_a_analysis": {
+      "total_entities": 8,
+      "entity_counts_by_type": {
+        "MISC": 3,
+        "LOC": 3,
+        "ORG": 1,
+        "PER": 1
+      },
+      "top_entities": {
+        "CONTRATO Nº": 1,
+        "GOIANIAPREV": 1,
+        "Contratante": 1,
+        "MARCOS OLIVEIRA DA SILVA": 1,
+        "Contratada": 1,
+        "CNPJ": 1,
+        "Órgão": 1,
+        "Av. B": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "territory_b_analysis": {
+      "total_entities": 13,
+      "entity_counts_by_type": {
+        "MISC": 5,
+        "ORG": 3,
+        "LOC": 3,
+        "PER": 2
+      },
+      "top_entities": {
+        "Contrato": 2,
+        "Sr. RU- DIMAR": 1,
+        "DO CONTRATO": 1,
+        "Administração Pública": 1,
+        "Brasil": 1,
+        "TERMO": 1,
+        "Procuradoria Geral do Município": 1,
+        "Aparecida de Goiânia": 1,
+        "DANIEL AN- TONIO": 1,
+        "CNPJ": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "differences": {
+      "investment_diff": 0.0,
+      "investment_percentage": 0,
+      "entities_diff": 5,
+      "winner": "Empate"
+    }
+  }
+}

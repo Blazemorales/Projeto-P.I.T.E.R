@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "source_territory": "5201405",
+    "period": "2023-01-03 a 2025-12-03",
+    "search_keywords": "robotica",
+    "generated_at": "2025-12-03T08:36:23.820678",
+    "type": "search_with_stats",
+    "date_range_start": "2023-01-03",
+    "date_range_end": "2025-12-03"
+  },
+  "data": {
+    "total_gazettes": 2,
+    "total_invested": 0.0,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Educação": 0.0,
+      "Capacitação": 0.0,
+      "Servidor": 0.0,
+      "Cloud/Nuvem": 0.0,
+      "Hospedagem": 0.0,
+      "Rede": 0.0,
+      "Backup": 0.0,
+      "Data Center": 0.0,
+      "Gestão": 0.0,
+      "ERP": 0.0,
+      "Financeiro": 0.0,
+      "Robótica": 0.0,
+      "Outros": 0.0
+    },
+    "investments_by_period": {},
+    "publications_by_period": {
+      "2024": 1,
+      "2025": 1
+    },
+    "period_grouping": "year"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5201405",
+      "date": "2024-01-18",
+      "scraped_at": "2024-01-18T22:50:09.135366",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2024-01-18/a68ad1216357c7412ec1d225b1b66b3e3081615c.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "do Ensino Fundamental nas Escolas Municipais… \n98\n2.8 Formação de turmas do Ensino Fundamental nas Escolas Municipais. \n101\n2.9 Programas Federais da Educação Básica e Programas\ne Projetos nas Escolas Municipais… 101\n2.9.1 Programa de Iniciação à Robótica… 102\n2.9.2 Programa AlfaMais Goiás… 103\n3. Ensino Fundamental nas Escolas de Tempo Integral 104\n3.1 Funcionamento e atendimento das Escolas de Tempo Integral… 105\n3.1.1 Orientações sobre os intervalos e recreios… 105\n3.1.2 Horários da alimentação"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2024-01-18/a68ad1216357c7412ec1d225b1b66b3e3081615c.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-06-27",
+      "scraped_at": "2025-06-28T03:29:08.586298",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-27/8d353db87b5a17d7a4c703f8bd4cd8d844283251.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "obrigatório na\nBase Nacional Comum Curricular dependerá de aprovação do Conselho Nacional\nde Educação e de homologação pelo Ministro de Estado da Educação.\n\n§ 11. A educação digital, com foco no letramento digital e no ensino de com-\nputação, programação, robótica e outras competências digitais, será componente\ncurricular do ensino fundamental e do ensino médio.\n\nAcrescente-se a isso, o fato de que, o § 2º do art. 4º do P.L. n.º 61/2025 limita\na atuação do Chefe do Poder Executivo de celebrar, privativamente"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-27/8d353db87b5a17d7a4c703f8bd4cd8d844283251.txt"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2025-10-29 a 2025-12-03",
+    "search_keywords": "software",
+    "generated_at": "2025-12-03T07:11:01.556372",
+    "type": "search_with_stats",
+    "date_range_start": "2025-10-29",
+    "date_range_end": "2025-12-03"
+  },
+  "data": {
+    "total_gazettes": 2,
+    "total_invested": 0.0,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 0.0
+    },
+    "investments_by_period": {},
+    "publications_by_period": {
+      "2025-11": 2
+    },
+    "period_grouping": "month"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-27",
+      "scraped_at": "2025-11-28T02:49:59.679203",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fiscalizar e acompanhar a execução do CONTRATO Nº 018/2025, firmado entre o\nGOIANIAPREV (Contratante) e a empresa 48.511.241 MARCOS OLIVEIRA DA SILVA (Contratada), CNPJ n.º\n48.511.241/0001-21, tendo como objeto o fornecimento de catracas eletrônicas com software integrado de controle de\nacesso, incluindo serviços de locação, instalação, treinamento e suporte técnico para atender as necessidades por um\nperíodo de 12 (doze) meses, a ser executado nas dependências deste Órgão, localizadas na Av. B, Qd. C-1"
+      ],
+      "edition": "8671",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-19",
+      "scraped_at": "2025-11-20T02:51:35.668779",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "sistema, deverá fundamentar a negativa e\napresentar à contratante relatório de impacto ou amostras do conjunto de dados não cobertos\npelo sigilo.\n\nArt. 11. A administração pública municipal poderá dar preferência, nas\ncontratações, ao emprego de software livre, com licenciamento gratuito e não exclusivo sobre\nos direitos de propriedade intelectual relativos a programas de computador, de forma a permitir\nexpressamente a alteração, a utilização e a distribuição de sistemas de inteligência artificial"
+      ],
+      "edition": "8667",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.txt"
+    }
+  ]
+}

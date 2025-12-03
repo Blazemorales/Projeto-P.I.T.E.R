@@ -35,11 +35,12 @@ async def fetch_gazettes(territory_id: str, since: str, until: str, keywords: st
     try:
         target_start = datetime.strptime(since, "%Y-%m-%d").date()
         target_end = datetime.strptime(until, "%Y-%m-%d").date()
-    except ValueError:
-        logger.error(f"Datas inválidas: {since} - {until}")
+    except ValueError as e:
+        logger.error(f"❌ Datas inválidas: {since} - {until} | Erro: {e}")
         return {"gazettes": [], "total_gazettes": 0}
 
     logger.info(f"🕵️ INICIANDO VARREDURA: '{query_term}' de {since} até {until}")
+    logger.info(f"📅 Intervalo alvo: {target_start} até {target_end}")
 
     async with httpx.AsyncClient(timeout=60.0, follow_redirects=True) as client:
         for page in range(PAGES_TO_SCAN):
@@ -69,17 +70,26 @@ async def fetch_gazettes(territory_id: str, since: str, until: str, keywords: st
                 count_in_batch = 0
                 for gazette in batch:
                     raw_date = gazette.get("date")
-                    if not raw_date: continue
-                    
+                    if not raw_date:
+                        logger.warning(f"  ⚠️ Diário sem data: {gazette.get('territory_id')} - {gazette.get('edition')}")
+                        continue
+
                     try:
                         g_date = datetime.strptime(str(raw_date)[:10], "%Y-%m-%d").date()
-                        
+
+                        # Log para debug
+                        is_in_range = target_start <= g_date <= target_end
+                        if not is_in_range:
+                            logger.debug(f"  🚫 FILTRADO: {g_date} não está entre {target_start} e {target_end}")
+
                         # Só guarda se for EXATAMENTE do período pedido
-                        if target_start <= g_date <= target_end:
+                        if is_in_range:
                             collected_gazettes.append(gazette)
                             count_in_batch += 1
-                            
-                    except ValueError:
+                            logger.debug(f"  ✅ INCLUÍDO: {g_date} está no período")
+
+                    except ValueError as e:
+                        logger.warning(f"  ⚠️ Data inválida: {raw_date} - {e}")
                         continue
                 
                 # Opcional: Log para ver o progresso

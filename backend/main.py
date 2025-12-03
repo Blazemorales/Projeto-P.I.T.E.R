@@ -4,13 +4,20 @@ from typing import Dict, Any, List
 import uvicorn
 import os
 import json
+import logging
 from pathlib import Path
+
+# Configurar logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Imports
 from services.integration.piter_api_orchestrator import PiterApiOrchestrator, run_analysis_pipeline
 from services.api.clients.querido_diario_client import FilterParams
 # Novo Import de Comparação
-from services.api.comparison.comparison_service import ComparisonService 
+from services.api.comparison.comparison_service import ComparisonService
+# Import de Ranking
+from services.api.ranking.routes import router as ranking_router 
 
 app = FastAPI(
     title="P.I.T.E.R API",
@@ -28,6 +35,9 @@ app.add_middleware(
 
 orchestrator = PiterApiOrchestrator()
 comparison_service = ComparisonService() # Instancia o serviço
+
+# Registrar rotas de ranking
+app.include_router(ranking_router, prefix="/api/v1", tags=["ranking"])
 
 @app.get("/")
 async def read_root():
@@ -66,7 +76,7 @@ async def analyze_gazettes(
     until: str = "2024-01-05",
     keywords: str = Query(None, description="Palavra-chave para filtro")
 ):
-    kw_value = keywords if keywords and keywords is not ... else None
+    kw_value = keywords if keywords else None
     return await run_analysis_pipeline(
         territory_id=territory_id,
         since=since,
@@ -88,7 +98,7 @@ async def compare_territories(
     """
     Compara investimentos em tecnologia entre dois territórios ou períodos.
     """
-    kw_value = keywords if keywords and keywords is not ... else None
+    kw_value = keywords if keywords else None
     
     return await comparison_service.compare_scenarios(
         territory_a, date_a_start, date_a_end,
@@ -151,20 +161,126 @@ async def get_data_output_file(filename: str):
         # Segurança: validar nome do arquivo
         if ".." in filename or "/" in filename:
             raise HTTPException(status_code=400, detail="Nome de arquivo inválido")
-        
+
         file_path = Path(__file__).parent / "data_output" / filename
-        
+
         if not file_path.exists():
             raise HTTPException(status_code=404, detail=f"Arquivo não encontrado: {filename}")
-        
+
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        
+
         return data
     except HTTPException:
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# --- NOVO ENDPOINT: Salvar resultados de busca ---
+@app.post("/api/v1/save_search")
+async def save_search_results(request: Dict[str, Any]):
+    """
+    Salva resultados de busca simples para visualização no dashboard.
+
+    Calcula estatísticas de investimento a partir dos excerpts dos diários
+    e salva em formato compatível com o dashboard.
+
+    Body esperado:
+    {
+        "gazettes": [...],  // Array de diários encontrados
+        "filters": {        // Filtros usados na busca
+            "territory_id": "5300108",
+            "dataInicio": "2024-01-01",
+            "dataFim": "2024-03-31",
+            "categoria": "software",
+            "municipio": "Brasília"
+        }
+    }
+    """
+    try:
+        from services.integration.piter_api_orchestrator import save_json_file
+        from services.processing.statistics_generator import StatisticsGenerator
+        from datetime import datetime
+
+        gazettes = request.get("gazettes", [])
+        filters = request.get("filters", {})
+
+        if not gazettes:
+            return {
+                "status": "skipped",
+                "message": "Nenhum diário para salvar"
+            }
+
+        # Calcular estatísticas de investimento a partir dos diários
+        stats_gen = StatisticsGenerator()
+        investment_stats = stats_gen.extract_investment_statistics(gazettes)
+
+        logger.info(f"💰 Estatísticas calculadas: total={investment_stats.get('total_invested', 0)}")
+        logger.info(f"📊 Agrupamento: {investment_stats.get('period_grouping', 'N/A')}")
+        logger.info(f"📈 Investimentos por período: {investment_stats.get('investments_by_period', {})}")
+
+        # Preparar estrutura de dados compatível com dashboard
+        territory_id = filters.get("territory_id") or filters.get("municipio", "unknown")
+        data = {
+            "meta": {
+                "source_territory": territory_id,
+                "period": f"{filters.get('dataInicio', 'N/A')} a {filters.get('dataFim', 'N/A')}",
+                "search_keywords": filters.get("categoria") or filters.get("querystring", "N/A"),
+                "generated_at": datetime.now().isoformat(),
+                "type": "search_with_stats",
+                "date_range_start": filters.get("dataInicio"),
+                "date_range_end": filters.get("dataFim")
+            },
+            "data": {
+                "total_gazettes": len(gazettes),
+                "total_invested": investment_stats.get("total_invested", 0),
+                "total_entities": 0,
+                "investments_by_category": investment_stats.get("investments_by_category", {}),
+                "investments_by_period": investment_stats.get("investments_by_period", {}),
+                "publications_by_period": investment_stats.get("publications_by_period", {}),
+                "period_grouping": investment_stats.get("period_grouping", "month")
+            },
+            "gazettes": gazettes
+        }
+
+        # Salvar com timestamp único
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Retornar dados completos para o frontend usar diretamente
+        return {
+            "status": "saved",
+            "filename": f"search_{territory_id}_{timestamp}.json",
+            "total_gazettes": len(gazettes),
+            "total_invested": investment_stats.get("total_invested", 0),
+            "investments_by_category": investment_stats.get("investments_by_category", {}),
+            "investments_by_period": investment_stats.get("investments_by_period", {}),
+            "publications_by_period": investment_stats.get("publications_by_period", {}),
+            "period_grouping": investment_stats.get("period_grouping", "month"),
+            "message": "Resultados salvos com sucesso"
+        }
+        
+        # Codigo abaixo não será executado (return acima), mas mantido para referencia
+        filename = f"search_{territory_id}_{timestamp}.json"
+
+        # Salvar arquivo (sobrescreve latest_search.json)
+        save_json_file(data, filename, is_latest=True, latest_name="latest_search.json")
+
+        logger.info(f"✅ Resultados de busca salvos: {filename} ({len(gazettes)} diários, R${investment_stats.get('total_invested', 0):,.2f})")
+
+        return {
+            "status": "saved",
+            "filename": filename,
+            "total_gazettes": len(gazettes),
+            "total_invested": investment_stats.get("total_invested", 0),
+            "message": "Resultados salvos com sucesso"
+        }
+
+    except Exception as e:
+        logger.error(f"❌ Erro ao salvar resultados de busca: {e}")
+        return {
+            "status": "error",
+            "message": str(e)
+        }
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)

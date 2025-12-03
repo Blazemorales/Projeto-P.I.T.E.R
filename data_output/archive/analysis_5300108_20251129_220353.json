@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_territory": "5300108",
+    "period": "2024-01-01 a 2024-01-05",
+    "search_keywords": "padrão",
+    "generated_at": "2025-11-29T22:03:53.956713"
+  },
+  "data": {
+    "entity_counts_by_type": {
+      "LOC": 115,
+      "MISC": 22,
+      "ORG": 7,
+      "PER": 4
+    },
+    "top_entities": {
+      "Secretaria": 71,
+      "Estado de Educação": 7,
+      "Mobilidade": 6,
+      "Orçamento e Administração": 5,
+      "Estado de Transporte": 5,
+      "Orçamento e Administração.............................................................": 5,
+      "Universidade do Distrito Federal Professor Jorge Amaury Maia Nunes": 5,
+      "Estado de Saúde": 3,
+      "Estado": 3,
+      "Parque Nacional de Brasília": 2
+    },
+    "total_invested": 0.0,
+    "investments_by_category": {
+      "Equipamentos (Hardware)": 0.0,
+      "Conectividade": 0.0,
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Infraestrutura de TI": 0.0,
+      "Outros": 0.0
+    },
+    "qualitative_analysis": {}
+  }
+}

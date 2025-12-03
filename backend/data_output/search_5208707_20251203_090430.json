@@ -1,0 +1,842 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2023-01-03 a 2025-12-03",
+    "search_keywords": "software",
+    "generated_at": "2025-12-03T09:04:30.906647",
+    "type": "search_with_stats",
+    "date_range_start": "2023-01-03",
+    "date_range_end": "2025-12-03"
+  },
+  "data": {
+    "total_gazettes": 57,
+    "total_invested": 26065199.34,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Educação": 0.0,
+      "Capacitação": 409046.83,
+      "Servidor": 1154653.08,
+      "Cloud/Nuvem": 62250.0,
+      "Hospedagem": 1800000.0,
+      "Rede": 1628080.0,
+      "Backup": 0.0,
+      "Data Center": 0.0,
+      "Gestão": 10003605.75,
+      "ERP": 0.0,
+      "Financeiro": 279961.16,
+      "Robótica": 0.0,
+      "Outros": 10727602.52
+    },
+    "investments_by_period": {
+      "2023": 1785136.38,
+      "2024": 466991.11,
+      "2025": 23813071.85
+    },
+    "publications_by_period": {
+      "2023": 14,
+      "2024": 16,
+      "2025": 27
+    },
+    "period_grouping": "year"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-22",
+      "scraped_at": "2025-09-23T03:39:07.897688",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-22/267dda725d2eb4fea7051df4216886190232e10c.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Secretaria Municipal de Inovação e Transformação Digital\n\nChefia da Advocacia Setorial\n\nEXTRATO DO CONTRATO 05/2025\n\nContrato de Licenciamento de Software por Assinatura, com Serviço de Manutenção e Suporte Técnico, que\nentre si celebram ao MUNICÍPIO DE GOIÂNIA, por intermédio da SECRETARIA MUNICIPAL DE INOVAÇÃO E\nTRANSFORMAÇÃO DIGITAL – SIT e a empresa SOFTWARE AG INFORMÁTICA E SERVIÇOS LTDA.\n\nO MUNICÍPIO DE GOIÂNIA, pessoa jurídica jurídica de direito público, com sede na Avenida do Cerrado, n° 999"
+      ],
+      "edition": "8627",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-22/267dda725d2eb4fea7051df4216886190232e10c.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-08-28",
+      "scraped_at": "2025-08-30T04:09:43.637877",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-08-28/31445b3ffe4bddf1a80277d93a24bbc9ef7048a4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Transformação Digital\n\nChefia da Advocacia Setorial\n\nEXTRATO DO TERMO ADITIVO 1 AO CONTRATO 11/22\n\nAditivo 1 ao Contrato de Licenciamento de Software por Assinatura, com Serviço de Manutenção e Suporte\nTécnico, que entre si celebram ao Município de Goiânia, por intermédio da Secretaria Municipal de Inovação e\nTransformação Digital – SIT e a empresa Software AG Informática e Serviços Ltda.\n\nO presente Aditivo ajusta-se conforme as cláusulas alinhadas adiante.\n\nPartes Contratantes:\n\na) Contratante:"
+      ],
+      "edition": "8610",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-08-28/31445b3ffe4bddf1a80277d93a24bbc9ef7048a4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-02-11",
+      "scraped_at": "2025-02-12T05:53:34.000213",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-02-11/ff738ef799a239f50980f5b7651e3c9d83cb3e0f.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Administrativo\n\nATO DE DECLARAÇÃO DE DISPENSA DE LICITAÇÃO\n\n1. Justificativa da Dispensa de Licitação\n\nA contratação é necessária para garantir a continuidade dos serviços essenciais relacionados à manutenção\ncorretiva, adaptativa, evolutiva e preventiva do Software de Gestão de Assistência Médica do IMAS , bem\ncomo o suporte técnico e operacional aos usuários do sistema.\n\nO IMAS realizou uma análise das propostas de três empresas, conforme demonstrada na Planilha\nComparativa de Preços :\n\nAsert Serviços e Tecnologia"
+      ],
+      "edition": "8476",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-02-11/ff738ef799a239f50980f5b7651e3c9d83cb3e0f.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-05-05",
+      "scraped_at": "2025-05-06T03:52:24.074443",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-05/9b37b18e7b50868d775c3101de71fc9d67b52529.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Infraestrutura Digital;\n\n3. Gerência do Centro de Gestão Integrado; e\n\n4. Gerência de Segurança Cibernética;\n\nb) Diretoria de Sistemas de Informações, com as seguintes unidades:\n\n1. Gerência de Arquitetura de Soluções;\n\n2. Gerência de Tecnologia e Soluções de Software;\n\n3. Gerência de Inovação em Sistemas; e\n\n4. Gerência de Automação e Qualidade; e\n\nc) Diretoria de Inteligência de Dados e Inovação, com as seguintes unidades:\n\n1. Gerência de Banco de Dados; e\n\n2. Gerência de Dados e Governança.\n\n§ 1º A Secretaria"
+      ],
+      "edition": "8529",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-05/9b37b18e7b50868d775c3101de71fc9d67b52529.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-07-16",
+      "scraped_at": "2024-07-17T00:40:36.726327",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-16/fa72ca693e139b46974b03c27e80af37d6206505.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "contratação de empresa para prestação dos serviços técnicos especializados de\nmanutenção preventiva e corretiva, em campo e laboratorial, do sistema semafórico instalado no Município de Goiânia,\ncompreendendo: fornecimento, manutenão e comunicação de software de controle de tráfego, tanto local como remoto;\ne, a implantação de um Centro de Controle Operacional - CCO, em atendimento à Secretaria Municipal de Mobilidade -\nSMM;\n\nCONSIDERANDO que, após a realização da Prova de Conceito do Grupo 03, foi proposta"
+      ],
+      "edition": "8333",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-16/fa72ca693e139b46974b03c27e80af37d6206505.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-03-20",
+      "scraped_at": "2025-03-21T03:35:34.931928",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-20/a29538b49ffff4b356393d41f1d2d5347e9b78c7.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Coordenadoria de Transporte:\n\n9.1.1. Chefia do Núcleo de Abastecimento;\n\n10. Diretoria de Tecnologia da Informação:\n\n10.1. Coordenadoria de Informática:\n\n10.1.1. Gerência de Hardware;\n\n10.1.2. Gerência de Suporte de Informática;\n\n10.1.3. Gerência de Software;\n\n11. Diretoria de Segurança e Inteligência:\n\n11.1. Serviço de Segurança da Presidência;\n\n11.2. Assessoria de Apoio de Segurança;\n\n11.3. Coordenadoria de Segurança e Inteligência;\n\n12. Diretoria Executiva do Cerimonial:\n\n12.1. Assessoria de Apoio"
+      ],
+      "edition": "8501",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-20/a29538b49ffff4b356393d41f1d2d5347e9b78c7.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-02-15",
+      "scraped_at": "2024-02-16T23:18:56.775132",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-02-15/9bc0997e4858e42a59287e14702d0c90a1649069.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Contratação de\nempresa especializada para prestação de serviços técnicos em elicitação, documentação, design, desenvolvimento e manutenção\nevolutiva e corretiva de sistemas, portais e aplicativos para dispositivos móveis, executados em regime de fábrica de software, utilizando\nas linguagens Maker All e Inteligência Artificial (IA), com treinamento da ferramenta para os técnicos e dos produtos desenvolvidos\npara multiplicadores e usuários finais dos novos produtos, contemplando instalação e acompanhamento da"
+      ],
+      "edition": "8228",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-02-15/9bc0997e4858e42a59287e14702d0c90a1649069.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-01",
+      "scraped_at": "2025-09-02T04:16:59.363396",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-01/aa40847524c104a5677704175432625b0f9867f7.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "do Executivo\nMunicipal através do Decreto n.º 304, de 19/01/2021, e a vista do que consta no processo SEI nº 23.20.000000856-5;\n\nCONSIDERANDO as exigências da Lei nº 9.609, de 19/02/1998, que dispõe sobre a proteção da propriedade\nintelectual de software, sua comercialização no País, e dá outras providências, da Lei nº 12.527, de 18/11/2011, atualizada pela Lei\nnº 12.737 de 30/11/2012 - que dispõe sobre a tipificação criminal de delitos informáticos, e da Lei nº 13.709 de 14/08/2018 - Lei\nGeral de"
+      ],
+      "edition": "8612",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-01/aa40847524c104a5677704175432625b0f9867f7.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-07-23",
+      "scraped_at": "2025-07-24T03:13:37.973255",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-07-23/f3210cce7e791096374f42fb193283f548f883b0.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "recursos\npróprios)\n\nR$\n1.800.000,00\n\nContratação direta em caráter\nemergencial, com fundamento no\nart. 75, inciso VIII, da Lei\n14.133/2021, cujo objeto consiste\nna manutenção, pelo período de\n90 (noventa) dias referente ao\nfuncionamento do sistema de\nsoftware fornecido pela empresa\nCELK Sistemas Ltda. Prestação\nde serviços de garantia de\nevolução tecnológica que\nenvolvem todos os serviços\nnecessários para a manutenção\ndo funcionamento dos sistemas\nde atendimento de pacientes,\nincluindo: hospedagem,\ninfraestrutura"
+      ],
+      "edition": "8584",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-07-23/f3210cce7e791096374f42fb193283f548f883b0.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-03-28",
+      "scraped_at": "2025-03-29T02:52:44.039270",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-28/b4d104fcf641ef882d167705c4f6111924c09367.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "por câmeras de segurança instaladas em seus clientes e que estejam apontadas para as vias públicas com a\nSIT e (AGCMG); da colaboração mútua na prevenção e combate à criminalidade.\n\nO SIESE/GO disponibilizará para a SIT acesso para a utilização do software de inteligência artificial em todas as câmera do Município, devendo este contemplar Face ID,\ninteligência para análise de imagem, portais de leitura de placa de carro, análise de imagem disponibiliza em meta dados, dentre outras inteligências e demais"
+      ],
+      "edition": "8508",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-28/b4d104fcf641ef882d167705c4f6111924c09367.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-19",
+      "scraped_at": "2025-09-20T09:42:36.853577",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-19/0c6a72716c6697a1e9ed3ad02a2b193c212640fe.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Municipal de Goiânia, declara Inexigível a Licitação, com apoio no art. 74\nI, da Lei 14.133/2021, para a contratação da empresa Software AG Informática e Serviços Ltda,\ninscrita no CNPJ sob nº 07.594.862/0001-39, pelo valor total de R$ 4.822.688,00 (quatro\nmilhões, oitocentos e vinte e dois mil, seiscentos e oitenta e oito reais), cujo objeto da\ncontratação é o licenciamento de software por assinatura, incluindo serviços de manutenção e\nsuporte técnico, conforme descrito no Termo de Referência, na proposta"
+      ],
+      "edition": "8626",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-19/0c6a72716c6697a1e9ed3ad02a2b193c212640fe.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-05-02",
+      "scraped_at": "2024-05-03T00:54:39.144738",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-05-02/362b7f9b8af224dee886508eb51abe5ced9b31be.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "todas as suas formas, oriundo da contratação direta proveniente do Termo \nde Referência constante no Processo nº 0007299/2024 – GED, de acordo com a Lei Federal nº \n13.303, de 30 de junho de 2016, realizado junto a empresa ECUSTOMIZE CONSULTORIA \nEM SOFTWARE S.A, inscrita no CNPJ nº 09.397.355/0001-30; \n\nArt. 2º - Designar a empregada ANA PAULA SALVIANO CAMPOS, matrícula \nnº 940470, inscrita no CPF nº 022.598.571-32, para, na ausência do titular GESTOR (a) exercer o \nencargo de suplente; \n\nArt. 3º -"
+      ],
+      "edition": "8282",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-05-02/362b7f9b8af224dee886508eb51abe5ced9b31be.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-06-24",
+      "scraped_at": "2024-06-25T01:15:04.144496",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-24/033733491c9cb7ca153fde6a80bd170bb8052ea7.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Secretaria Municipal de Mobilidade\n\nChefia da Advocacia Setorial\n\nPROCESSO SEI Nº: 24.13.000003446-0\n\nCONTRATANTE: SECRETARIA MUNICIPAL DE MOBILIDADE – SMM\n\nCONTRATADA: AUGUSTO MARTINS PARREIRA - MEI\n\nOBJETO DO CONTRATO: AQUISIÇÃO DE LICENÇA PARA USO DE SOFTWARE.\n\nDECLARAÇÃO DE DISPENSA DE LICITAÇÃO\n\nO SECRETÁRIO MUNICIPAL DE MOBILIDADE, MARCELO TORRUBIA DE OLVEIRA, CPF Nº 700.918.271-08,\nnomeado pelo Decreto Municipal nº 1.130, de 20 de março de 2023, no uso de suas atribuições legais e regulamentares,"
+      ],
+      "edition": "8317",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-24/033733491c9cb7ca153fde6a80bd170bb8052ea7.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-06-21",
+      "scraped_at": "2023-06-21T21:36:03.602715",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-06-21/70966d63f2a2d336134bbecc970b8f65e0e89c76.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "matrícula nº 887951-01 e CPF nº 031.258.291-94, para \natuar como FISCAL do Contrato nº 121/2023 – AJU, oriundo da dispensa de licitação que \noriginou o contrato de fornecimento de solução para o gerenciamento de processos judiciais \n(licença de uso de software jurídico) de acordo com as especificações e condições estabelecidas \nno Termo de Referência e Processo nº 0010302/2023 – GED, feita por esta Companhia junto a \nempresa LAWSOFT S.A., inscrita no CNPJ sob o nº 07.295.329/0001-76, que deverá atender"
+      ],
+      "edition": "8070",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-06-21/70966d63f2a2d336134bbecc970b8f65e0e89c76.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-03-07",
+      "scraped_at": "2025-03-08T03:13:23.151459",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-07/8e5dbf801c6ccc4b65e05dfdbf411d7a2425ec2d.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Municipal de Inovação, Ciência e\nTecnologia, hoje denominada Secretaria Municipal de Inovação e Transformação Digital - SIT e a Empresa\nIBM Brasil – Industria Máquinas e Serviços Ltda., que tem por objeto a cessão de Licença de uso dos\nprogramas/software, conforme contido no item 1.4 do referido contrato, licença não transferíveis e não\nexclusivas dentro do território nacional, fazendo parte do presente contrato a proposta da IBM n.º 567883-\n1, salvo o disposto contratualmente de forma diversa.\n"
+      ],
+      "edition": "8492",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-07/8e5dbf801c6ccc4b65e05dfdbf411d7a2425ec2d.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-06-06",
+      "scraped_at": "2025-06-07T03:14:38.457711",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-06/719f5f0fda08e4769782287d751bf25af63582b3.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "desmontagem de Tela em LED de Led\nIndoor, TELAS EM LEDS PH03, PH\n6.67 ou equivalente em altíssima\ndefinição, no tamanho de 6mx3m 18\nmetros quadrados. Processamento\ndigital com entradas e saídas sdi,\nhdmi, vga; computador e controller;\nplaca de captura e o software do\npainel. Conexões: sinal rj45 cat 5e /\nfibra óptica; possibilidade de leitura\ndas extensões de arquivos, no\nmínimo: mpg, avi, wmv, rm. 01 control\nbox constituído com engates\nprojetados especialmente para\npermitirem a montagem e\ndesmontagem rapidamente"
+      ],
+      "edition": "8553",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-06/719f5f0fda08e4769782287d751bf25af63582b3.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-05-29",
+      "scraped_at": "2025-05-30T03:13:52.817221",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-29/aa899ca26edb8713f7e0c934223cb73aae024f6b.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Parecer /25 da Advocacia da SIT, processo SEI 25.2.000000284-1.\n\nCláusula Primeira: Objeto\n\n1.1. O presente contrato tem por objeto a aquisição e manutenção pela CONTRATANTE, de equipamento\ntipo Mainframe IBM Z15 T02 8562 K01 (RMKT-Remarketing) e software z/VM, incluindo seus respectivos\ncomponentes, licenças, manuais, e demais acessórios necessários ao seu pleno funcionamento, conforme\nespecificações técnicas, requisitos de desempenho, condições de entrega e demais elementos constantes no\nTermo de"
+      ],
+      "edition": "8547",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-29/aa899ca26edb8713f7e0c934223cb73aae024f6b.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-02-26",
+      "scraped_at": "2024-02-27T23:21:17.876583",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-02-26/fc161573faa92ed7a71a118fbb06e7ef05829f9e.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "realização de despesa, por dispensa de licitação, de acordo com o ar�go 29, inciso III\ne IV, da Lei Federal nº 13.303/2016, para a CONTRATAÇÃO DE EMPRESA ESPECIALIZADA NA PRESTAÇÃO DE SERVIÇO\nCONTÍNUO MENSAL, DE CESSÃO DE LICENÇA DE USO ONEROSO DE SOFTWARE PARA FISCALIZAÇÃO, PESQUISA,\nCADASTRO E VISTORIA DO SISTEMA DE TRANSPORTE COLETIVO DA REGIÃO METROPOLITANA DE GOIÂNIA, conforme\nMemorando nº 9/2023 (0942804) da Gerência Administra�va, que teve como vencedora da cotação, pelo quesito menor\npreço"
+      ],
+      "edition": "8236",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-02-26/fc161573faa92ed7a71a118fbb06e7ef05829f9e.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-03-14",
+      "scraped_at": "2023-03-15T11:28:29.977978",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-03-14/076f81e48504e9e027f61591a8f15e4953a8d2a5.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "do Inventário Patrimonial da Prefeitura Municipal de Goiânia,\nexecutando serviços de levantamento físico com inspeção \"in loco\", substituição e afixação das etiquetas de\nidentificação patrimonial, com o fornecimento de etiquetas, fornecimento de Software, material e equipamento\nnecessários à organização do patrimônio de todo o município de Goiânia, pelo período de 12 (doze) meses, na forma de\nserviços continuados, executados sob demanda e mão de obra, mensurados em Unidade de Serviço – US, conforme"
+      ],
+      "edition": "8004",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-03-14/076f81e48504e9e027f61591a8f15e4953a8d2a5.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-06-13",
+      "scraped_at": "2023-06-14T11:22:23.958617",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-06-13/23765d04eb83b0f42d894fa26630c294a365b8fc.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "de Mobilidade\n\nChefia da Advocacia Setorial\n\nPROCESSO SEI Nº: 22.13.000003421-9\n\nCONTRATANTE: SECRETARIA MUNICIPAL DE MOBILIDADE – SMM\n\nCONTRATADAS: ACM BAPTISTA LTDA e\n\nLC VENDAS E CONSULTORIA LTDA.\n\nOBJETO DO CONTRATO: AQUISIÇÃO DE LICENÇAS DE SOFTWARE AUTODESK AUTOCAD.\n\nDECLARAÇÃO DE DISPENSA DE LICITAÇÃO\n\nO SECRETÁRIO MUNICIPAL DE MOBILIDADE, nomeado pelo Decreto Municipal nº 2.351, de 16 de maio de 2023, no uso de\nsuas atribuições legais e regulamentares, mediante a instrução dos autos nº SEI"
+      ],
+      "edition": "8064",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-06-13/23765d04eb83b0f42d894fa26630c294a365b8fc.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-06-03",
+      "scraped_at": "2025-06-04T03:37:35.641235",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-03/82367651effac48b9116305cccca400ea497f4a3.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "serviços de comunicação (telefone, telex, correios, etc.);fretes e\ncarretos; locação de imóveis (inclusive despesas de condomínio e tributos à\nconta do locatário, quando previstos no contrato de locação); locação de\nequipamentos e materiais permanentes; software; conservação e adaptação\nde bens imóveis; seguros em geral (exceto os decorrentes de obrigação\npatronal); serviços de asseio e higiene; serviços de divulgação, impressão,\nencadernação e emolduramento; serviços funerários; despesas com\ncongressos"
+      ],
+      "edition": "8550",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-03/82367651effac48b9116305cccca400ea497f4a3.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-11",
+      "scraped_at": "2025-09-12T04:14:41.015523",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-11/6b1487dbc72f87a8353ccde04baa20de537499f4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Inovação e Transformação Digital\n\nChefia da Advocacia Setorial\n\nEXTRATO DO CONTRATO 06/25\n\nContrato de\n Solução de\nSoftware de\nGestão, em\nmodelo de\nlicenciamento,\nque entre si\n celebram o\nMunicípio de\nGoiânia, por\nintermédio\nda Secretaria\nMunicipal de\nInovação,\nCiência e\nTecnologia -\nSictec, e a\nempresa\nCongres -\nConsultoria\nem Gestão\nEmpresarial\nLtda.\n\nO presente Contrato de Solução de Software de Gestão, em modelo de licenciamento, dar-se-á mediante as cláusulas e\ncondições adiante.\n\nPartes:\n\nContratantes:"
+      ],
+      "edition": "8620",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-11/6b1487dbc72f87a8353ccde04baa20de537499f4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-04-20",
+      "scraped_at": "2023-04-21T11:25:20.543556",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-04-20/315b61ed465fdf22e0e74c261c229de6240e5a0a.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "dos resultados com o seu valor contábil e são \nreconhecidos em outras receitas (despesas) líquidas na demonstração do resultado. \n\ni) Intangível\n\nAtivos intangíveis são reconhecidos pelo custo de aquisição e/ou implantação, os direitos de uso de software são \ndemonstrados pelo custo de aquisição em conta de compensação e lançados em contrapartida ao resultado do período. \n\nj) Redução ao valor recuperável (Impairment)\n\nUm ativo tem perda no seu valor recuperável se uma evidência objetiva indica que"
+      ],
+      "edition": "8030",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-04-20/315b61ed465fdf22e0e74c261c229de6240e5a0a.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-29",
+      "scraped_at": "2025-09-30T03:30:15.881948",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-29/2c20175042ff3b75943adbc5a60f6f21779688a4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fiscalizar a execução do Contrato Ctjr n.º 05/2025 (SEI nº\n25.2.000000462-3) , celebrado entre o Município de Goiânia, através da  Secretaria Municipal de\nInovação e Transformação Digital - SIT e a Empresa \"Software AG\" Informática e Serviços LTDA, cujo\nobjeto é a contratação de Licenciamento de Software por assinatura, com serviço de Manutenção e\nSuporte Técnico.\n\nArt. 2°. Determinar que o mencionado servidor observe e cumpra as determinações\ncontidas na Instrução Normativa n.º 02/2018 da Controladoria"
+      ],
+      "edition": "8632",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-29/2c20175042ff3b75943adbc5a60f6f21779688a4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-08-25",
+      "scraped_at": "2023-08-26T11:24:59.967278",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-08-25/f4b82d91a71688d92c8deec1cb30728c351ef976.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Licitações, constantes no Processo SEI nº 23.31.000001326-0,\n\nRESOLVE:\n\nArt. 1º - AUTORIZAR a realização de despesa, por dispensa de licitação, de acordo com o artigo 29, inciso II, da\nLei Federal nº 13.303/2016 para o FORNECIMENTO DE LICENÇA DE USO DE SOFTWARE ESPECIALIZADO PARA AS\nÁREAS DE DEPARTAMENTO PESSOAL E CONTÁBIL, conforme Memorando nº 16/2023 (2094101) da Gerência de Finanças e\nContabilidade, que teve como vencedora da cotação, pelo critério de melhor qualificação técnica, conforme condições"
+      ],
+      "edition": "8116",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-08-25/f4b82d91a71688d92c8deec1cb30728c351ef976.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-07-08",
+      "scraped_at": "2025-07-09T03:32:48.411918",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-07-08/5297dcbbf6231c4bdc51bb2c7c1fceb6d78a0450.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "\nData da sessão: 11/07/2025\n\nLink: https://www.gov.br/compras/pt-br\n\nHorário da Fase de lances: 08h às 14h\n\n1. OBJETO DA CONTRAÇÃO DIRETA\n\n1.1. O objeto da presente dispensa é a escolha da proposta mais vantajosa para a contratação de solução de\nsoftware de gestão, em modelo de licenciamento, destinada a atender às demandas da Prefeitura Municipal de Goiânia,\nvisando possibilitar o acesso à plataforma, de forma potencial, a todos os seus servidores ativos, estimados em\naproximadamente 47.000 (quarenta"
+      ],
+      "edition": "8573",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-07-08/5297dcbbf6231c4bdc51bb2c7c1fceb6d78a0450.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-05-31",
+      "scraped_at": "2023-06-01T11:27:16.925782",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-05-31/d3b1ea12eed824133a99c9bc9d7f240da25c8a9e.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "analistas de sistema que poderão iniciar os trabalhos de \ndesenvolvimento de software específico, tanto interno, quanto para a disponibilização via \ninternet, de forma concomitante; \n\n Iniciar projeto que identifique, classifique e crie regras para aumentar a celeridade \ne eficácia em conjunto com a arrecadação para atender de forma ágil as diligências junto \nao TCM, e que seja possível a elaboração de sistema/software especializado, \nautomatizando as ações. \n\n Criar grupo de trabalho para a discussão"
+      ],
+      "edition": "8057",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-05-31/d3b1ea12eed824133a99c9bc9d7f240da25c8a9e.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-03-18",
+      "scraped_at": "2025-03-20T03:19:40.814079",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-18/5b82e4a2119faa266ae93339d337a1f12e5f194c.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "dos resultados com o seu valor \ncontábil e são reconhecidos em outras receitas (despesas) líquidas na demonstração do resultado. \n\ni) Intangível\n\nAtivos intangíveis são reconhecidos pelo custo de aquisição e/ou implantação, os direitos de uso de software são \ndemonstrados pelo custo de aquisição em conta de compensação e lançados em contrapartida ao resultado do \nperíodo. \n\nj) Redução ao valor recuperável (Impairment)\n\nUm ativo tem perda no seu valor recuperável se uma evidência objetiva indica que"
+      ],
+      "edition": "8499",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-18/5b82e4a2119faa266ae93339d337a1f12e5f194c.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-05-30",
+      "scraped_at": "2025-05-31T03:59:02.982592",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-30/763e8382f832675965877f43e8a12b8c6c17a7c4.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "instalados e atualizados sistemas, aplicativos e programas de software necessários à execução das atividades;\nParágrafo único. Constará, ainda, no termo de adesão, que o Auditor de Tributos, se responsabilizará pela estrutura física e tecnológica, imprescindíveis ao exercício de suas atribuições e, ainda pelas despesas\n\ndecorrente dessa modalidade de trabalho, incluindo telefonia fixa e/ou móvel, internet, mobiliário, hardware, software, celular, energia elétrica e similares.\n\nArt. 14. O deferimento"
+      ],
+      "edition": "8548",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-30/763e8382f832675965877f43e8a12b8c6c17a7c4.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-12-30",
+      "scraped_at": "2024-12-31T02:57:24.965287",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-12-30/e880feca5684cf6923b187e0dd7bd79c82cad668.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "1\n\nCoordenadoria de Informática Básica\nCoordenador de\n\nInformática\nDAS-2 1\n\n\n\nGerência de Hardware Compl. Gerente de Hardware AFC-2 1\n\nGerência de Suporte de Informática Compl.\nGerente de Suporte de\n\nInformática\nAFC-2 1\n\nGerência de Software Compl. Gerente de Software AFC-2 1\n\nArt. 19. Fica alterado o Anexo IV da Lei nº 10.801, de 15 de julho de 2022, que passa a vigorar da\nseguinte forma:\n\nANEXO IV\nCARGOS DE ASSESSORAMENTO AMPLO DE PROVIMENTO EM COMISSÃO COM SEUS\n\nRESPECTIVOS SÍMBOLOS, QUANTITATIVOS"
+      ],
+      "edition": "8445",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-12-30/e880feca5684cf6923b187e0dd7bd79c82cad668.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-08-18",
+      "scraped_at": "2023-08-19T11:23:33.608725",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-08-18/213a486e79b5265403995fc055f4873a9af42fe1.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "PATRICIA RESENDE NOGUEIRA - CPF: 861.133.481-72; PEDRO TEOFILO DA CRUZ - CPF: \n\n169.572.101-20; PIRES MESQUITA SERVICOS AUTOMOTIVOS LTDA ME - CNPJ: \n\n11.379.358/0001-93; POLIEDROS ADMINISTRACAO E CONTABILIDADE LTDA - CNPJ: \n\n12.685.066/0001-41; POWERBEE SOFTWARE & INTERNET LTDA - CNPJ: 04.123.781/0001-62; \n\nPREMIUM TURISMO EVENTOS E VIAGENS LTDA. - ME - CNPJ: 26.944.074/0001-70; \n\nPRESTADORA DE SERVICOS MARISTA SUL LTDA - CNPJ: 25.289.126/0001-59; \n\nPRESTADORA DE SERVICOS MARISTA SUL LTDA - CNPJ: 25.289"
+      ],
+      "edition": "8111",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-08-18/213a486e79b5265403995fc055f4873a9af42fe1.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-01-31",
+      "scraped_at": "2024-02-01T23:22:58.233127",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-31/24902a1d2ddafd89707e95fd22ff3986916bd800.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Lei Complementar nº 335, de 01 de janeiro de 2021,\n\nRESOLVE:\n\nArt. 1º - Designar servidores para acompanharem e fiscalizarem o Contrato nº 3/2024, celebrado\nentre o Município de Goiânia, por meio da Secretaria Municipal de Finanças e a empresa CLM Software Comércio,\nImportação e Exportação Ltda., para fornecimento de serviços de instalação, configuração e serviço de migração do\nambiente para gerenciamento de infraestrutura da Secretaria Municipal de Finanças.\n\nArt. 2º - Ficam designados, os servidores"
+      ],
+      "edition": "8219",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-31/24902a1d2ddafd89707e95fd22ff3986916bd800.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-05-08",
+      "scraped_at": "2025-05-09T04:19:35.988609",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-08/d33b358e91e1f72573e87afbe884c5466a60558a.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "ESTRUTURA COESA \n(NÃO \n“DESPEDAÇADAS”). \n\nVALOR TOTAL DA ATA  R$ 2.627.859,00 \n\n\n\nPrefeitura de Goiânia\nCompanhia Metropolitana de Transportes Coletivos\n\nChefia da Advocacia Setorial\n\nEXTRATO DO CONTRATO PARA PRESTAÇÃO DE SERVIÇOS DE LICENCIAMENTO DE USO DE SOFTWARE PARA\nGESTÃO ADMINISTRATIVA E FINANCEIRA QUE ATENDA AS NECESSIDADES ESPECÍFICAS DO DEPARTAMENTO\nPESSOAL, CONTÁBIL, FINANCEIRO E ADMINISTRATIVO DA CMTC, QUE ENTRE SI FIRMAM A COMPANHIA\nMETROPOLITANA DE TRANSPORTES COLETIVOS - CMTC E A PRODATA INFORMÁTICA"
+      ],
+      "edition": "8532",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-05-08/d33b358e91e1f72573e87afbe884c5466a60558a.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-27",
+      "scraped_at": "2025-11-28T02:49:59.679203",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "fiscalizar e acompanhar a execução do CONTRATO Nº 018/2025, firmado entre o\nGOIANIAPREV (Contratante) e a empresa 48.511.241 MARCOS OLIVEIRA DA SILVA (Contratada), CNPJ n.º\n48.511.241/0001-21, tendo como objeto o fornecimento de catracas eletrônicas com software integrado de controle de\nacesso, incluindo serviços de locação, instalação, treinamento e suporte técnico para atender as necessidades por um\nperíodo de 12 (doze) meses, a ser executado nas dependências deste Órgão, localizadas na Av. B, Qd. C-1"
+      ],
+      "edition": "8671",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-27/c2d8cc8dd266262307883ad4d86ddc5f33e9dbb5.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-26",
+      "scraped_at": "2025-09-27T03:57:51.437773",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-26/66a9f3974cafd0218d623313382529f0cfec20e2.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "nº 335/2021, atualizada pela Lei\nComplementar nº 382/2024, e pelo Decreto nº 2.132/2025, e em atendimento do art. 13 da Instrução\nNormativa nº 09/2023 do Tribunal de Contas dos Municípios do Estado de Goiás.\n\nConsiderando o Contrato de Solução de Software de Gestão, celebrado por intermédio\nda Secretaria Municipal de Governo - SEGOV/Contratante e da Secretaria Municipal de Inovação e\nTransformação Digital - SIT/Contratante.\n\nResolve:\n\nArt. 1°.Designar, respectivamente, os servidores abaixo relacionados"
+      ],
+      "edition": "8631",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-26/66a9f3974cafd0218d623313382529f0cfec20e2.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-07-09",
+      "scraped_at": "2024-07-10T00:25:39.337698",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-09/ca6a38e05cfc9ddb702c555826cdc9e906c2df11.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "EXTRATO DO 4º TERMO ADITIVO AO CONTRATO Nº 038/2021-AJU \n\nProcesso Administrativo nº 0005494/2022 - GED \n\nCONTRATANTES: \nCOMPANHIA DE URBANIZAÇÃO DE GOIÂNIA – COMURG, inscrita no CNPJ sob o nº \n00.418.160/0001-55 e SISTEMATECH DESENVOLVIMENTO DE SOFTWARE EIRELI, \ninscrita no CNPJ sob o nº 10.981.677/0001-01. \n\nDATA: Goiânia, 21 de junho de 2024. \n\nREPRESENTANTES: \nCONTRATANTES: RODOLPHO BUENO ARANTES DE CARVALHO – Diretor Presidente \ne ADRIANO RENATO GOUVEIA - Diretor Administrativo e Financeiro"
+      ],
+      "edition": "8328",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-07-09/ca6a38e05cfc9ddb702c555826cdc9e906c2df11.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-05-15",
+      "scraped_at": "2024-05-17T02:52:43.588828",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-05-15/2bd346c3e833d8cd50721374117857056da9e787.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "instalados e atualizados sistemas, aplicativos e programas de software necessários à execução das atividades;\nParágrafo único. Constará, ainda, no termo de adesão, que o Auditor de Tributos, se responsabilizará pela estrutura física e tecnológica, imprescindíveis ao exercício de suas atribuições e, ainda pelas despesas\n\ndecorrente dessa modalidade de trabalho, incluindo telefonia fixa e/ou móvel, internet, mobiliário, hardware, software, celular, energia elétrica e similares.\n\nArt. 14. O deferimento"
+      ],
+      "edition": "8291",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-05-15/2bd346c3e833d8cd50721374117857056da9e787.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-09-23",
+      "scraped_at": "2024-09-24T02:00:30.503612",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-09-23/a7727769140d7ebf952749197c2073ffa820bb8f.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "contratação de empresa para prestação dos\nserviços técnicos especializados de manutenção preventiva e corretiva, em campo e laboratorial, do sistema semafórico\ninstalado no município de Goiânia, compreendendo: fornecimento, manutenção e comunicação de software de controle de\ntráfego, tanto local como remoto; e, a implantação de um Centro de Controle Operacional – CCO;\n\nConsiderando o processo nº 03405/2024, do Tribunal de Contas dos Municípios do Estado de Goiás – TCM/GO, que\ntrata de denúncia, com pedido"
+      ],
+      "edition": "8382",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-09-23/a7727769140d7ebf952749197c2073ffa820bb8f.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-06-10",
+      "scraped_at": "2025-06-11T04:01:09.152706",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-10/1e28851694f1b3b3cc854446140e2f99772f41df.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "desmontagem de Tela em LED de Led\nIndoor, TELAS EM LEDS PH03, PH 6.67 ou equivalente\nem altíssima definição, no tamanho de 6mx3m 18\nmetros quadrados. Processamento digital com\nentradas e saídas sdi, hdmi, vga; computador e\ncontroller; placa de captura e o software do painel.\nConexões: sinal rj45 cat 5e / fibra óptica; possibilidade\nde leitura das extensões de arquivos, no mínimo: mpg,\navi, wmv, rm. 01 control box constituído com engates\nprojetados especialmente para permitirem a\nmontagem e desmontagem rapidamente"
+      ],
+      "edition": "8555",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-10/1e28851694f1b3b3cc854446140e2f99772f41df.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-02-08",
+      "scraped_at": "2023-02-09T11:27:59.157255",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-02-08/72ad15e18c8fe087d0c5c48b8f265dd3342b0cb2.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "“Contratação de empresa para prestação dos serviços técnicos especializados de manutenção preventiva e \ncorretiva, em campo e laboratorial, do sistema semafórico instalado no município de Goiânia, compreendendo: \nfornecimento, manutenção e comunicação de software de controle de tráfego, tanto local como remoto; e, a \nimplantação de um Centro de Controle Operacional - CCO, em atendimento à Secretaria Municipal de \nMobilidade - SMM, conforme condições e especificações estabelecidas no Edital e seus Anexos”"
+      ],
+      "edition": "7982",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-02-08/72ad15e18c8fe087d0c5c48b8f265dd3342b0cb2.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-03-21",
+      "scraped_at": "2024-03-22T22:50:11.457682",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-03-21/cf1bc37f0417d34ab4690e317540e49016eb5946.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "\n\nEXTRATO DO CONTRATO Nº 09/2024 \n\nPROCESSO Nº: 00000.001778.2023-31 \n\nCONTRATANTE: CÂMARA MUNICIPAL DE GOIÂNIA \n\nCONTRATADA: KEK COMÉRCIO E SOLUÇÕES LTDA. (CNPJ/MF: 42.451.292/0001-29). \n\nOBJETO: Fornecimento de subscrição de licenças de uso do software Autocad Lt (Limited) - (item \n\n2), para atender as necessidades da Câmara Municipal de Goiânia, conforme condições e \n\nespecificações estabelecidas no Contrato, no Edital do Pregão Eletrônico nº 19/2023 - Republicação \n\ne seus Anexos.  \n\nPRAZO DE"
+      ],
+      "edition": "8254",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-03-21/cf1bc37f0417d34ab4690e317540e49016eb5946.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-09-25",
+      "scraped_at": "2023-09-26T11:33:20.948769",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-09-25/0cbaea6e0e1bf56c875c410fd0bd72692a9efbfc.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "dos resultados com o seu valor \ncontábil e são reconhecidos em outras receitas (despesas) líquidas na demonstração do resultado. \n\ni) Intangível\n\nAtivos intangíveis são reconhecidos pelo custo de aquisição e/ou implantação, os direitos de uso de software são \ndemonstrados pelo custo de aquisição em conta de compensação e lançados em contrapartida ao resultado do \nperíodo. \n\n\n\n7 \n\nj) Redução ao valor recuperável (Impairment)\n\nUm ativo tem perda no seu valor recuperável se uma evidência objetiva indica"
+      ],
+      "edition": "8135",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-09-25/0cbaea6e0e1bf56c875c410fd0bd72692a9efbfc.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-03-25",
+      "scraped_at": "2025-03-26T03:12:18.401771",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-25/d8c03bb3b0826338677164ec5cdbd7578c3fe7f7.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "matrícula nº 1058363-01, CPF nº 004.684.611-59, para atuar \ncomo FISCAL, referente ao Contrato nº 038/2021-AJU, celebrado com a empresa \nSISTEMATECH DESENVOLVIMENTO DE SOFTWARE EIRELLI, inscrita no CNPJ sob \no N °10.981.667/0001-01, decorrente da prestação de serviço e orientação a implementação de\nforma segura e integrada de software, disposto através de Adesão a Ata de Registro de Preço do \nProcesso nº 010/2020 do Pregão Presencial nº 005/2020 do Pregão Eletrônico n°025/2023 – \nConsórcio Público"
+      ],
+      "edition": "8504",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-03-25/d8c03bb3b0826338677164ec5cdbd7578c3fe7f7.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-11-19",
+      "scraped_at": "2025-11-20T02:51:35.668779",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "sistema, deverá fundamentar a negativa e\napresentar à contratante relatório de impacto ou amostras do conjunto de dados não cobertos\npelo sigilo.\n\nArt. 11. A administração pública municipal poderá dar preferência, nas\ncontratações, ao emprego de software livre, com licenciamento gratuito e não exclusivo sobre\nos direitos de propriedade intelectual relativos a programas de computador, de forma a permitir\nexpressamente a alteração, a utilização e a distribuição de sistemas de inteligência artificial"
+      ],
+      "edition": "8667",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-11-19/7401889fe277cc4e46136b039edd94877086c6a8.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-01-25",
+      "scraped_at": "2024-01-26T23:03:01.987307",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-25/3fa53c69c46bf3885a7c2a818f24853a8b30e7c8.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "4218| e-mail: procuradoria@camaragyn.go.gov.br  \n\nEXTRATO DO CONTRATO Nº 59/2023 \n\nPROCESSO Nº: 00000.005729.2023-77 \n\nCONTRATANTE: CÂMARA MUNICIPAL DE GOIÂNIA \n\nCONTRATADA: CENTI SOLUÇÕES LTDA. (CNPJ/MF: 14.419.896/0001-52). \n\nOBJETO: Locação de software aplicativo para Gestão de Recursos Humanos da Câmara \nMunicipal de Goiânia, contemplando os serviços de parametrização, adequação, treinamento, \nmanutenção, atendimento técnico especializado e fornecimento de atualizações do aplicativo e \ndesenvolvimento"
+      ],
+      "edition": "8215",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-01-25/3fa53c69c46bf3885a7c2a818f24853a8b30e7c8.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-04-24",
+      "scraped_at": "2023-04-25T11:38:57.825803",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-04-24/f135fbe007d92160c271bfef97317d7380559305.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "data do julgamento, se caso;\no nome dos participantes da reunião; respectiva Câmara Julgadora ou Colégio Pleno, com o título “AGENDAMENTO\nDE DESPACHO VIRTUAL”.\n\n§ 1º O despacho será realizado de forma preferencialmente virtual, por aplicativo de software para\nreunião em videoconferência disponibilizado e autorizado para uso oficial pela Secretaria Municipal de Finanças.\n\n§ 2º Em até 48 (quarenta e oito) horas, desde que haja expediente normal na unidade, será agendada\nreunião virtual, obrigatoriamente"
+      ],
+      "edition": "8031",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-04-24/f135fbe007d92160c271bfef97317d7380559305.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-07-10",
+      "scraped_at": "2023-07-11T11:29:56.829056",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-10/73146145a7c868ca3af3107d038091809883836a.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "decorre do Processo n° 22.29.000024879-5, \nfundamentado em dispensa de licitação na forma do disposto no artigo 75, II, da Lei n° 14.133/21. \n\nDO OBJETO: Constitui objeto do presente contrato a aquisição de equipamentos de informática \n(hardware e software) para atendimento de demanda da Diretoria de Vigilância Sanitária e \nAmbiental de Goiânia (DVISAM) da Secretaria Municipal de Saúde, conforme especificações e \nquantitativos previstos no Termo de Referência e na proposta da CONTRATADA. \n\nDA VIGÊNCIA:"
+      ],
+      "edition": "8083",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-10/73146145a7c868ca3af3107d038091809883836a.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-07-04",
+      "scraped_at": "2023-07-05T11:33:19.700403",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-04/3a7bf4eceb07fb83016c4ed5bf1ff4b4bf493204.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "001-\n78, no exercício da função de Assistente Administrativo.\n\nParágrafo único – Os servidores acima designados estão vinculados ao Processo SEI  nº\n23.13.000003862-1, cujo objeto é a contratação de empresa para fornecimento de licença de uso de software de\npesquisa e comparação de preços praticados pela Administração Pública.\n\nArt. 2º - Atribuir aos servidores responsabilidade de fiscalização, acompanhamento, de atestar e\nverificação da perfeita execução do contrato, em todas as suas fases, até"
+      ],
+      "edition": "8079",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-04/3a7bf4eceb07fb83016c4ed5bf1ff4b4bf493204.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-06-25",
+      "scraped_at": "2024-06-26T00:49:04.548672",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-25/5e62e876cbc28bb674ea3a7c3217f83534383c90.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "de180 (cento e oitenta) dias.\n\nITEM DESCRIÇÃO/ESPECIFICAÇÃO\nUNIDADE\nDE\nMEDIDA\n\nQUANTIDADE\n\nGrupo 1\nSubgrupo A – sistema web\n\n01\nServiço de implantação do sistema de Gestão do Serviço de Remoção –\nSuporte Avançado com cadastramento, preparo inicial do software e\ntreinamento dos profissionais para uso das aplicações, com operação assistida.\n\nun 01\n\n02\nLicença de uso do sistema web para gestão do Serviço de Remoção – Suporte\nAvançado (Central de regulação, bases, viaturas). Conforme especificação\ntécnica"
+      ],
+      "edition": "8318",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-25/5e62e876cbc28bb674ea3a7c3217f83534383c90.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-12-09",
+      "scraped_at": "2024-12-10T01:25:43.053755",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-12-09/2b3196ae4bbd2cdf17e2c91eef8e23ff0add1c8f.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "vinte e um centavos), referente ao período de 02 de\nabril de 2024 a 21 de maio de 2024, decorrente da execução de serviço sem previsão contratual.\n\n2.2. O objeto negocial recebido pela administração consiste em: Cessão de Licença de uso dos programas/software,\nlicença não transferíveis e não exclusivas, dentro do território nacional, conforme tabela abaixo no período de 02 de\nabril de 2024 a 21 de maio de 2024.\n\nProgramas\n\nDisp. Sob\nlicença/Part\n\nNumber Descrição Qtd\n\nEncargos\n\nData Referência\n\n(**)Unit"
+      ],
+      "edition": "8433",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-12-09/2b3196ae4bbd2cdf17e2c91eef8e23ff0add1c8f.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-07-12",
+      "scraped_at": "2023-07-13T11:34:24.029875",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-12/4873e1f03ed2671bdd85ee6581368333e944ce91.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Secretaria Municipal de Mobilidade\n\nChefia da Advocacia Setorial\n\nPROCESSO SEI Nº: 23.13.000003862-1\n\nCONTRATANTE: SECRETARIA MUNICIPAL DE MOBILIDADE – SMM\n\nCONTRATADA: CAPACITAÇÃO LEGAL – TREINAMENTOS LTDA.\n\nOBJETO DO CONTRATO: CONTRATAÇÃO DE USO DE SOFTWARE PARA PESQUISA DE PREÇOS.\n\nDECLARAÇÃO DE DISPENSA DE LICITAÇÃO\n\nO SECRETÁRIO MUNICIPAL DE MOBILIDADE, nomeado pelo Decreto Municipal nº 2.351, de 16 de maio de 2023, no uso\nde suas atribuições legais e regulamentares, mediante a instrução dos autos"
+      ],
+      "edition": "8085",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-07-12/4873e1f03ed2671bdd85ee6581368333e944ce91.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-04-22",
+      "scraped_at": "2025-04-23T03:42:00.769626",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-22/36490a35aa1906c9dffc4620b9e29c8729f70aec.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "EMENTA: Processo de contrato de prestação de serviço que, entre si fazem o IMAS – inscrito no CNPJ nº\n02.371.916/0001-83 e a Empresa Asert Serviços e Tecnologia da Informação Ltda, cujo objeto é o fornecimento\nde prestação de serviços de sustentação do Software de Gestão de Assistência Médica para a realização das\natividades do Instituto Municipal de Assistência à Saúde dos Servidores de Goiânia – IMAS.\n\nCONTRATANTE: INSTITUTO MUNICIPAL DE ASSISTÊNCIA À SAÚDE AOS SERVIDORES DE GOIÂNIA –\nIMAS, pessoa jurídica"
+      ],
+      "edition": "8522",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-22/36490a35aa1906c9dffc4620b9e29c8729f70aec.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-06-10",
+      "scraped_at": "2024-06-10T23:58:34.036358",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-10/bd72bab8f66e0d5ea497a71e3fe833a1908482a0.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "quan�dades e exigências\nestabelecidas neste Aviso de Contratação Direta e seus anexos.\n\n1.2. A contratação será dividida em itens, conforme tabela constante\nabaixo.\n\nITEM DESCRIÇÃO/\nESPECIFICAÇÃO\n\nUN. DE\nMEDIDA\n\nQUANT.\n\n01\n\nLICENCIAMENTO DE USO DO SOFTWARE\nAUTODESK AutoCAD LT 2024 Commercial New\nSingle-user ELD Annual Subscrip�on\nLICENCIAMENTO POR 12 MESES. A a�vação das\nlicenças deverá ser vinculada a conta Autodesk\nfornecida pela contratante.\n\nUN 22\n\n1.3. O critério de julgamento adotado será o menor"
+      ],
+      "edition": "8307",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-10/bd72bab8f66e0d5ea497a71e3fe833a1908482a0.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2024-06-03",
+      "scraped_at": "2024-06-04T00:16:01.446633",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-03/46ff200ff737afa676764e2f116d9999a3ce38dd.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Coletivos – CMTC e a Empresa Checklist Fácil S.A., CNPJ n° 04.906.685/0001-90 procedeu-se a abertura do Processo SEI\n22.31.000000060-6, solicitando providências para a abertura do processo licitatório, com o objetivo de contratação de cessão onerosa de\nsoftware e disponibilização da infraestrutura tecnológica para a execução do sistema, prestação de suporte técnico no caso de\nimplementações, atualizações, erros que possam ocorrer, aperfeiçoando o serviço de fiscalização, pesquisas, cadastro e vistoria que"
+      ],
+      "edition": "8302",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2024-06-03/46ff200ff737afa676764e2f116d9999a3ce38dd.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-06-27",
+      "scraped_at": "2025-06-28T03:36:43.361194",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-27/d5e97d69156de6bebf712ac32658d598887be74a.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "ocupante do cargo: Gerente de Apoio Diagnóstico da Secretaria Municipal de Saúde, para\nacompanharem e fiscalizarem a despesa, decorrente do Processo Bee nº 4658, que tem por objeto a\nprestação de serviços de Engenharia Clínica com a utilização de software de gestão incluindo os serviços de\nassistência técnica, manutenção preventiva, corretiva, calibração, testes de segurança elétrica e qualificação\ndos equipamentos médicos assistenciais e apoio hospitalares instalados nas unidades da Secretaria Municipal"
+      ],
+      "edition": "8566",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-06-27/d5e97d69156de6bebf712ac32658d598887be74a.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-09-05",
+      "scraped_at": "2025-09-06T03:48:50.275904",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-05/65c14db75a6bfe20568912f881f61f7bfbf730a1.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "empresa a Congres - Consultoria em Gestão Empresarial Ltda, CNPJ Nº 48.606.374/0001-81, no valor\ntotal de R$62.250,00 (sessenta e dois mil e duzentos e cinquenta reais), pelo prazo máximo de 12\n(doze) meses, cujo objeto é o licenciamento mensal de software em nuvem para gestão de\ndesempenho (objetivos e indicadores), projetos, tarefas e agenda corporativa, incluindo suporte\ntécnico e metodológico, destinado a atender as necessidades da SIT, conforme especificações,\nquantitativos e condições previstos"
+      ],
+      "edition": "8616",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-09-05/65c14db75a6bfe20568912f881f61f7bfbf730a1.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2023-02-15",
+      "scraped_at": "2023-02-16T11:25:58.746471",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-02-15/93515c098ad717cabe4de90aebe6ed0224ec4e0b.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Contratação de empresa para prestação dos \nserviços técnicos especializados de manutenção preventiva e corretiva, em campo e \nlaboratorial, do sistema semafórico instalado no município de Goiânia, compreendendo: \nfornecimento, manutenção e comunicação de software de controle de tráfego, tanto local \ncomo remoto; e, a implantação de um Centro de Controle Operacional - CCO, em \natendimento à Secretaria Municipal de Mobilidade - SMM, conforme condições e \nespecificações estabelecidas no Edital e seus Anexos"
+      ],
+      "edition": "7987",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2023-02-15/93515c098ad717cabe4de90aebe6ed0224ec4e0b.txt"
+    }
+  ]
+}

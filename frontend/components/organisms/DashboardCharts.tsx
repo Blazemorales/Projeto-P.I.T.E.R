@@ -1,54 +1,113 @@
 /**
- * Dashboard com Gráficos - Componente principal
- * Carrega dados de backend/data_output e exibe visualizações com Recharts
+ * Dashboard de Investimentos - Componente principal
+ * Exibe visualizações dos dados de investimentos em diários oficiais
  */
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { InvestmentPieChart } from '@/components/organisms/charts_pesquisa/InvestmentPieChart';
-import { InvestmentBarChart } from '@/components/organisms/charts_pesquisa/InvestmentBarChart';
-import { InvestmentLineChart } from '@/components/organisms/charts_pesquisa/InvestmentLineChart';
+import React, { useState, useEffect, useMemo } from 'react';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+} from 'recharts';
 
-interface ChartData {
-  territoryId: string;
-  date: string;
-  investmentsByCategory: Array<{ category: string; value: number }>;
-  totalInvestment: number;
-  publicationCount: number;
+// Tipos
+interface DashboardData {
+  meta: {
+    source_territory: string;
+    period: string;
+    search_keywords: string;
+    generated_at: string;
+    date_range_start?: string;
+    date_range_end?: string;
+  };
+  data: {
+    total_invested: number;
+    investments_by_category: Record<string, number>;
+    investments_by_period?: Record<string, number>;
+    publications_by_period?: Record<string, number>;
+    period_grouping?: 'month' | 'year';
+    total_entities?: number;
+    total_gazettes?: number;
+  };
+  gazettes?: any[];
 }
 
-interface Statistics {
-  totalFiles: number;
-  totalTerritories: number;
-  totalInvestment: number;
-  averageInvestmentPerFile: number;
+interface CategoryData {
+  name: string;
+  value: number;
+  percentage: number;
+  [key: string]: string | number;
 }
+
+const MONTH_NAMES: Record<string, string> = {
+  '01': 'Jan', '02': 'Fev', '03': 'Mar', '04': 'Abr',
+  '05': 'Mai', '06': 'Jun', '07': 'Jul', '08': 'Ago',
+  '09': 'Set', '10': 'Out', '11': 'Nov', '12': 'Dez'
+};
+
+const PIE_COLORS = ['#3B82F6', '#22C55E', '#A855F7', '#F97316', '#EC4899', '#EAB308'];
 
 export default function DashboardCharts() {
-  const [chartData, setChartData] = useState<ChartData[]>([]);
-  const [statistics, setStatistics] = useState<Statistics | null>(null);
+  const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedTerritory, setSelectedTerritory] = useState<string>('all');
+  const [territoryName, setTerritoryName] = useState<string>('');
 
-  // Carregar dados do servidor
+  // Carregar dados do backend
   useEffect(() => {
     async function loadData() {
       try {
         setLoading(true);
-        const response = await fetch('/api/analysis');
-        
+        setError(null);
+
+        const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/data_output`);
+
         if (!response.ok) {
-          throw new Error('Erro ao carregar dados');
+          throw new Error('Erro ao carregar dados do backend');
         }
 
-        const data = await response.json();
-        setChartData(data.chartData);
-        setStatistics(data.statistics);
+        const result = await response.json();
+
+        if (!result.files || result.files.length === 0) {
+          throw new Error('Nenhum dado de análise encontrado. Faça uma busca primeiro.');
+        }
+
+        // Pegar o arquivo mais recente
+        const sortedFiles = result.files
+          .filter((f: any) => f.data && f.data.meta)
+          .sort((a: any, b: any) => b.modified - a.modified);
+
+        if (sortedFiles.length === 0) {
+          throw new Error('Nenhum arquivo válido encontrado');
+        }
+
+        const latestFile = sortedFiles[0];
+        const data = latestFile.data as DashboardData;
+
+        console.log('📊 Dados carregados:', data);
+        setDashboardData(data);
+
+        // Mapear territory_id para nome
+        const territoryMap: Record<string, string> = {
+          '5208707': 'Goiânia',
+          '5201405': 'Aparecida de Goiânia',
+          '5300108': 'Brasília',
+        };
+        setTerritoryName(territoryMap[data.meta.source_territory] || data.meta.source_territory);
+
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Erro desconhecido');
         console.error('Erro ao carregar dados:', err);
+        setError(err instanceof Error ? err.message : 'Erro desconhecido');
       } finally {
         setLoading(false);
       }
@@ -57,177 +116,334 @@ export default function DashboardCharts() {
     loadData();
   }, []);
 
-  // Filtrar dados por território
-  const filteredData = selectedTerritory === 'all' 
-    ? chartData 
-    : chartData.filter(d => d.territoryId === selectedTerritory);
+  // Dados do gráfico de barras
+  const { barChartData, chartTitle, hasMoneyData } = useMemo(() => {
+    if (!dashboardData?.data) {
+      return { barChartData: [], chartTitle: 'Sem dados', hasMoneyData: false };
+    }
 
-  // Preparar dados para gráfico de barras (por território)
-  const barChartData = chartData
-    .reduce((acc, curr) => {
-      const existing = acc.find(item => item.name === curr.territoryId);
-      if (existing) {
-        existing.value += curr.totalInvestment;
-      } else {
-        acc.push({ name: curr.territoryId, value: curr.totalInvestment });
+    const { investments_by_period, publications_by_period, period_grouping } = dashboardData.data;
+    const isMonthly = period_grouping === 'month';
+    
+    const hasInvestments = investments_by_period && Object.keys(investments_by_period).length > 0 && 
+                          Object.values(investments_by_period).some(v => v > 0);
+    
+    // Combinar todos os períodos de ambas as fontes
+    const allPeriods = new Set([
+      ...Object.keys(investments_by_period || {}),
+      ...Object.keys(publications_by_period || {})
+    ]);
+    
+    if (allPeriods.size === 0) {
+      return { barChartData: [], chartTitle: 'Sem dados', hasMoneyData: false };
+    }
+
+    // Se tem investimentos, mostrar investimentos (com 0 para períodos sem valor)
+    // Senão, mostrar publicações
+    const rawData = Array.from(allPeriods).map((period) => {
+      let name = period;
+      
+      if (isMonthly && period.includes('-')) {
+        const [, month] = period.split('-');
+        name = MONTH_NAMES[month] || month;
       }
-      return acc;
-    }, [] as Array<{ name: string; value: number }>)
-    .sort((a, b) => b.value - a.value);
+      
+      const value = hasInvestments 
+        ? (investments_by_period?.[period] || 0)
+        : (publications_by_period?.[period] || 0);
+      
+      return { name, value: Math.round(value as number), period, originalValue: Math.round(value as number) };
+    });
 
-  // Preparar dados para gráfico de pizza (agregado)
-  const pieChartData = chartData
-    .flatMap(d => d.investmentsByCategory)
-    .reduce((acc, curr) => {
-      const existing = acc.find(item => item.category === curr.category);
-      if (existing) {
-        existing.value += curr.value;
-      } else {
-        acc.push({ ...curr });
-      }
-      return acc;
-    }, [] as Array<{ category: string; value: number }>)
-    .sort((a, b) => b.value - a.value);
+    rawData.sort((a, b) => a.period.localeCompare(b.period));
+    
+    // Calcular valor mínimo visível (5% do máximo) para barras muito pequenas
+    const maxValue = Math.max(...rawData.map(d => d.value));
+    const minVisibleValue = maxValue * 0.05;
+    
+    // Ajustar valores muito pequenos para serem visíveis, mas manter o valor original para tooltip
+    const chartData = rawData.map(d => ({
+      ...d,
+      displayValue: d.value > 0 && d.value < minVisibleValue ? minVisibleValue : d.value,
+    }));
 
-  // Preparar dados para gráfico de linha (por data)
-  const lineChartData = filteredData
-    .map(d => ({
-      name: new Date(d.date).toLocaleDateString('pt-BR'),
-      value: d.totalInvestment,
-    }))
-    .sort((a, b) => new Date(a.name).getTime() - new Date(b.name).getTime());
+    const title = hasInvestments 
+      ? (isMonthly ? 'Investimentos Mensais' : 'Investimentos por Ano')
+      : (isMonthly ? 'Publicações por Mês' : 'Publicações por Ano');
 
-  // Territórios únicos para filtro
-  const territories = Array.from(new Set(chartData.map(d => d.territoryId)));
+    return { barChartData: chartData, chartTitle: title, hasMoneyData: hasInvestments };
+  }, [dashboardData]);
 
-  if (error) {
+  // Dados do gráfico de pizza - usando categorias do backend
+  const pieChartData = useMemo((): CategoryData[] => {
+    if (!dashboardData?.data?.investments_by_category) {
+      return [];
+    }
+
+    const categories = dashboardData.data.investments_by_category;
+    const total = Object.values(categories).reduce((sum, val) => sum + val, 0);
+
+    if (total === 0) {
+      return [];
+    }
+
+    // Usar o nome original da categoria (já vem formatado do backend)
+    return Object.entries(categories)
+      .filter(([_, value]) => value > 0)
+      .map(([name, value]) => ({
+        name: name,
+        value,
+        percentage: Math.round((value / total) * 100),
+      }))
+      .sort((a, b) => b.value - a.value);
+  }, [dashboardData]);
+
+  // Formatar período para exibição
+  const formattedPeriod = useMemo(() => {
+    if (!dashboardData?.meta?.period) return 'N/A';
+
+    const period = dashboardData.meta.period;
+    const match = period.match(/(\d{4})-(\d{2})-(\d{2})\s*(?:a|-)\s*(\d{4})-(\d{2})-(\d{2})/);
+    if (match) {
+      return `${match[3]}/${match[2]}/${match[1]} - ${match[6]}/${match[5]}/${match[4]}`;
+    }
+    return period.replace(/-/g, '/');
+  }, [dashboardData]);
+
+  // Estatísticas
+  const totalInvested = dashboardData?.data?.total_invested || 0;
+  const totalGazettes = dashboardData?.data?.total_gazettes || dashboardData?.gazettes?.length || 0;
+  const avgPerFile = totalGazettes > 0 ? totalInvested / totalGazettes : 0;
+
+  // Formatador de valores
+  const formatCurrency = (value: number): string => {
+    return `R$ ${value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  };
+
+  const formatShortCurrency = (value: number): string => {
+    if (value === 0) return 'R$ 0,00';
+    if (value >= 1000000) {
+      return `${(value / 1000000).toFixed(1)}M`;
+    }
+    if (value >= 1000) {
+      return `${(value / 1000).toFixed(0)}K`;
+    }
+    return formatCurrency(value);
+  };
+
+  // Gerar PDF
+  const handleGeneratePDF = () => {
+    window.print();
+  };
+
+  // Tooltip customizado para barras - usa originalValue para mostrar o valor real
+  const CustomBarTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      // Usar originalValue se disponível (valor real antes do ajuste visual)
+      const value = payload[0].payload?.originalValue ?? payload[0].value;
+      const formattedValue = hasMoneyData
+        ? formatCurrency(value)
+        : `${value} publicação(ões)`;
+
+      return (
+        <div className="bg-white p-3 rounded-lg shadow-lg border">
+          <p className="font-semibold text-gray-800">{territoryName || label}</p>
+          <p className="text-blue-600">{formattedValue}</p>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  if (loading) {
     return (
-      <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
-        <p className="text-red-600 font-semibold">Erro ao carregar dados: {error}</p>
-        <p className="text-red-500 text-sm mt-2">
-          Verifique se os arquivos estão em backend/data_output
-        </p>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <p className="mt-4 text-gray-600 text-lg">Carregando dashboard...</p>
+        </div>
       </div>
     );
   }
 
-  if (loading) {
+  if (error) {
     return (
-      <div className="p-6 text-center">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        <p className="mt-4 text-gray-600">Carregando dados...</p>
+      <div className="min-h-screen flex items-center justify-center p-4 bg-gray-100">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-8 max-w-md text-center">
+          <p className="text-red-600 font-semibold text-lg mb-2">Erro ao carregar dados</p>
+          <p className="text-red-500">{error}</p>
+          <a
+            href="/"
+            className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+          >
+            Fazer uma busca
+          </a>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full space-y-6 mt-12 bg-transparent">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-[#466986]/50 to-[#1D2D44]/50 text-[#F0EBD8] p-8 rounded-lg">
-        <h1 className="text-3xl font-bold mb-2">Dashboard de Análise</h1>
-        <p className="text-[#F0EBD8]">Visualização de dados de investimentos em diários oficiais</p>
+    <div className="w-full min-h-screen bg-gray-100 p-6">
+      <div className="max-w-5xl mx-auto space-y-6">
+        {/* Header */}
+        <h1 className="text-3xl font-bold text-gray-900">Dashboard de Investimentos</h1>
+
+        {/* Cards de Estatísticas - Layout horizontal */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Card 1 - Total Investido (Azul) */}
+          <div className="bg-blue-500 rounded-xl p-6 text-white">
+            <p className="text-sm opacity-90">Total investido:</p>
+            <p className="text-2xl md:text-3xl font-bold mt-2">
+              {totalInvested > 0 ? formatCurrency(totalInvested) : 'Sem dados'}
+            </p>
+          </div>
+
+          {/* Card 2 - Período Analisado (Verde) */}
+          <div className="bg-green-500 rounded-xl p-6 text-white">
+            <p className="text-sm opacity-90">Período Analisado:</p>
+            <p className="text-2xl md:text-3xl font-bold mt-2">{formattedPeriod}</p>
+              </div>
+
+          {/* Card 3 - Média por Arquivo (Roxo) */}
+          <div className="bg-purple-500 rounded-xl p-6 text-white">
+            <p className="text-sm opacity-90">
+              {totalInvested > 0 ? 'Média por arquivo:' : 'Total de publicações:'}
+            </p>
+            <p className="text-2xl md:text-3xl font-bold mt-2">
+              {totalInvested > 0 ? formatShortCurrency(avgPerFile) : totalGazettes}
+                </p>
+              </div>
+        </div>
+
+        {/* Gráficos - Um acima do outro */}
+        <div className="space-y-6">
+          {/* Gráfico de Barras */}
+          <div className="bg-blue-500 rounded-xl p-6">
+            <p className="text-white text-sm font-medium mb-4">{chartTitle}:</p>
+            <div className="bg-white rounded-lg p-4">
+              {barChartData.length > 0 ? (
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart data={barChartData} margin={{ top: 20, right: 20, left: 20, bottom: 20 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />
+                    <XAxis
+                      dataKey="name"
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                      axisLine={{ stroke: '#E5E7EB' }}
+                    />
+                    <YAxis
+                      tick={{ fill: '#6B7280', fontSize: 12 }}
+                      axisLine={{ stroke: '#E5E7EB' }}
+                      tickFormatter={(value) => hasMoneyData ? `${(value/1000).toFixed(0)}K` : value.toString()}
+                    />
+                    <Tooltip content={<CustomBarTooltip />} />
+                    <Bar
+                      dataKey="displayValue"
+                      fill="#3B82F6"
+                      radius={[4, 4, 0, 0]}
+                      activeBar={{ fill: '#1D4ED8' }}
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              ) : (
+                <div className="h-[300px] flex items-center justify-center text-gray-500">
+                  <p>Nenhum dado disponível</p>
+                </div>
+              )}
       </div>
-
-      {/* Estatísticas */}
-      {statistics && (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md border-l-4 border-blue-600">
-            <p className="text-gray-600 text-sm font-semibold">Total de Arquivos</p>
-            <p className="text-2xl font-bold text-gray-900 mt-2">{statistics.totalFiles}</p>
           </div>
 
-          <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md border-l-4 border-green-600">
-            <p className="text-gray-600 text-sm font-semibold">Total de Territórios</p>
-            <p className="text-2xl font-bold text-gray-900 mt-2">{statistics.totalTerritories}</p>
-          </div>
+          {/* Gráfico de Pizza */}
+          <div className="bg-green-500 rounded-xl p-6">
+            <p className="text-white text-sm font-medium mb-4">Investimentos por subcategoria:</p>
+            <div className="bg-white rounded-lg p-4">
+              {pieChartData.length > 0 ? (
+                <div className="flex flex-col md:flex-row items-center">
+                  {/* Legenda */}
+                  <div className="flex flex-col space-y-3 mb-4 md:mb-0 md:mr-6">
+                    {pieChartData.map((entry, index) => (
+                      <div key={entry.name} className="flex items-center">
+                        <div
+                          className="w-4 h-4 rounded mr-3"
+                          style={{ backgroundColor: PIE_COLORS[index % PIE_COLORS.length] }}
+                        />
+                        <span className="text-gray-700 text-sm font-medium">
+                          {entry.name} - {entry.percentage}%
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-          <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md border-l-4 border-purple-600">
-            <p className="text-gray-600 text-sm font-semibold">Total Investido</p>
-            <p className="text-2xl font-bold text-gray-900 mt-2">
-              R$ {(statistics.totalInvestment / 1000000).toFixed(1)}M
-            </p>
-          </div>
-
-          <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md border-l-4 border-orange-600">
-            <p className="text-gray-600 text-sm font-semibold">Média por Arquivo</p>
-            <p className="text-2xl font-bold text-gray-900 mt-2">
-              R$ {(statistics.averageInvestmentPerFile / 1000).toFixed(0)}K
-            </p>
+                  {/* Gráfico Donut */}
+                  <div className="flex-1 relative">
+                    <ResponsiveContainer width="100%" height={250}>
+                      <PieChart>
+                        <Pie
+                          data={pieChartData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={50}
+                          outerRadius={90}
+                          paddingAngle={2}
+                          dataKey="percentage"
+                          nameKey="name"
+                        >
+                          {pieChartData.map((entry, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={PIE_COLORS[index % PIE_COLORS.length]}
+                  />
+                ))}
+                        </Pie>
+                        <Tooltip
+                          formatter={(value: any, name: any) => [`${value}%`, name]}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
+                    {/* Texto central do donut */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <p className="text-2xl font-bold text-gray-800">100%</p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="h-[250px] flex items-center justify-center text-gray-500">
+                  <div className="text-center">
+                    <p>Sem dados de categorias</p>
+                    <p className="text-sm mt-2">Os investimentos não foram classificados</p>
+                  </div>
+              </div>
+              )}
+            </div>
           </div>
         </div>
-      )}
 
-      {/* Filtro por Território */}
-      <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md">
-        <label className="block text-sm font-semibold text-gray-700 mb-3">
-          Filtrar por Território:
-        </label>
-        <select
-          value={selectedTerritory}
-          onChange={(e) => setSelectedTerritory(e.target.value)}
-          className="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-        >
-          <option value="all">Todos os Territórios</option>
-          {territories.map((territory) => (
-            <option key={territory} value={territory}>
-              {territory}
-            </option>
-          ))}
-        </select>
-      </div>
+        {/* Info quando não há dados de investimento */}
+        {totalInvested === 0 && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+            <p className="text-yellow-800 font-semibold">ℹ️ Informação</p>
+            <p className="text-yellow-700 text-sm mt-2">
+              Os diários encontrados não contêm valores monetários identificáveis nos trechos analisados.
+              O gráfico de barras está mostrando a <strong>quantidade de publicações</strong> por período.
+            </p>
+            </div>
+          )}
 
-      {/* Gráficos */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Pizza Chart */}
-        <InvestmentPieChart
-          data={pieChartData}
-          title="Distribuição de Investimentos por Categoria"
-        />
-
-        {/* Bar Chart */}
-        <InvestmentBarChart
-          data={barChartData}
-          dataKey="value"
-          title="Investimentos por Território"
-        />
-      </div>
-
-      {/* Line Chart - Tendência */}
-      <InvestmentLineChart
-        data={lineChartData}
-        dataKey="value"
-        title="Tendência de Investimentos ao Longo do Tempo"
-      />
-
-      {/* Tabela de Dados */}
-      <div className="bg-[#F0EBD8]/80 p-6 rounded-lg shadow-md overflow-x-auto">
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Detalhes dos Dados</h3>
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b-2 border-gray-200">
-              <th className="text-left px-4 py-2 font-semibold text-gray-700">Território</th>
-              <th className="text-left px-4 py-2 font-semibold text-gray-700">Data</th>
-              <th className="text-right px-4 py-2 font-semibold text-gray-700">Total Investido</th>
-              <th className="text-right px-4 py-2 font-semibold text-gray-700">Publicações</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item, index) => (
-              <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
-                <td className="px-4 py-3 text-gray-900 font-medium">{item.territoryId}</td>
-                <td className="px-4 py-3 text-gray-600">
-                  {new Date(item.date).toLocaleDateString('pt-BR')}
-                </td>
-                <td className="px-4 py-3 text-right text-gray-900">
-                  R$ {item.totalInvestment.toLocaleString('pt-BR')}
-                </td>
-                <td className="px-4 py-3 text-right text-gray-600">
-                  {item.publicationCount}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {/* Botão Gerar PDF */}
+        <div className="flex justify-center gap-4 pt-4">
+          <button
+            onClick={() => window.location.href = '/pesquisar'}
+            className="bg-gray-600 hover:bg-gray-700 text-white font-semibold px-10 py-3 rounded-full transition-colors shadow-lg"
+          >
+            Nova busca
+          </button>
+          <button
+            onClick={handleGeneratePDF}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-3 rounded-full transition-colors shadow-lg"
+          >
+            Gerar relatório PDF
+          </button>
+        </div>
       </div>
     </div>
   );

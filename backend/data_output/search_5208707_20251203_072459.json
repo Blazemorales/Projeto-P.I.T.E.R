@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "source_territory": "5208707",
+    "period": "2025-01-03 a 2025-07-03",
+    "search_keywords": "robotica",
+    "generated_at": "2025-12-03T07:24:59.727152",
+    "type": "search_with_stats",
+    "date_range_start": "2025-01-03",
+    "date_range_end": "2025-07-03"
+  },
+  "data": {
+    "total_gazettes": 2,
+    "total_invested": 87000.0,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Software e Licenças": 0.0,
+      "Robótica e Maker": 0.0,
+      "Outros": 87000.0
+    },
+    "investments_by_period": {
+      "2025-04": 87000.0
+    },
+    "publications_by_period": {
+      "2025-01": 1,
+      "2025-04": 1
+    },
+    "period_grouping": "month"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5208707",
+      "date": "2025-01-07",
+      "scraped_at": "2025-01-08T02:16:35.719203",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-01-07/859741b575d9dbaab5ae05c9c0dbd2a1c6c4e434.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "DESENVOLVIMENTO DAS ACOES PARA \nMANUTENCAO DO ENSINO FUNDAMENTAL  673.846.000\n\n1750.1236101412.726 \nPROGRAMA AUTONOMIA DAS INST. EDUCACIONAIS‐\nPAFIE‐ENS.FUNDAMENTAL  14.806.000\n\nGOIANIA EM NOVA ACAO  58.000\n1750.1236101471.028  GOIANIA EM NOVA ACAO ‐ TABLETS E ROBOTICA  30.000\n\n1750.1236101471.029 \nGOIANIA EM NOVA ACAO ‐ REFORMA E AMPLIACAO \nDE UNIDADES ESCOLARES  13.000\n\n1750.1236101471.030 \nGOIANIA EM NOVA ACAO ‐ ESCOLAS DE TEMPO \nINTEGRAL  15.000\n\n\n\nEDUCACAO INFANTIL  363.988.000\nM.D.E. CONSTRUCAO, REFORMA, AMPLIACAO E "
+      ],
+      "edition": "8451",
+      "is_extra_edition": true,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-01-07/859741b575d9dbaab5ae05c9c0dbd2a1c6c4e434.txt"
+    },
+    {
+      "territory_id": "5208707",
+      "date": "2025-04-30",
+      "scraped_at": "2025-05-01T03:10:55.664038",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-30/a669acba28903dc4fcb01a3cf48cb1d472469dcf.pdf",
+      "territory_name": "Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "----+-------------------+-------------------+-------------------+-------------------+\n\n| 0147 | GOIANIA EM NOVA ACAO | 15.000,00| | 15.000,00| | 15.000,00 | | |\n\n| | | | | | | | | |\n\n| | | | | | | | | |\n\n| 1028 | GOIANIA EM NOVA ACAO - TABLETS E ROBOTICA | 11.000,00| | 11.000,00| | 11.000,00 | | |\n\n| | | | | | | | | |\n\n| | | | | | | | | |\n\n| 33504100 | CONTRIBUICOES | 1.000,00| | 1.000,00| | 1.000,00 | | |\n\n| | | | | | | | | |\n\n| 33903000 | MATERIAL DE CONSUMO | 2.000,00| | 2.000,00| | 2.000,00 |"
+      ],
+      "edition": "8528",
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5208707/2025-04-30/a669acba28903dc4fcb01a3cf48cb1d472469dcf.txt"
+    }
+  ]
+}

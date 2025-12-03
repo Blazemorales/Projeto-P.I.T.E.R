@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "source_territory": "5201405",
+    "period": "2021-01-03 a 2025-12-03",
+    "search_keywords": "robotica",
+    "generated_at": "2025-12-03T08:15:47.545313",
+    "type": "search_with_stats",
+    "date_range_start": "2021-01-03",
+    "date_range_end": "2025-12-03"
+  },
+  "data": {
+    "total_gazettes": 9,
+    "total_invested": 89943306.92,
+    "total_entities": 0,
+    "investments_by_category": {
+      "Educação": 71275680.11,
+      "Capacitação": 0.0,
+      "Servidor": 0.0,
+      "Cloud/Nuvem": 0.0,
+      "Hospedagem": 0.0,
+      "Rede": 0.0,
+      "Backup": 0.0,
+      "Data Center": 0.0,
+      "Gestão": 0.0,
+      "ERP": 0.0,
+      "Financeiro": 0.0,
+      "Robótica": 18667626.81,
+      "Outros": 0.0
+    },
+    "investments_by_period": {
+      "2021": 89898280.36,
+      "2022": 45026.56
+    },
+    "publications_by_period": {
+      "2021": 5,
+      "2022": 2,
+      "2024": 1,
+      "2025": 1
+    },
+    "period_grouping": "year"
+  },
+  "gazettes": [
+    {
+      "territory_id": "5201405",
+      "date": "2021-12-22",
+      "scraped_at": "2022-10-04T00:25:06.987220",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-12-22/6c5b3157217450b5ce94d80a387666d586fcb1e2.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Aquisição do Projeto Maluquinho por Robótica para atender os alunos \ndo Ensino Fundamental I da rede municipal de ensino.  \n\n2. CLÁUSULA SEGUNDA - ESPECIFICAÇÕES DO OBJETO\n2.1 Projeto “Maluquinho por Robótica” para atender os alunos do 1º, 2º, 3º, \n4º e 5º ano do Ensino Fundamental I, sendo kit individual do aluno e professor, \nconforme descritivo abaixo. \n\nITEM DESCRIÇÃO QUANT. U N I T Á -\nRIO\n\nTOTAL\n\n1 Kit Estudantes 1º ano \nGuia Prático Maluqui-\nnho Por Robótica - Robô \nGuerreiro - ISBN:  978-\n65-88876-10-7"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-12-22/6c5b3157217450b5ce94d80a387666d586fcb1e2.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2024-01-18",
+      "scraped_at": "2024-01-18T22:50:09.135366",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2024-01-18/a68ad1216357c7412ec1d225b1b66b3e3081615c.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "do Ensino Fundamental nas Escolas Municipais… \n98\n2.8 Formação de turmas do Ensino Fundamental nas Escolas Municipais. \n101\n2.9 Programas Federais da Educação Básica e Programas\ne Projetos nas Escolas Municipais… 101\n2.9.1 Programa de Iniciação à Robótica… 102\n2.9.2 Programa AlfaMais Goiás… 103\n3. Ensino Fundamental nas Escolas de Tempo Integral 104\n3.1 Funcionamento e atendimento das Escolas de Tempo Integral… 105\n3.1.1 Orientações sobre os intervalos e recreios… 105\n3.1.2 Horários da alimentação"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2024-01-18/a68ad1216357c7412ec1d225b1b66b3e3081615c.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2022-08-11",
+      "scraped_at": "2022-10-04T00:25:59.268499",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2022-08-11/305b2b77f45b640029512aed112a67fe60237c12.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "de Licitação, o Secretário Municipal de Administração e \no Secretário Municipal de Educação no uso de suas atribuições legais, tendo em \nvista a adjudicação do pregão eletrônico nº 162/2021, processo nº 2021.226.521, \nobjeto: Aquisição de kits de Robótica Lego, conforme condições e especificações \nestabelecidas no Edital e seus Anexos. Homologam o presente procedimento lici-\ntatório a empresa vencedora: G-F COMÉRCIO E IMPORTAÇÃO DE EQUI-\nPAMENTOS INDUSTRIAIS LTDA,  CNPJ: 23.358.643/0001-07, sobre"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2022-08-11/305b2b77f45b640029512aed112a67fe60237c12.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2022-05-12",
+      "scraped_at": "2022-10-04T00:25:38.042284",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2022-05-12/c4772ac8b9954425793c667535d5f69b9ad5c032.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Executiva de Licitação. \n\nAna Paula Ribeiro \nPregoeira.\n\n____________________________________________\n\nAVISO DE LICITAÇÃO DO PREGÃO ELETRÔNICO \nNº 162/2021-REP.\n\nData Abertura: 27 de maio de 2022, às 09h. Objeto da Licitação: Aquisição de kits \nde Robótica Lego. Tipo: menor preço por item. Local da sessão de abertura: www.\nlicitacoes-e.com.br Interessado: SECRETARIA MUNICIPAL DE EDUCAÇÃO. \nProcesso: 2021.226.521. Retire e acompanhe o edital no site: www.aparecida.\ngo.gov.br e www.licitacoes-e.com.br"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2022-05-12/c4772ac8b9954425793c667535d5f69b9ad5c032.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2021-06-29",
+      "scraped_at": "2022-10-04T00:24:24.894717",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-06-29/220900b082c42c10f7e4251c1d6738b7887ad7a7.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "Nº 011/2021. \n\nA Secretária Executiva de Licitação, no uso de suas atribuições legais, torna pú-\nblica a revogação do Pregão Eletrônico nº 011/2021, Processo nº 2020.071.102, \ndestinado ao registro de preços para eventual aquisição de materiais de robóti-\nca e treinamento dos docentes, conforme solicitação da Secretaria Municipal de \nEducação no intuito de assegurar a regularidade do procedimento, considerando \na necessidade de se proceder adequações no objeto, bem como, nova análise por-\nmenorizada"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-06-29/220900b082c42c10f7e4251c1d6738b7887ad7a7.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2021-11-09",
+      "scraped_at": "2022-10-04T00:24:55.949867",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-11-09/800e690d6613ed11dbaa5f37a043cf902ba4d6a7.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "licitacaoapgyn@gmail.com. \n\nViviane Batista de Oliveira \nSecretária Executiva de Licitação \n\nDhayly Oliveira \nPregoeira\n\nAVISO DE LICITAÇÃO - PREGÃO ELETRÔNICO \nNº 162/2021\n\nData Abertura: 22 de novembro de 2021, às 14h. Objeto da Licitação: Aquisição \nde kits de Robótica Lego. Tipo: menor preço por item. Local da sessão de abertu-\nra: www.licitacoes-e.com.br Interessado: SECRETARIA MUNICIPAL DE EDU-\nCAÇÃO. Processo: 2021.226.521. Retire e acompanhe o edital no site: www.\naparecida.go.gov.br e www.licitacoes-e.com"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-11-09/800e690d6613ed11dbaa5f37a043cf902ba4d6a7.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2021-12-20",
+      "scraped_at": "2022-10-04T00:25:05.784771",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-12-20/0e16a4762a4d31b2b53dbada52bc7bb175356be7.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "com fulcro \nno Art. 25, I da Lei Federal nº 8.666/93 em favor da empresa CONEXAO IN-\nTELETCUAL COMÉRCIO DE LIVROS E PAPELARIA EIRELI., inscrita no \nCNPJ/MF sob o nº 40.442.427/0001-64, objetivando a aquisição do de Kits do \nProjeto Maluquinho por Robótica, para alunos e professores do 1º ao 5º ano do \nEnsino Fundamental, da Rede Municipal de Ensino, no valor de R$ 29.916.834,44 \n(vinte e nove milhões, novecentos e dezesseis mil, oitocentos e trinta e quatro re-\nais e quarenta e quatro centavos), conforme"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-12-20/0e16a4762a4d31b2b53dbada52bc7bb175356be7.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2021-09-09",
+      "scraped_at": "2022-10-04T00:24:43.062689",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-09-09/68ecee974f549ba0f0eeeb035e60f85f5b807751.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "RENASCER INDÚSTRIA \nE COMÉRCIO DE CONFECÇÕES LTDA., pessoa jurídica de direito privado, \ninscrita no CNPJ/MF sob o nº 04.337.924/0001-39, objetivando a contratação de \nempresa para confecção de camisetas em malha que serão utilizadas no Campe-\nonato de Robótica e demais eventos previstos pela Secretaria Municipal de Edu-\ncação, no valor total de R$ 17.064,00 (dezessete mil e sessenta e quatro reais), \nconforme proposta anexa aos autos nº 2021.224.942 ás fls.12.\n\n2 – Ordenar a publicação do feito, na forma"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2021-09-09/68ecee974f549ba0f0eeeb035e60f85f5b807751.txt"
+    },
+    {
+      "territory_id": "5201405",
+      "date": "2025-06-27",
+      "scraped_at": "2025-06-28T03:29:08.586298",
+      "url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-27/8d353db87b5a17d7a4c703f8bd4cd8d844283251.pdf",
+      "territory_name": "Aparecida de Goiânia",
+      "state_code": "GO",
+      "excerpts": [
+        "obrigatório na\nBase Nacional Comum Curricular dependerá de aprovação do Conselho Nacional\nde Educação e de homologação pelo Ministro de Estado da Educação.\n\n§ 11. A educação digital, com foco no letramento digital e no ensino de com-\nputação, programação, robótica e outras competências digitais, será componente\ncurricular do ensino fundamental e do ensino médio.\n\nAcrescente-se a isso, o fato de que, o § 2º do art. 4º do P.L. n.º 61/2025 limita\na atuação do Chefe do Poder Executivo de celebrar, privativamente"
+      ],
+      "is_extra_edition": false,
+      "txt_url": "https://querido-diario.nyc3.cdn.digitaloceanspaces.com/5201405/2025-06-27/8d353db87b5a17d7a4c703f8bd4cd8d844283251.txt"
+    }
+  ]
+}

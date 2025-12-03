@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "territory_a": "5208707",
+    "territory_a_name": "Território 5208707",
+    "period_a": "2024-01-01 a 2024-01-31",
+    "territory_b": "5201405",
+    "territory_b_name": "Território 5201405",
+    "period_b": "2024-01-01 a 2024-01-31",
+    "search_keywords": "software",
+    "generated_at": "2025-12-02T22:19:47.199135"
+  },
+  "data": {
+    "territory_a_analysis": {
+      "total_entities": 13,
+      "entity_counts_by_type": {
+        "LOC": 6,
+        "MISC": 5,
+        "PER": 1,
+        "ORG": 1
+      },
+      "top_entities": {
+        "Secretaria": 2,
+        "Lei Complementar": 1,
+        "Contrato nº 3/2024": 1,
+        "Designar": 1,
+        "Município": 1,
+        "Goiânia": 1,
+        "CLM Software Comércio": 1,
+        "Importação": 1,
+        "Exportação Ltda": 1,
+        "Ficam": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "territory_b_analysis": {
+      "total_entities": 26,
+      "entity_counts_by_type": {
+        "LOC": 10,
+        "MISC": 10,
+        "PER": 4,
+        "ORG": 2
+      },
+      "top_entities": {
+        "Avenida Nações Unidas": 1,
+        "Marble Tower": 1,
+        "Vila Gertrudes": 1,
+        "São Paulo": 1,
+        "CEP:": 1,
+        "TeamViewer": 1,
+        "TI da Secretaria Municipal de Ciência": 1,
+        "Tecnologia": 1,
+        "Inovação": 1,
+        "Quinta - Feira Item Especificação Qtd": 1
+      },
+      "total_invested": 51488.72,
+      "investments_by_category": {
+        "Software e Licenças": 51488.72,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {
+        "error": "API Key não configurada"
+      }
+    },
+    "differences": {
+      "investment_diff": 51488.72,
+      "investment_percentage": -100.0,
+      "entities_diff": 13,
+      "winner": "Território B (5201405)"
+    }
+  }
+}

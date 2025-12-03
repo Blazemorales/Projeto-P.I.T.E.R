@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "territory_a": "5208707",
+    "territory_a_name": "Território 5208707",
+    "period_a": "2025-10-01 a 2025-12-02",
+    "territory_b": "5201405",
+    "territory_b_name": "Território 5201405",
+    "period_b": "2025-10-01 a 2025-12-02",
+    "search_keywords": "todos",
+    "generated_at": "2025-12-02T21:21:18.656635"
+  },
+  "data": {
+    "territory_a_analysis": {},
+    "territory_b_analysis": {
+      "total_entities": 24,
+      "entity_counts_by_type": {
+        "MISC": 9,
+        "LOC": 9,
+        "ORG": 6
+      },
+      "top_entities": {
+        "Plano de Cargos": 2,
+        "Adicional de Titularidade": 2,
+        "Salários dos Servidores da Educação I –": 2,
+        "Segunda - Feira A Secretária Municipal de Educação de Aparecida de Goiânia": 1,
+        "Secretaria": 1,
+        "Quarta - Feira": 1,
+        "Secretária Municipal de Educação de Aparecida de Goiânia": 1,
+        "Municipal de Educação": 1,
+        "LCM nº237/2025": 1,
+        "Sr(a": 1
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "differences": {
+      "investment_diff": 0.0,
+      "investment_percentage": 0,
+      "entities_diff": 24,
+      "winner": "Empate"
+    }
+  }
+}

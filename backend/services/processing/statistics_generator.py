@@ -1,43 +1,47 @@
 import re
+import logging
 from typing import List, Dict, Any
 from datetime import datetime
 from collections import defaultdict
 
+try:
+    import requests
+except ImportError:
+    requests = None
 
 try:
     import pandas as pd
 except Exception:
     pd = None
 
+logger = logging.getLogger(__name__)
+
 # --- MAPEAMENTO: Categoria de Tecnologia ---
+# Subcategorias específicas - cada uma é contada separadamente
+# A ordem importa: subcategorias específicas primeiro, depois "Outros" como fallback
 CATEGORY_MAP = {
-    "Software e Licenças": [
-        "licença de software", "licença de sistema", "licença de aplicativo",
-        "sistema de gestão", "sistema acadêmico", "sistemas informatizados",
-        "aplicativo", "app", "plataforma digital", "plataforma online",
-        "ambiente virtual", "ava", "ambiente virtual de aprendizagem",
-        "google workspace", "microsoft office",
-        "software educativo", "software educacional",
-        "jogos digitais", "gamificação",
-        "antivírus"
-    ],
-
-    "Robótica e Maker": [
-        # Robótica em geral
-        "robótica", "robótica educacional",
-        "kit de robótica", "kit de robótica educacional",
-        "arduino", "curso de robótica", "oficina de robótica",
-        "laboratório de robótica",
-        "programação", "programação educacional",
-        "scratch", "micro:bit",
-        "componentes eletrônicos",
-
-        # Cultura maker / equipamentos
-        "cultura maker", 
-        "impressora 3d", "filamento",
-        "cortadora a laser",
-        "lego education"
-    ]
+    # Subcategorias de Educação
+    "Educação": ["educação", "educacional", "escola", "escolar", "ensino"],
+    "Capacitação": ["capacitação", "treinamento", "curso", "cursos"],
+    
+    # Subcategorias de Infraestrutura  
+    "Servidor": ["servidor", "servidores"],
+    "Cloud/Nuvem": ["cloud", "nuvem"],
+    "Hospedagem": ["hospedagem", "hosting"],
+    "Rede": ["rede", "redes", "network"],
+    "Backup": ["backup", "armazenamento", "storage"],
+    "Data Center": ["data center", "datacenter"],
+    
+    # Subcategorias de Gestão
+    "Gestão": ["gestão", "gerenciamento", "administração"],
+    "ERP": ["erp"],
+    "Financeiro": ["financeiro", "contábil", "fiscal"],
+    
+    # Robótica
+    "Robótica": ["robótica"],
+    
+    # Fallback - software genérico que não se encaixa em nenhuma subcategoria
+    "Outros": ["software"]
 }
 
 
@@ -58,7 +62,27 @@ EXCLUSION_TERMS = [
 
 class StatisticsGenerator:
     def __init__(self):
-        pass
+        self._txt_cache = {}  # Cache para textos baixados
+    
+    def _download_full_text(self, txt_url: str) -> str:
+        """Baixa o texto completo do diário oficial via txt_url."""
+        if not txt_url or not requests:
+            return ""
+        
+        # Verificar cache
+        if txt_url in self._txt_cache:
+            return self._txt_cache[txt_url]
+        
+        try:
+            response = requests.get(txt_url, timeout=30)
+            response.raise_for_status()
+            text = response.text
+            self._txt_cache[txt_url] = text
+            logger.info(f"📥 Texto completo baixado: {len(text)} chars")
+            return text
+        except Exception as e:
+            logger.warning(f"⚠️ Erro ao baixar texto: {e}")
+            return ""
 
     def _parse_date(self, date_value):
         """Tenta converter diferentes formatos de data para `datetime`.
@@ -128,28 +152,49 @@ class StatisticsGenerator:
         category_totals["Outros"] = 0.0
 
         money_re = re.compile(r"(?:R\$\s?)?(\d{1,3}(?:\.\d{3})*,\d{2})")
+        
         # Preparar intervalo de datas para decidir agrupamento (mês vs ano)
         parsed_dates = [self._parse_date(g.get('date')) for g in gazettes if g.get('date')]
         parsed_dates = [d for d in parsed_dates if d is not None]
-        time_series = {}
-        group_by = None
-
-        if selected_category and parsed_dates:
+        
+        # SEMPRE calcular série temporal (não apenas para selected_category)
+        group_by = 'month'  # default
+        if parsed_dates:
             start_date = min(parsed_dates)
             end_date = max(parsed_dates)
             delta_days = (end_date - start_date).days
-            # Até um ano (considerando ano bissexto) -> agrupar por mês
-            if delta_days <= 366:
-                group_by = 'month'
-            else:
-                group_by = 'year'
+            # Até um ano (366 dias) -> agrupar por mês, senão por ano
+            group_by = 'month' if delta_days <= 366 else 'year'
 
-            # usar defaultdict para acumular rapidamente
-            ts_acc = defaultdict(float)
+        # Acumuladores para série temporal
+        ts_acc = defaultdict(float)  # Para valores monetários
+        count_acc = defaultdict(int)  # Para contagem de publicações
 
         for gazette in gazettes:
+            gazette_date = self._parse_date(gazette.get('date'))
+            
+            # Calcular bucket de tempo
+            time_bucket = None
+            if gazette_date:
+                if group_by == 'month':
+                    time_bucket = f"{gazette_date.year}-{gazette_date.month:02d}"
+                else:
+                    time_bucket = f"{gazette_date.year}"
+                # Sempre contar publicação
+                count_acc[time_bucket] += 1
+
+            # PRIORIDADE: texto completo via txt_url > excerpts
             text_content = ""
-            if "excerpts" in gazette and gazette["excerpts"]:
+            txt_url = gazette.get("txt_url")
+            
+            # Tentar baixar texto completo se disponível
+            if txt_url:
+                full_text = self._download_full_text(txt_url)
+                if full_text:
+                    text_content = full_text
+            
+            # Fallback para excerpts se não conseguiu texto completo
+            if not text_content and "excerpts" in gazette and gazette["excerpts"]:
                 if isinstance(gazette["excerpts"], list):
                     text_content = "\n".join([str(e) for e in gazette["excerpts"] if e])
                 else:
@@ -174,44 +219,63 @@ class StatisticsGenerator:
 
                 start_index = match.start()
                 end_index = match.end()
-                context_window = text_content[max(0, start_index - 300) : min(len(text_content), end_index + 300)].lower()
+                # Aumentar janela de contexto para 500 chars para capturar mais informação
+                context_window = text_content[max(0, start_index - 500) : min(len(text_content), end_index + 500)].lower()
                 
                 if any(term in context_window for term in EXCLUSION_TERMS):
                     continue
                 
-                found_category = "Outros"
+                # FILTRO PRINCIPAL: Só incluir se "software" ou "robótica" estiver no contexto
+                has_software = bool(re.search(r'\bsoftware\b', context_window))
+                has_robotica = bool(re.search(r'\brobótica\b', context_window))
+                
+                if not has_software and not has_robotica:
+                    continue  # Pular valores sem relação com software/robótica
+                
+                # SUBCATEGORIZAÇÃO: Verificar subcategorias específicas
+                found_category = None
                 for category, keywords in CATEGORY_MAP.items():
+                    if category == "Outros":
+                        continue  # Verificar "Outros" por último
                     for keyword in keywords:
-                        if keyword in context_window:
+                        pattern = r'\b' + re.escape(keyword) + r'\b'
+                        if re.search(pattern, context_window):
                             found_category = category
                             break 
-                    if found_category != "Outros":
+                    if found_category:
                         break
+                
+                # Fallback para categoria principal
+                if not found_category:
+                    found_category = "Robótica" if has_robotica else "Outros"
 
                 total_invested += clean_value
                 category_totals[found_category] += clean_value
 
-                # Se solicitado, acumular série temporal apenas para a categoria selecionada
-                if selected_category and found_category == selected_category:
-                    gazette_date = self._parse_date(gazette.get('date'))
-                    if gazette_date:
-                        if group_by == 'month':
-                            bucket = f"{gazette_date.year}-{gazette_date.month:02d}"
-                        else:
-                            bucket = f"{gazette_date.year}"
-                        ts_acc[bucket] += clean_value
+                # Acumular na série temporal
+                if time_bucket:
+                    ts_acc[time_bucket] += clean_value
 
         total_invested = round(total_invested, 2)
         category_totals = {k: round(v, 2) for k, v in category_totals.items()}
+        
+        # Série temporal de investimentos (ordenada cronologicamente)
+        investments_by_period = {k: round(v, 2) for k, v in sorted(ts_acc.items())}
+        
+        # Série temporal de contagem de publicações (ordenada cronologicamente)
+        publications_by_period = {k: v for k, v in sorted(count_acc.items())}
+
         result = {
             "total_invested": total_invested,
-            "investments_by_category": category_totals
+            "investments_by_category": category_totals,
+            "investments_by_period": investments_by_period,
+            "publications_by_period": publications_by_period,
+            "period_grouping": group_by  # 'month' ou 'year'
         }
 
+        # Manter compatibilidade com selected_category
         if selected_category:
-            # converter acumulador para dict ordenado por chave (cronológico por formato)
-            time_series = {k: round(v, 2) for k, v in sorted(ts_acc.items())}
-            result["time_series"] = time_series
+            result["time_series"] = investments_by_period
 
         return result
 

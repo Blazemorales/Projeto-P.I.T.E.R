@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "territory_a": "5208707",
+    "territory_a_name": "Território 5208707",
+    "period_a": "2025-09-01 a 2025-12-01",
+    "territory_b": "5201405",
+    "territory_b_name": "Território 5201405",
+    "period_b": "2025-09-01 a 2025-12-01",
+    "search_keywords": "todos",
+    "generated_at": "2025-12-02T15:17:58.098736"
+  },
+  "data": {
+    "territory_a_analysis": {
+      "total_entities": 21,
+      "entity_counts_by_type": {
+        "MISC": 7,
+        "LOC": 6,
+        "PER": 5,
+        "ORG": 3
+      },
+      "top_entities": {
+        "ctrl+f": 3,
+        "Assinatura Digital": 3,
+        "Secretaria": 3,
+        "Casa Civil": 3,
+        "Diário Oficial –": 3,
+        "Parque Lozandes Goiânia": 3,
+        "Fone": 3
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "territory_b_analysis": {
+      "total_entities": 77,
+      "entity_counts_by_type": {
+        "MISC": 30,
+        "LOC": 28,
+        "ORG": 15,
+        "PER": 4
+      },
+      "top_entities": {
+        "Aparecida de Goiânia": 5,
+        "Secretaria": 3,
+        "Salários dos Servidores da Educação I –": 2,
+        "Sr(a": 2,
+        "Adicional de Titularidade": 2,
+        "Secretária Municipal de Educação de Aparecida de Goiânia": 2,
+        "LCM nº237/2025": 2,
+        "BENEFÍCIOS": 2,
+        "servidor(a": 2,
+        "Lei Municipal": 2
+      },
+      "total_invested": 0.0,
+      "investments_by_category": {
+        "Software e Licenças": 0.0,
+        "Robótica e Maker": 0.0,
+        "Outros": 0.0
+      },
+      "qualitative_analysis": {}
+    },
+    "differences": {
+      "investment_diff": 0.0,
+      "investment_percentage": 0,
+      "entities_diff": 56,
+      "winner": "Empate"
+    }
+  }
+}
